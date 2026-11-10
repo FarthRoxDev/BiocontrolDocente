@@ -1,0 +1,116 @@
+{# ==========================================================
+   slide.html — una diapositiva 16:9 de BIOCONTROL
+   Contexto esperado (dict `s`):
+     s.slide      número de diapositiva
+     s.pagina     página del libro que acompaña (int|None)
+     s.titulo     título
+     s.layout     portada | vinetas | columnas | imagen | dato | cierre
+     s.kicker     línea superior (módulo/capítulo)
+     s.subtitulo  bajada opcional
+     s.titulo_html título con markdown en línea ya resuelto
+     s.html       cuerpo ya renderizado desde markdown, en orden de documento
+     s.intro      bajada del layout de columnas
+     s.vinetas    viñetas sueltas (dato; el orden vive en s.html)
+     s.columnas   [ {titulo, html}, {titulo, html} ]
+     s.imagen     ruta/URI de imagen a sangre
+     s.pie        pie de figura
+     s.dato       cifra grande
+     s.cita       cita destacada
+     s.fuente     atribución del dato/cita
+     s.meta       pie de portada (docente, duración)
+     s.notas      notas del expositor (no se imprimen)
+     s.palabras   conteo de palabras visibles
+     s.denso      True si supera el umbral de palabras
+   ========================================================== #}
+{%- macro indicador(s) -%}
+  {%- if s.pagina is not none %}
+  <div class="bc-libro">
+    <span class="bc-libro__etiqueta">Libro pág.</span><span class="bc-libro__num">{{ s.pagina }}</span>
+  </div>
+  {%- endif %}
+{%- endmacro -%}
+
+<section class="bc-slide bc-slide--{{ s.layout }}"
+         id="slide-{{ s.slide }}"
+         data-slide="{{ s.slide }}"
+         data-pagina="{{ s.pagina if s.pagina is not none else '' }}"
+         data-layout="{{ s.layout }}"
+         data-palabras="{{ s.palabras }}">
+
+  {%- if s.denso and avisos_visibles %}
+  <div class="bc-aviso-densidad">Diapositiva densa: {{ s.palabras }} palabras</div>
+  {%- endif %}
+
+  {%- if s.layout == 'portada' %}
+    {%- if s.kicker %}<p class="bc-kicker">{{ s.kicker }}</p>{% endif %}
+    <h1 class="bc-portada__titulo">{{ s.titulo_html }}</h1>
+    <hr class="bc-regla">
+    {%- if s.subtitulo %}<p class="bc-bajada">{{ s.subtitulo }}</p>{% endif %}
+    {%- if s.html %}{{ s.html }}{% endif %}
+    {%- if s.meta %}<p class="bc-portada__meta">{{ s.meta }}</p>{% endif %}
+
+  {%- elif s.layout == 'imagen' %}
+    {%- if s.imagen %}
+      <img class="bc-imagen" src="{{ s.imagen }}" alt="{{ s.pie or s.titulo }}">
+    {%- else %}
+      <div class="bc-imagen--falta">[FALTA IMAGEN: {{ s.titulo }}]</div>
+    {%- endif %}
+    <div class="bc-imagen__velo"></div>
+    {%- if s.titulo %}
+    <div class="bc-imagen__titulo"><h1>{{ s.titulo_html }}</h1></div>
+    {%- endif %}
+    {%- if s.pie or s.html %}
+    <div class="bc-imagen__pie">{% if s.pie %}<p>{{ s.pie }}</p>{% endif %}{{ s.html }}</div>
+    {%- endif %}
+
+  {%- elif s.layout == 'dato' %}
+    {%- if s.kicker %}<p class="bc-kicker">{{ s.kicker }}</p>{% endif %}
+    <div class="bc-cuerpo">
+      {%- if s.dato %}<p class="bc-dato__cifra">{{ s.dato }}</p>{% endif %}
+      {%- if s.cita %}
+        <p class="bc-dato__cita{% if s.dato %} bc-dato__cita--sin-comillas{% endif %}">{{ s.cita }}</p>
+      {%- elif s.titulo and not s.dato %}
+        <p class="bc-dato__cita">{{ s.titulo }}</p>
+      {%- elif s.titulo %}
+        <h2>{{ s.titulo }}</h2>
+      {%- endif %}
+      {{ s.html }}
+      {%- if s.fuente %}<p class="bc-dato__fuente">{{ s.fuente }}</p>{% endif %}
+    </div>
+
+  {%- elif s.layout == 'cierre' %}
+    {%- if s.kicker %}<p class="bc-kicker">{{ s.kicker }}</p>{% endif %}
+    <h1 class="bc-cierre__titulo">{{ s.titulo_html }}</h1>
+    <hr class="bc-regla">
+    <div class="bc-cuerpo">{{ s.html }}</div>
+
+  {%- elif s.layout == 'columnas' %}
+    {%- if s.kicker %}<p class="bc-kicker">{{ s.kicker }}</p>{% endif %}
+    <h1>{{ s.titulo_html }}</h1>
+    <hr class="bc-regla">
+    <div class="bc-cuerpo">
+      {%- if s.intro %}<div class="bc-intro">{{ s.intro }}</div>{% endif %}
+      <div class="bc-cols">
+        {%- for c in s.columnas %}
+        <div class="bc-col">
+          {%- if c.titulo %}<h2>{{ c.titulo }}</h2>{% endif %}
+          {{ c.html }}
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+
+  {%- else %}{# vinetas / tabla: layout por defecto #}
+    {%- if s.kicker %}<p class="bc-kicker">{{ s.kicker }}</p>{% endif %}
+    <h1>{{ s.titulo_html }}</h1>
+    <hr class="bc-regla">
+    <div class="bc-cuerpo">
+      {%- if s.subtitulo %}<h2>{{ s.subtitulo }}</h2>{% endif %}
+      {{ s.html }}
+    </div>
+  {%- endif %}
+
+  <div class="bc-folio">{{ s.slide }}{% if total %}/{{ total }}{% endif %}</div>
+  {{ indicador(s) }}
+  {%- if s.notas %}<div class="bc-notas">{{ s.notas }}</div>{% endif %}
+</section>

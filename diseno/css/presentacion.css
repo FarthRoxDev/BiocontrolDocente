@@ -1,0 +1,402 @@
+/* ============================================================
+   BIOCONTROL — Presentación 16:9 (1280x720 pt)
+   Depende de tokens.css. NINGÚN color literal acá: solo var(--bc-*).
+   Escala tipográfica propia (pt) pensada para lectura a distancia:
+   cuerpo nunca por debajo de 20pt.
+   ============================================================ */
+
+:root{
+  /* Lienzo: 1280x720 pt exactos = 16:9 = 13.333x7.5 in */
+  --bc-p-ancho:1280pt;
+  --bc-p-alto:720pt;
+
+  /* Márgenes de seguridad del lienzo */
+  --bc-p-margen-x:76pt;
+  --bc-p-margen-y:56pt;
+
+  /* Escala tipográfica de proyección (mínimo de cuerpo: 20pt) */
+  --bc-p-t-portada:76pt;
+  --bc-p-t-h1:48pt;
+  --bc-p-t-h2:32pt;
+  --bc-p-t-kicker:22pt;
+  --bc-p-t-cuerpo:28pt;
+  --bc-p-t-vineta:30pt;
+  --bc-p-t-cuerpo-min:20pt;   /* piso duro de legibilidad */
+  --bc-p-t-dato:110pt;
+  --bc-p-t-cita:44pt;
+  --bc-p-t-pie:20pt;
+  --bc-p-t-indicador:21pt;
+  --bc-p-lh:1.32;
+
+  /* Ritmo vertical */
+  --bc-p-s1:8pt; --bc-p-s2:16pt; --bc-p-s3:24pt;
+  --bc-p-s4:36pt; --bc-p-s5:52pt;
+}
+
+/* ---------- Página / lienzo ---------- */
+@page{
+  size:1280pt 720pt;   /* 16:9 exacto */
+  margin:0;
+}
+
+html,body{
+  margin:0; padding:0;
+  background:var(--bc-papel-alt);
+  color:var(--bc-tinta);
+  font-family:var(--bc-font-cuerpo);
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+}
+
+.bc-slide{
+  position:relative;
+  box-sizing:border-box;
+  width:var(--bc-p-ancho);
+  height:var(--bc-p-alto);
+  overflow:hidden;
+  background:var(--bc-papel);
+  color:var(--bc-tinta);
+  padding:var(--bc-p-margen-y) var(--bc-p-margen-x);
+  display:flex;
+  flex-direction:column;
+  page-break-after:always;
+  break-after:page;
+}
+.bc-slide:last-child{ page-break-after:auto; break-after:auto; }
+
+/* En pantalla (previsualización del mazo) separamos las diapositivas */
+@media screen{
+  body{ padding:24pt 0; }
+  .bc-mazo{ display:flex; flex-direction:column; align-items:center; gap:24pt; }
+  .bc-slide{ box-shadow:0 2pt 14pt rgba(0,0,0,.18); }
+}
+@media print{
+  body{ padding:0; background:var(--bc-papel); }
+  .bc-mazo{ display:block; }
+  .bc-slide{ box-shadow:none; }
+}
+
+/* ---------- Tipografía base ---------- */
+.bc-slide h1,.bc-slide h2,.bc-slide .bc-portada__titulo,.bc-slide .bc-cierre__titulo{
+  font-family:var(--bc-font-titulo);
+  color:var(--bc-verde-900);
+  margin:0;
+  line-height:1.1;
+  letter-spacing:-.01em;
+}
+.bc-slide h1{ font-size:var(--bc-p-t-h1); }
+.bc-slide h2{ font-size:var(--bc-p-t-h2); color:var(--bc-agua-700); }
+
+/* El tamaño de cuerpo se HEREDA desde .bc-slide: asi cualquier clase de
+   componente (.bc-kicker, .bc-dato__cifra, ...) puede pisarlo sin pelear
+   con selectores elemento+clase de mayor especificidad. */
+.bc-slide{ font-size:var(--bc-p-t-cuerpo); line-height:var(--bc-p-lh); }
+.bc-slide p{ margin:0 0 var(--bc-p-s2); }
+.bc-slide p:last-child{ margin-bottom:0; }
+.bc-slide strong{ color:var(--bc-verde-700); }
+.bc-slide em{ color:var(--bc-tierra-700); font-style:italic; }
+.bc-slide code{
+  font-family:var(--bc-font-mono);
+  font-size:.86em;
+  background:var(--bc-verde-100);
+  color:var(--bc-verde-900);
+  padding:0 .22em; border-radius:var(--bc-radio);
+}
+.bc-slide a{ color:var(--bc-agua-700); text-decoration:none; }
+
+/* Kicker (módulo / capítulo) */
+.bc-kicker{
+  font-size:var(--bc-p-t-kicker);
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--bc-tierra-500);
+  margin:0 0 var(--bc-p-s2);
+}
+
+/* Regla de identidad bajo el título */
+.bc-regla{
+  width:120pt; height:6pt; border:0; margin:var(--bc-p-s2) 0 var(--bc-p-s4);
+  background:var(--bc-tierra-500);
+  border-radius:3pt;
+}
+
+/* ---------- Indicador de página del libro (clave de la sincronía) ---------- */
+.bc-libro{
+  position:absolute;
+  right:var(--bc-p-margen-x);
+  bottom:26pt;
+  display:flex; align-items:baseline; gap:.4em;
+  padding:10pt 20pt;
+  background:var(--bc-verde-700);
+  color:var(--bc-papel);
+  border-radius:var(--bc-radio-lg);
+  font-size:var(--bc-p-t-indicador);
+  font-weight:700;
+  letter-spacing:.02em;
+  box-shadow:0 1pt 6pt rgba(0,0,0,.18);
+}
+.bc-libro__etiqueta{ font-weight:600; opacity:.88; }
+.bc-libro__num{ font-family:var(--bc-font-titulo); font-size:1.28em; }
+/* En portadas / cierres el indicador invierte para no pelear con el fondo */
+.bc-slide--portada .bc-libro,
+.bc-slide--cierre .bc-libro,
+.bc-slide--imagen .bc-libro{
+  background:var(--bc-papel);
+  color:var(--bc-verde-900);
+}
+
+/* Número de diapositiva */
+.bc-folio{
+  position:absolute;
+  left:var(--bc-p-margen-x);
+  bottom:32pt;
+  font-size:var(--bc-p-t-pie);
+  color:var(--bc-tinta-suave);
+  font-variant-numeric:tabular-nums;
+}
+.bc-slide--portada .bc-folio,
+.bc-slide--cierre .bc-folio{ color:var(--bc-verde-100); }
+.bc-slide--imagen .bc-folio{ color:var(--bc-papel); }
+
+/* Zona de contenido: deja aire para el pie fijo */
+.bc-cuerpo{
+  flex:1 1 auto;
+  min-height:0;
+  padding-bottom:var(--bc-p-s5);
+}
+
+/* ---------- Viñetas ---------- */
+.bc-lista{ list-style:none; margin:0; padding:0; }
+.bc-lista > li{
+  position:relative;
+  font-size:var(--bc-p-t-vineta);
+  padding-left:38pt;
+  margin-bottom:var(--bc-p-s3);
+}
+.bc-lista > li::before{
+  content:"";
+  position:absolute; left:0; top:.46em;
+  width:16pt; height:16pt; border-radius:50%;
+  background:var(--bc-verde-400);
+}
+.bc-lista > li > ul{ list-style:none; margin:var(--bc-p-s1) 0 0; padding:0; }
+.bc-lista > li > ul > li{
+  position:relative; padding-left:26pt; margin-top:var(--bc-p-s1);
+  font-size:var(--bc-p-t-cuerpo-min);
+  color:var(--bc-tinta-suave);
+}
+.bc-lista > li > ul > li::before{
+  content:""; position:absolute; left:2pt; top:.52em;
+  width:12pt; height:3pt; background:var(--bc-tierra-500);
+}
+
+/* Listas numeradas */
+.bc-lista--num{ counter-reset:bc-num; }
+.bc-lista--num > li{ counter-increment:bc-num; }
+.bc-lista--num > li::before{
+  content:counter(bc-num);
+  width:auto; height:auto; border-radius:0;
+  background:none;
+  top:0; left:0;
+  font-family:var(--bc-font-titulo);
+  font-weight:700;
+  font-size:.9em;
+  color:var(--bc-tierra-500);
+}
+
+/* Subtítulos dentro del cuerpo */
+.bc-slide h2{ margin:var(--bc-p-s3) 0 var(--bc-p-s2); }
+.bc-slide h3{
+  font-family:var(--bc-font-titulo);
+  font-size:var(--bc-p-t-kicker);
+  color:var(--bc-tierra-700);
+  margin:var(--bc-p-s3) 0 var(--bc-p-s1);
+}
+.bc-cuerpo h2:first-child,.bc-cuerpo h3:first-child,.bc-col h2:first-child,.bc-col h3:first-child{ margin-top:0; }
+.bc-intro{ margin-bottom:var(--bc-p-s3); }
+.bc-intro p:last-child{ margin-bottom:0; }
+
+/* Cita / frase destacada (blockquote del markdown) */
+.bc-slide blockquote{
+  margin:var(--bc-p-s3) 0;
+  padding:var(--bc-p-s2) var(--bc-p-s4);
+  border-left:8pt solid var(--bc-tierra-500);
+  background:var(--bc-tierra-100);
+  color:var(--bc-tierra-700);
+  font-family:var(--bc-font-titulo);
+  border-radius:0 var(--bc-radio) var(--bc-radio) 0;
+}
+.bc-slide blockquote p{ margin:0; }
+.bc-slide--cierre blockquote,.bc-slide--portada blockquote,
+.bc-slide--imagen blockquote{
+  background:transparent;
+  color:var(--bc-tierra-100);
+  border-left-color:var(--bc-tierra-100);
+}
+/* Subtitulos sobre fondos oscuros */
+.bc-slide--portada h2,.bc-slide--portada h3,
+.bc-slide--cierre h2,.bc-slide--cierre h3,
+.bc-slide--imagen h2,.bc-slide--imagen h3{ color:var(--bc-tierra-100); }
+
+/* Tablas */
+.bc-slide table{
+  width:100%;
+  border-collapse:collapse;
+  margin:var(--bc-p-s2) 0;
+  font-size:var(--bc-p-t-cuerpo-min);
+}
+.bc-slide th,.bc-slide td{
+  text-align:left;
+  padding:8pt 14pt;
+  border-bottom:1.5pt solid var(--bc-linea);
+  vertical-align:top;
+}
+.bc-slide th{
+  background:var(--bc-verde-100);
+  color:var(--bc-verde-900);
+  font-family:var(--bc-font-titulo);
+  font-size:var(--bc-p-t-cuerpo-min);
+  border-bottom:3pt solid var(--bc-verde-400);
+}
+.bc-slide tbody tr:nth-child(even) td{ background:var(--bc-papel-alt); }
+
+/* Layout tabla: el titular cede espacio a la tabla */
+.bc-slide--tabla h1{ font-size:var(--bc-p-t-h2); }
+.bc-slide--tabla .bc-regla{ margin-bottom:var(--bc-p-s3); }
+
+/* ---------- LAYOUT: portada de módulo ---------- */
+.bc-slide--portada{
+  background:var(--bc-verde-900);
+  color:var(--bc-verde-100);
+  justify-content:center;
+}
+.bc-slide--portada .bc-kicker{ color:var(--bc-tierra-500); }
+.bc-slide--portada .bc-portada__titulo{
+  font-size:var(--bc-p-t-portada);
+  color:var(--bc-papel);
+  max-width:84%;
+}
+.bc-slide--portada .bc-regla{ background:var(--bc-tierra-500); width:170pt; }
+.bc-bajada{ max-width:72%; }
+.bc-slide--portada .bc-portada__meta{
+  margin-top:var(--bc-p-s4);
+  font-size:var(--bc-p-t-pie);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--bc-verde-400);
+}
+
+/* ---------- LAYOUT: título + viñetas ---------- */
+.bc-slide--vinetas .bc-cuerpo{ display:flex; flex-direction:column; justify-content:flex-start; }
+
+/* ---------- LAYOUT: dos columnas ---------- */
+.bc-slide--columnas .bc-cols{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:46pt;
+  height:100%;
+}
+.bc-slide--columnas .bc-col{ min-width:0; }
+.bc-slide--columnas .bc-col + .bc-col{
+  border-left:2pt solid var(--bc-linea);
+  padding-left:46pt;
+}
+.bc-slide--columnas .bc-col h2{
+  color:var(--bc-agua-700);
+  margin-bottom:var(--bc-p-s2);
+}
+
+/* ---------- LAYOUT: imagen a sangre con pie ---------- */
+.bc-slide--imagen{ padding:0; background:var(--bc-verde-900); }
+.bc-slide--imagen .bc-imagen{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+}
+.bc-slide--imagen .bc-imagen--falta{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--bc-verde-700);
+  color:var(--bc-verde-100);
+  font-size:var(--bc-p-t-h2);
+  font-family:var(--bc-font-titulo);
+}
+.bc-slide--imagen .bc-imagen__velo{
+  position:absolute; left:0; right:0; bottom:0; height:46%;
+  background:linear-gradient(to top,var(--bc-verde-900),transparent);
+}
+.bc-slide--imagen .bc-imagen__pie{
+  font-size:var(--bc-p-t-cuerpo);
+  position:absolute;
+  left:var(--bc-p-margen-x); right:300pt; bottom:92pt;
+  color:var(--bc-papel);
+  margin:0;
+}
+.bc-slide--imagen .bc-imagen__pie strong{ color:var(--bc-papel); }
+.bc-slide--imagen .bc-imagen__titulo{
+  position:absolute;
+  left:var(--bc-p-margen-x); right:var(--bc-p-margen-x); top:var(--bc-p-margen-y);
+  color:var(--bc-papel);
+  text-shadow:0 1pt 8pt rgba(0,0,0,.45);
+}
+.bc-slide--imagen .bc-imagen__titulo h1{ color:var(--bc-papel); }
+
+/* ---------- LAYOUT: cita / dato grande ---------- */
+.bc-slide--dato{ background:var(--bc-verde-100); justify-content:center; }
+.bc-slide--dato .bc-cuerpo{ display:flex; flex-direction:column; justify-content:center; }
+.bc-dato__cifra{
+  font-family:var(--bc-font-titulo);
+  font-size:var(--bc-p-t-dato);
+  line-height:1;
+  color:var(--bc-verde-700);
+  margin:0 0 var(--bc-p-s2);
+}
+.bc-dato__cita{
+  font-family:var(--bc-font-titulo);
+  font-size:var(--bc-p-t-cita);
+  line-height:1.24;
+  color:var(--bc-verde-900);
+  margin:0;
+  max-width:88%;
+}
+.bc-dato__cita::before{ content:"\201C"; color:var(--bc-tierra-500); }
+.bc-dato__cita::after{ content:"\201D"; color:var(--bc-tierra-500); }
+.bc-dato__cita--sin-comillas::before,
+.bc-dato__cita--sin-comillas::after{ content:none; }
+.bc-dato__fuente{
+  margin-top:var(--bc-p-s3);
+  font-size:var(--bc-p-t-pie);
+  color:var(--bc-tinta-suave);
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+
+/* ---------- LAYOUT: cierre de sección ---------- */
+.bc-slide--cierre{
+  background:var(--bc-verde-700);
+  color:var(--bc-verde-100);
+  justify-content:center;
+}
+.bc-slide--cierre .bc-kicker{ color:var(--bc-tierra-100); }
+.bc-slide--cierre .bc-cierre__titulo{
+  color:var(--bc-papel);
+  font-size:var(--bc-p-t-h1);
+  max-width:80%;
+}
+.bc-slide--cierre .bc-regla{ background:var(--bc-tierra-100); }
+.bc-slide--cierre .bc-lista > li::before{ background:var(--bc-tierra-100); }
+
+/* ---------- Aviso de densidad (solo en pantalla, nunca al imprimir) ---------- */
+.bc-aviso-densidad{
+  position:absolute; left:0; top:0;
+  padding:6pt 12pt;
+  background:var(--bc-alerta-600);
+  color:var(--bc-papel);
+  font-size:var(--bc-p-t-pie);
+  font-weight:700;
+}
+@media print{ .bc-aviso-densidad{ display:none; } }
+
+/* Las notas del expositor nunca se ven en el lienzo */
+.bc-notas{ display:none; }
