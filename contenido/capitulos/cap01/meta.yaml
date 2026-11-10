@@ -1,0 +1,84 @@
+# ============================================================
+# Capítulo 01 — metadatos
+# AVISO: Contenido de muestra generado para demostrar el formato.
+# Reemplazar con el material del docente antes de usar en clase.
+# ============================================================
+
+capitulo: 1
+id: cap01
+modulo: 1
+titulo: "[MUESTRA] Biofertilización y micorrizas"
+subtitulo: "Qué son, cómo se presentan, cuándo se aplican y cómo reconocer un producto de buena calidad"
+
+estado: muestra          # muestra | borrador | revisado | aprobado
+es_muestra: true
+aviso_muestra: >
+  Contenido de muestra generado para demostrar el formato.
+  Reemplazar con el material del docente antes de usar en clase.
+
+# --- Atribución --------------------------------------------------------
+# NO se atribuye a ningún docente: este capítulo no se basa en material
+# aportado por los profesores del curso. Al pegar la fuente real en
+# 01-fuente.md, completar estos campos con el docente que la aportó.
+docente: null            # <!-- FALTA: confirmar con el docente -->
+docente_revisor: null    # <!-- FALTA: confirmar con el docente -->
+fuente_material: null    # archivo PPTX/DOCX/PDF de origen
+fecha_material: null
+
+curso: "Biocontrol y manejo biológico para productores agrícolas"
+institucion: "Laboratorio de Biocontrol, Centro de Investigación en Biotecnología (CIB) — TEC, Costa Rica"
+publico: "Productores agrícolas"
+
+# --- Dictado -----------------------------------------------------------
+duracion_min: 90         # orientativo, verificar con la programación del curso
+duracion_detalle:
+  exposicion_min: 55
+  ejercicios_min: 25
+  cierre_min: 10
+
+# --- Paginación --------------------------------------------------------
+# Numeración GLOBAL del libro, tomada de salidas/libro/cap01-paginas.json
+# (lo produce construir_libro.py al medir el PDF). Las diapositivas de
+# 05-diapositivas.md apuntan a estas mismas páginas. Si el texto cambia de
+# largo, regenerar el libro y reajustar las marcas y los `pagina:`.
+pagina_inicio: 4
+paginas_total: 18
+
+# --- Objetivos de aprendizaje -----------------------------------------
+objetivos:
+  - "Explicar con palabras propias qué es un biofertilizante y en qué se diferencia de un fertilizante de síntesis."
+  - "Identificar los principales grupos de biofertilizantes: micorrizas arbusculares, fijadores de nitrógeno y solubilizadores de fósforo."
+  - "Reconocer las presentaciones comerciales más comunes y para qué sirve cada una."
+  - "Decidir en qué momento del cultivo conviene aplicar cada tipo de biofertilizante."
+  - "Evaluar la compatibilidad de un biofertilizante con otros productos antes de mezclarlo."
+  - "Revisar la etiqueta de un biofertilizante y detectar señales de mala calidad."
+
+temas:
+  - tipos de biofertilizantes
+  - presentaciones comerciales
+  - usos recomendados
+  - compatibilidad y tiempos de aplicación
+  - características de buena calidad
+
+requisitos_previos:
+  - "Ninguno. Se parte de la experiencia de campo del participante."
+
+materiales_clase:
+  - "Dos o tres envases reales de biofertilizante con su etiqueta (para el ejercicio de lectura de etiqueta)."
+  - "Raíces frescas de un cultivo con y sin inoculación, si están disponibles."
+  - "Un balde, agua y una jarra transparente para la prueba de compatibilidad."
+  - "Calculadora o celular para el ejercicio de cálculo."
+
+archivos:
+  fuente: 01-fuente.md
+  libro: 02-libro.md
+  ejercicios: 03-ejercicios.md
+  docente: 04-docente.md
+  diapositivas: 05-diapositivas.md
+
+# --- Control de datos faltantes ---------------------------------------
+# Todo dato numérico técnico (dosis, concentraciones, precios, cepas
+# comerciales) quedó marcado en el texto con:
+#   <!-- FALTA: confirmar con el docente -->
+# Buscar esos marcadores antes de aprobar el capítulo.
+datos_pendientes: true
