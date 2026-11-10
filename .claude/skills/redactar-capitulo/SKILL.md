@@ -29,6 +29,11 @@ reglas de muestra (ver abajo).
    <!-- pagina: N -->
    ```
    Un tema por página o por par de páginas; no partir un concepto en dos.
+   **La numeración es global**, no relativa al capítulo: delante van portada,
+   créditos e índice. Son marcas de orientación: tras construir el libro,
+   reajustarlas con las páginas reales de
+   `salidas/libro/capNN-paginas.json` y volver a mirar los `pagina:` de
+   `05-diapositivas.md`.
 3. **Front-matter** con `capitulo`, `titulo`, `pagina_inicio`,
    `paginas_total`, `estado`.
 4. **Página 1:** título, entrada corta que diga por qué le importa al
@@ -85,8 +90,10 @@ Un productor puede actuar sobre una dosis inventada y perder una cosecha.
 - [ ] `grep -n "FALTA" 02-libro.md` — ningún número inventado donde debería
       haber un marcador.
 - [ ] Bloques `:::` balanceados (cada apertura con su cierre).
-- [ ] Marcas `<!-- pagina: N -->` consecutivas desde 1, sin saltos.
-- [ ] `paginas_total` de `meta.yaml` == última marca de página.
+- [ ] Marcas `<!-- pagina: N -->` crecientes y coherentes con
+      `salidas/libro/capNN-paginas.json` tras construir el libro.
+- [ ] `pagina_inicio` y `paginas_total` de `meta.yaml` == lo que mide el
+      build (el cuerpo del capítulo, sin los ejercicios).
 - [ ] Todos los objetivos de `meta.yaml` cubiertos por el texto.
 - [ ] Cada término técnico definido en `:::glosario` en su primera aparición.
 - [ ] `wc -w 02-libro.md` coherente con las páginas declaradas.
@@ -94,6 +101,8 @@ Un productor puede actuar sobre una dosis inventada y perder una cosecha.
 ## Build
 
 ```bash
-python3 build/scripts/construir_libro.py --capitulo capNN
+python3 build/scripts/construir_libro.py --capitulo capNN   # HTML + PDF + capNN-paginas.json
 python3 build/scripts/verificar_sync.py --capitulo capNN
 ```
+Construir, leer la paginación medida, reajustar las marcas y las
+diapositivas, y volver a construir hasta que `verificar_sync.py` dé OK.

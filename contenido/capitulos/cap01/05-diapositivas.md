@@ -216,6 +216,7 @@ hay raíces, usar fotos grandes de nódulos cortados.
 Si hay tiempo y material, hacer aquí la actividad de la página 10 (15 min) y
 recortar después la pausa de ejercicios.
 No dar número esperable de nódulos por planta: pendiente de confirmar.
+<!-- FALTA: confirmar con el docente — nódulos esperables por planta -->
 :::
 
 ---
@@ -242,6 +243,7 @@ una raíz mejor desarrollada y un arranque más parejo.
 No dar ninguna cifra de ahorro de fertilizante: el dato está pendiente de
 confirmar con el docente y es exactamente el tipo de número sobre el que un
 productor actúa.
+<!-- FALTA: confirmar con el docente — ajuste posible de la dosis de N -->
 :::
 
 ---
@@ -267,6 +269,7 @@ lo mismo**. Mostrar un análisis de suelo real si se tiene.
 Caso de la página 11: el productor que sube la dosis de fósforo año tras año
 sin ver respuesta. Lo que hace falta es corregir la acidez y liberar el
 fósforo ya acumulado, no seguir subiendo la dosis.
+<!-- FALTA: confirmar con el docente — cepas comerciales disponibles en el país -->
 :::
 
 ---
@@ -293,6 +296,7 @@ de biocontrol **no son líneas firmes**: muchos microorganismos hacen las
 tres cosas en distinta medida.
 Anunciar que *Trichoderma* se retoma en el módulo 4.
 Dosis de cada grupo: pendiente de confirmar. No improvisar.
+<!-- FALTA: confirmar con el docente — dosis por grupo -->
 :::
 
 ---
@@ -322,6 +326,7 @@ Insistir en el envase en el carro: el microorganismo se muere y el envase
 sigue viéndose igual. Es una de las causas de falla más frecuentes y menos
 reconocidas.
 Vida útil por presentación: pendiente de confirmar; remitir a la etiqueta.
+<!-- FALTA: confirmar con el docente — vida útil por presentación -->
 :::
 
 ---
@@ -351,6 +356,7 @@ ya hacen podrían montar la aplicación sin agregar un viaje al lote?».
 Aquí va la actividad de la línea de tiempo de la página 14 (10 min). Si el
 tiempo aprieta, dejarla de tarea.
 Frecuencia de refuerzos en cultivo establecido: pendiente de confirmar.
+<!-- FALTA: confirmar con el docente — frecuencia de refuerzos -->
 :::
 
 ---
@@ -379,6 +385,7 @@ La pregunta de fondo, siempre: «¿esto que voy a mezclar mata hongos o
 bacterias?». Si la respuesta es sí o quizás, no se mezcla.
 Tiempos de separación entre fungicida y biofertilizante: pendiente de
 confirmar. Decir «la etiqueta manda».
+<!-- FALTA: confirmar con el docente — tiempos de separación -->
 :::
 
 ---
@@ -437,6 +444,7 @@ Alerta: sin especie · sin concentración · vencido · envase hinchado · al so
 ejercicio sale solo.
 Concentración mínima aceptable por tipo de producto: pendiente de
 confirmar. No dar un número de memoria.
+<!-- FALTA: confirmar con el docente — concentración mínima aceptable -->
 :::
 
 ---

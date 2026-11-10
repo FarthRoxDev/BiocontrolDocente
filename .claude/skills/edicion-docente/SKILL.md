@@ -58,7 +58,8 @@ escribe: necesita el libro, los ejercicios y las diapositivas ya hechos.
 
 - [ ] Las siete secciones presentes.
 - [ ] Los tramos del guion suman `duracion_min`.
-- [ ] Cada tramo cita una diapositiva y una página que existen.
+- [ ] Cada tramo cita una diapositiva y una página que existen (las páginas,
+      contra `salidas/libro/capNN-paginas.json`).
 - [ ] **Todos** los ejercicios tienen respuesta explicada, subítems
       incluidos.
 - [ ] Las respuestas coinciden con la clave de `03-ejercicios.md` (comparar
@@ -70,6 +71,11 @@ escribe: necesita el libro, los ejercicios y las diapositivas ya hechos.
 ## Build
 
 ```bash
-python3 build/scripts/construir_libro.py --capitulo capNN --edicion docente
+python3 build/scripts/construir_libro.py --capitulo capNN
 python3 build/scripts/verificar_sync.py --capitulo capNN
 ```
+La edición docente propiamente dicha (franja lateral, cuadro «antes de la
+clase», minutaje al margen) **todavía no la emite el build**: su
+especificación está en `plantillas/docente/README.md` y la implementa el
+agente de maquetación. Comprobar con `--help` si ya existe una bandera de
+edición antes de prometerla.

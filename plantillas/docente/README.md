@@ -145,7 +145,26 @@ plantillas/docente/
 
 ## Build
 
+La bandera de edición **aún no existe** en `construir_libro.py` (hoy acepta
+`--capitulo`, `--salida`, `--fuente`, `--ejercicios`, `--sin-pdf`).
+Implementarla como parte de esta plantilla:
+
 ```bash
 python3 build/scripts/construir_libro.py --capitulo cap01 --edicion docente
 python3 build/scripts/verificar_sync.py --capitulo cap01
 ```
+
+Mientras no exista, la edición docente se compone a mano desde
+`salidas/libro/cap01.html` y `salidas/libro/cap01-paginas.json`, que ya
+traen la paginación global medida sobre el PDF.
+
+
+---
+
+## Estado
+
+La bandera `--edicion docente` de `construir_libro.py` **ya esta implementada**:
+agrega `diseno/css/docente.css` sobre `libro.css`, anexa `04-docente.md` como
+seccion «Solo para el docente» y escribe en `salidas/docente/`. La edicion
+docente reimprime el libro del productor identico y le suma la guia, para que
+el docente estudie exactamente la pagina que el productor tiene delante.

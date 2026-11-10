@@ -625,6 +625,8 @@ def main(argv=None) -> int:
     ap.add_argument("--fuente", help="markdown alternativo (por defecto contenido/capitulos/<cap>/02-libro.md)")
     ap.add_argument("--ejercicios", help="markdown adicional con bloques :::ejercicio y :::clave")
     ap.add_argument("--sin-pdf", action="store_true", help="solo generar el HTML")
+    ap.add_argument("--edicion", choices=("productor", "docente"), default="productor",
+                    help="'docente' agrega la guia de clase y las respuestas explicadas")
     args = ap.parse_args(argv)
 
     cap = args.capitulo
@@ -641,6 +643,20 @@ def main(argv=None) -> int:
 
     tokens = CSS_TOKENS.read_text(encoding="utf-8")
     css_libro = CSS_LIBRO.read_text(encoding="utf-8")
+
+    # La edicion docente es el mismo libro del productor con una capa
+    # encima: mismas paginas, misma maquetacion, para que el docente
+    # estudie exactamente lo que el productor tiene delante.
+    es_docente = args.edicion == "docente"
+    if es_docente:
+        css_docente = CSS_LIBRO.parent / "docente.css"
+        if not css_docente.exists():
+            print(f"error: falta {css_docente}", file=sys.stderr)
+            return 2
+        css_libro += "\n" + css_docente.read_text(encoding="utf-8")
+        if args.salida == "salidas/libro":
+            salida = RAIZ / "salidas" / "docente"
+            salida.mkdir(parents=True, exist_ok=True)
 
     # --- metadatos -----------------------------------------------------
     meta = leer_yaml(dir_cap / "meta.yaml")
@@ -671,6 +687,7 @@ def main(argv=None) -> int:
         "licencia": meta.get("licencia", ""),
         "nota_legal": meta.get("nota_legal", ""),
         "muestra": bool(meta.get("muestra", "[MUESTRA]" in str(capitulo["titulo"]))),
+        "edicion_docente": es_docente,
     }
     creditos = meta.get("creditos") or (
         [{"rol": "Material del docente", "nombre": capitulo["docente"]}]
@@ -694,6 +711,24 @@ def main(argv=None) -> int:
     # El título del capítulo ya lo compone la apertura: si el markdown
     # abre con un h1, se descarta para no repetirlo.
     cuerpo_html = re.sub(r"<h1[^>]*>.*?</h1>", "", cuerpo_html, count=1, flags=re.DOTALL)
+
+    # --- guia del docente ----------------------------------------------
+    if es_docente:
+        ruta_docente = dir_cap / "04-docente.md"
+        if ruta_docente.exists():
+            _, cuerpo_doc = partir_frontmatter(ruta_docente.read_text(encoding="utf-8"))
+            # El h1 propio del archivo se reemplaza por el rotulo de la seccion.
+            cuerpo_doc = re.sub(r"(?m)^#\s+.*$", "", cuerpo_doc, count=1)
+            html_doc = render_nodos(parsear_bloques(cuerpo_doc), ruta_docente.parent, {})
+            cuerpo_html += (
+                '<section class="bc-docente">'
+                '<p class="bc-docente__rotulo">Solo para el docente</p>'
+                '<h1>Guia de clase y respuestas explicadas</h1>'
+                + html_doc + '</section>'
+            )
+        else:
+            print(f"  aviso: no existe {ruta_docente}; la edicion docente "
+                  "sale sin guia de clase", file=sys.stderr)
 
     cuerpo_html, indice, numeracion_propia = preparar_headings(cuerpo_html, numero_int)
 

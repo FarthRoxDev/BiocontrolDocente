@@ -23,7 +23,8 @@ material del docente (.pptx/.docx/.pdf)
 
 ```bash
 python3 build/scripts/ingerir_fuentes.py contenido/fuentes/*.pptx --capitulo cap01 --docente "Nombre"
-python3 build/scripts/construir_libro.py --capitulo cap01
+python3 build/scripts/construir_libro.py --capitulo cap01                 # libro del productor
+python3 build/scripts/construir_libro.py --capitulo cap01 --edicion docente  # edicion docente
 python3 build/scripts/construir_presentacion.py --capitulo cap01
 python3 build/scripts/verificar_sync.py --capitulo cap01     # libro ↔ presentación
 ```

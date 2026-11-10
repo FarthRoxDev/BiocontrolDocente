@@ -40,11 +40,24 @@ enseñó.**
    gramos por bolsa, conversión ha ↔ m²). Si las dosis reales no están
    confirmadas, usar números **ficticios y declararlo en voz alta** en el
    enunciado, con `<!-- FALTA: confirmar con el docente -->` al lado.
-7. **Clave de respuestas al final**, tras un separador, con el título
-   `# Clave de respuestas`. Para cada ejercicio: la respuesta, y en los
-   falso/verdadero el motivo del falso en una línea. El razonamiento
-   extenso va en `04-docente.md`, no aquí.
-8. Front-matter con `capitulo`, `titulo`, `estado`, `ejercicios_total`.
+7. **Envolver cada ejercicio** en el bloque que el maquetador extrae:
+   ```
+   :::ejercicio{tipo="seleccion" renglones=1}
+   **1. Título corto** *(página 5)*
+   ...enunciado y opciones...
+   :::
+   ```
+   `tipo`: `seleccion`, `falso-verdadero`, `relacionar`, `caso`, `calculo`.
+   `renglones=N` = renglones en blanco para escribir. `recuadro=si` encierra
+   el ejercicio en una caja. Sin estos bloques, `construir_libro.py` deja la
+   sección de ejercicios **vacía**.
+8. **Clave de respuestas al final**, tras `# Clave de respuestas`, dentro de
+   un bloque `:::clave` y como **lista de markdown, un ítem por ejercicio**
+   (así la extrae el maquetador). La respuesta y, en los falso/verdadero, el
+   motivo del falso en una línea. El razonamiento extenso va en
+   `04-docente.md`, no aquí.
+9. Front-matter con `capitulo`, `titulo`, `estado`, `ejercicios_total` y,
+   opcionalmente, `instruccion_ejercicios`.
 
 ## Reglas
 
@@ -59,6 +72,8 @@ enseñó.**
 ## Verificar antes de terminar
 
 - [ ] 12–15 ejercicios, todos los tipos presentes.
+- [ ] Cada ejercicio dentro de `:::ejercicio{...}`; la clave dentro de
+      `:::clave` como lista.
 - [ ] Cada ejercicio cita una página que existe en `02-libro.md`.
 - [ ] Cada objetivo de `meta.yaml` evaluado al menos una vez.
 - [ ] La clave cubre **todos** los ejercicios y todos los subítems.
@@ -70,5 +85,8 @@ enseñó.**
 ## Build
 
 ```bash
+# los ejercicios se toman de 03-ejercicios.md del capítulo
 python3 build/scripts/construir_libro.py --capitulo capNN
 ```
+Si el PDF sale sin la sección de ejercicios, los bloques `:::ejercicio` no
+se están reconociendo: revisar la sintaxis antes de seguir.

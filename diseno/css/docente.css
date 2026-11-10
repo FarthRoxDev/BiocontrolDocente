@@ -1,0 +1,61 @@
+/* ============================================================
+   Edición docente — capa sobre libro.css.
+   Solo añade: el libro del productor se imprime idéntico debajo,
+   para que el docente estudie exactamente la página que ellos tienen.
+   ============================================================ */
+
+/* Marca de edición en la portada y en los corridos */
+.bc-portada::after{
+  content:"EDICIÓN DOCENTE";
+  position:absolute; bottom:28mm; left:22mm;
+  font-family:var(--bc-font-cuerpo); font-size:10pt; font-weight:700;
+  letter-spacing:.22em; color:var(--bc-tierra-500);
+  border:1.5px solid var(--bc-tierra-500); border-radius:var(--bc-radio);
+  padding:var(--bc-s2) var(--bc-s4);
+}
+
+/* La clave de respuestas deja de ser material aparte: aquí se lee */
+.bc-clave{ break-before:auto; }
+
+/* --- Guía del docente --------------------------------------- */
+.bc-docente{
+  break-before:page;
+  border-top:3px solid var(--bc-tierra-500);
+  padding-top:var(--bc-s5);
+}
+.bc-docente__rotulo{
+  font-family:var(--bc-font-cuerpo); font-size:var(--bc-t-micro);
+  letter-spacing:.2em; text-transform:uppercase;
+  color:var(--bc-tierra-700); margin:0 0 var(--bc-s2);
+}
+.bc-docente h1{ font-size:var(--bc-t-h1); color:var(--bc-verde-900); margin:0 0 var(--bc-s5); }
+
+/* Cada tramo del guion de clase lleva franja lateral: el docente
+   la sigue con el dedo mientras habla. */
+.bc-docente h2{
+  font-family:var(--bc-font-titulo); font-size:var(--bc-t-h2);
+  color:var(--bc-verde-700);
+  border-left:5px solid var(--bc-verde-700);
+  padding-left:var(--bc-s3); margin:var(--bc-s6) 0 var(--bc-s3);
+  break-after:avoid;
+}
+.bc-docente h3{
+  font-family:var(--bc-font-cuerpo); font-size:var(--bc-t-h3); font-weight:700;
+  color:var(--bc-tierra-700);
+  border-left:3px solid var(--bc-tierra-500);
+  padding-left:var(--bc-s3); margin:var(--bc-s5) 0 var(--bc-s2);
+  break-after:avoid;
+}
+.bc-docente p, .bc-docente li{ font-size:10.5pt; line-height:var(--bc-lh-cuerpo); }
+.bc-docente blockquote{
+  margin:var(--bc-s3) 0; padding:var(--bc-s3) var(--bc-s4);
+  background:var(--bc-agua-100); border-left:4px solid var(--bc-agua-500);
+  border-radius:0 var(--bc-radio) var(--bc-radio) 0;
+  break-inside:avoid;
+}
+.bc-docente table{ font-size:9.5pt; }
+.bc-docente h2, .bc-docente h3, .bc-docente blockquote{ break-inside:avoid; }
+
+/* Los minutajes del guion ("0–05 min · Apertura") se destacan solos
+   porque ya vienen en el h3; no se añade numeración automática. */
+.bc-docente :is(h2,h3)::before{ content:none !important; }

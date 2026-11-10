@@ -14,11 +14,13 @@ estado: muestra
 > etiquetados «orientativo, verificar». **No aplicar nada de este capítulo
 > en campo sin confirmar los números con el técnico o el docente.**
 
-<!-- Las marcas `<!-- pagina: N -->` son la paginación GLOBAL del libro
-     (este capítulo ocupa las páginas 4–21). La autoridad es
+<!-- Las marcas de pagina de abajo son la paginacion GLOBAL del libro
+     (este capitulo ocupa las paginas 4-21). La autoridad es
      salidas/libro/cap01-paginas.json, que produce construir_libro.py al
      medir el PDF: si el texto cambia de largo, volver a generar el libro y
-     reajustar estas marcas y los `pagina:` de 05-diapositivas.md. -->
+     reajustar estas marcas y los campos de pagina de 05-diapositivas.md.
+     No escribir comentarios HTML anidados aqui: cierran el comentario
+     antes de tiempo y el texto se imprime en el PDF. -->
 
 <!-- pagina: 4 -->
 
@@ -215,7 +217,7 @@ Antes de invertir en un inoculante micorrícico, vale la pena mirar el
 análisis de suelo.
 :::
 
-<!-- pagina: 9 -->
+<!-- pagina: 8 -->
 
 ### Cultivos que responden y cultivos que no
 

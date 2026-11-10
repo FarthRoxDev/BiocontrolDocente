@@ -19,9 +19,16 @@ libro que el productor tiene abierto; no lo repite ni lo sustituye.
 
 ## Pasos
 
-1. **Listar las páginas reales del libro.**
-   `grep -n "pagina: " 02-libro.md`
-   Ninguna diapositiva puede apuntar a una página que no esté en esa lista.
+1. **Construir el libro primero y leer su paginación real.**
+   ```bash
+   python3 build/scripts/construir_libro.py --capitulo capNN
+   python3 -c "import json;print(json.load(open('salidas/libro/capNN-paginas.json'))['secciones'])"
+   ```
+   `salidas/libro/capNN-paginas.json` es **la autoridad**: lleva la página
+   **global** del libro de cada sección, medida sobre el PDF. Las marcas
+   `<!-- pagina: N -->` de `02-libro.md` son orientación; si discrepan, gana
+   el JSON. El capítulo **no** empieza en la página 1: hay portada,
+   créditos e índice delante.
 2. **Planificar 14–18 diapositivas** cubriendo todas las páginas. Una
    página puede tener varias diapositivas; una diapositiva apunta a **una
    sola** página.
@@ -34,12 +41,20 @@ libro que el productor tiene abierto; no lo repite ni lo sustituye.
    layout: titulo-contenido
    ---
    ```
-   `layout`: `portada`, `titulo-contenido`, `dos-columnas`, `comparacion`,
-   `tabla`, `imagen-texto`, `cierre`.
+   `layout`: `portada`, `vinetas`, `columnas`, `tabla`, `imagen`, `dato`,
+   `cierre` (se aceptan alias: `titulo-contenido`, `dos-columnas`,
+   `comparacion`, `imagen-texto`). En `columnas`, partir el cuerpo con una
+   línea `+++` o con dos subtítulos `###`, o el constructor avisa y manda
+   todo a la primera columna.
+   Añadir también `seccion: <slug-de-la-seccion>` tomado del JSON de
+   paginación: con eso `verificar_sync.py` valida la diapositiva contra una
+   sección concreta y no solo contra el rango del capítulo.
 4. **Contenido de cada diapositiva:** un título que sea una afirmación, no
    una etiqueta («Entre más temprano, mejor», no «Momento de aplicación»).
-   Como máximo 6 líneas o 5 viñetas. Nada de párrafos: el párrafo va en el
-   libro.
+   **Máximo 40 palabras de cuerpo** — `construir_presentacion.py` avisa por
+   encima de ese umbral. Nada de párrafos: el párrafo va en el libro. Las
+   notas del expositor no cuentan para ese límite, así que el detalle va
+   ahí.
 5. **Notas del expositor** en bloque `:::notas` al final de cada
    diapositiva, con:
    - el tramo de minutos del guion de `04-docente.md`
@@ -66,8 +81,10 @@ libro que el productor tiene abierto; no lo repite ni lo sustituye.
 ## Verificar antes de terminar
 
 - [ ] 14–18 diapositivas, numeración `slide:` consecutiva desde 1.
-- [ ] Todo `pagina:` existe como `<!-- pagina: N -->` en `02-libro.md`
-      (comparar las dos listas con `grep`).
+- [ ] Todo `pagina:` coincide con la página de su sección en
+      `salidas/libro/capNN-paginas.json`.
+- [ ] Toda diapositiva con `seccion:`, salvo la portada.
+- [ ] `construir_presentacion.py` sin avisos (ni de palabras ni de layout).
 - [ ] Cada página del libro aparece en al menos una diapositiva.
 - [ ] Toda diapositiva tiene `:::notas`.
 - [ ] Los tiempos de las notas suman la duración de `meta.yaml`.
