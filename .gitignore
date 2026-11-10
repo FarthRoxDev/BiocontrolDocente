@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+salidas/**/*.pdf
+salidas/**/*.pptx
+salidas/**/*.png
+!salidas/.gitkeep
+.DS_Store

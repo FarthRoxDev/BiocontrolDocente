@@ -1,0 +1,53 @@
+/* ============================================================
+   BIOCONTROL — Sistema de diseño (tokens compartidos)
+   Fuente única de verdad para libro, presentación y edición docente.
+   NO redefinir colores en otros archivos: usar var(--bc-*).
+   ============================================================ */
+:root{
+  /* --- Paleta ---------------------------------------------- */
+  --bc-verde-900:#0C3F28;   /* titulares, portada */
+  --bc-verde-700:#14633F;   /* PRIMARIO — identidad biocontrol */
+  --bc-verde-400:#4E9B6E;
+  --bc-verde-100:#E6F1EA;   /* fondos de bloque */
+
+  --bc-tierra-700:#9A5C13;  /* ocre suelo — acento cálido */
+  --bc-tierra-500:#D08A2C;  /* SECUNDARIO — subtítulos, viñetas */
+  --bc-tierra-100:#FBF0DC;  /* fondo de "Ejemplo" */
+
+  --bc-agua-700:#1F5A73;
+  --bc-agua-500:#2B7A9B;    /* notas, datos, agua/riego */
+  --bc-agua-100:#E4F0F5;    /* fondo de "Nota" */
+
+  --bc-alerta-600:#B3432B;  /* precaución, dosis, fitotoxicidad */
+  --bc-alerta-100:#FBE8E3;
+
+  --bc-papel:#FAF7F0;       /* fondo página (crema, tipo libro) */
+  --bc-papel-alt:#F2EDE2;
+  --bc-tinta:#1A2420;       /* texto cuerpo */
+  --bc-tinta-suave:#5A6560; /* texto secundario, pies de figura */
+  --bc-linea:#D8D2C4;
+
+  /* --- Tipografía ------------------------------------------ */
+  --bc-font-titulo:"Bitter","Georgia",serif;
+  --bc-font-cuerpo:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --bc-font-mono:"JetBrains Mono","Consolas",monospace;
+
+  --bc-t-h1:28pt; --bc-t-h2:18pt; --bc-t-h3:13.5pt;
+  --bc-t-cuerpo:11pt; --bc-t-pie:9pt; --bc-t-micro:8pt;
+  --bc-lh-cuerpo:1.55;
+
+  /* --- Retícula y espaciado -------------------------------- */
+  --bc-pagina-ancho:210mm; --bc-pagina-alto:297mm;      /* A4 libro */
+  --bc-margen-sup:18mm; --bc-margen-inf:18mm;
+  --bc-margen-int:22mm; --bc-margen-ext:16mm;            /* lomo mayor */
+  --bc-col-gap:8mm;
+  --bc-s1:4px; --bc-s2:8px; --bc-s3:12px; --bc-s4:16px;
+  --bc-s5:24px; --bc-s6:32px; --bc-s7:48px;
+  --bc-radio:6px; --bc-radio-lg:12px;
+
+  /* --- Presentación (16:9) --------------------------------- */
+  --bc-slide-ancho:338.67mm; --bc-slide-alto:190.5mm;    /* 1280x720pt */
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .bc-ui{ --bc-papel:#15191A; --bc-tinta:#EDEAE2; }
+}
