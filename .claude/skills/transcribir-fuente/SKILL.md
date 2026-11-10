@@ -16,6 +16,22 @@ didáctico.** La redacción viene después.
 
 ## Pasos
 
+0. **Probar primero el ingestor automático.** Para PPTX, DOCX y PDF con texto
+   resuelve el 90 % del trabajo, incluidas las imágenes:
+
+   ```bash
+   python3 build/scripts/ingerir_fuentes.py contenido/fuentes/<archivos> \
+       --capitulo capNN --docente "Nombre del docente"
+   ```
+
+   Escribe `01-fuente.md` y guarda las imágenes incrustadas en
+   `diseno/assets/capNN/`, dejando en el markdown la ruta relativa lista para
+   pegar en un bloque `:::figura`. Revisá su salida y completá a mano solo lo
+   que haya marcado: gráficos nativos de PowerPoint (no se pueden extraer),
+   páginas escaneadas sin texto, y formatos EMF/WMF que hay que reexportar a
+   PNG. Los pasos de abajo son para lo que el ingestor no cubre: escaneos,
+   fotos de pizarra y audio.
+
 1. **Guardar el original intacto** en `referencias/`. No editarlo nunca.
 2. **Extraer el texto** según el formato:
    - PPTX: `python3 -c` con `python-pptx`, o descomprimir y leer

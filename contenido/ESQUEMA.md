@@ -27,7 +27,7 @@ convierte en cajas con el color del token correspondiente.
 :::glosario        (verde claro — definición de término)
 :::sabias-que      (verde claro — curiosidad)
 :::actividad       (ejercicio intercalado en la página)
-:::figura{src="..." pie="..."}
+:::figura{src="../../../diseno/assets/capNN/foto.jpg" pie="..."}
 :::tabla{titulo="..."}
 ```
 
@@ -45,6 +45,18 @@ titulo: "Tipos de biofertilizantes"
 
 El script `build/scripts/verificar-sync.py` falla si una diapositiva
 apunta a una página que el libro no produjo.
+
+## Figuras
+
+`ingerir_fuentes.py` extrae las imágenes incrustadas del material del docente a
+`diseno/assets/capNN/` y deja en `01-fuente.md` la referencia con la ruta
+relativa ya correcta: se copia tal cual dentro de un bloque `:::figura`.
+
+El ingestor marca por su cuenta lo que conviene mirar: imágenes repetidas
+(logos de plantilla), imágenes muy pequeñas (probablemente decorativas) y
+formatos que el PDF no puede incrustar (EMF/WMF, hay que reexportarlos a PNG).
+Los gráficos nativos de PowerPoint **no se pueden extraer**: el ingestor los
+señala para rehacerlos o pedirle una captura al docente.
 
 ## Reglas duras
 

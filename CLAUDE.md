@@ -12,6 +12,7 @@ Convierte el material que entregan los docentes en tres entregables sincronizado
 ```
 material del docente (.pptx/.docx/.pdf)
   └─ build/scripts/ingerir_fuentes.py  ──>  01-fuente.md   (transcripción fiel)
+  │                                    └─>  diseno/assets/capNN/  (imágenes extraídas)
        └─ skill redactar-capitulo      ──>  02-libro.md
             ├─ skill generar-ejercicios ──> 03-ejercicios.md
             ├─ skill generar-diapositivas ─> 05-diapositivas.md
@@ -41,6 +42,9 @@ python3 build/scripts/verificar_sync.py --capitulo cap01     # libro ↔ present
   una cifra equivocada: este es el riesgo más serio del proyecto.
 - **El contenido de muestra se marca `[MUESTRA]`** y no se atribuye a ningún docente.
 - Cada capítulo declara en `meta.yaml` el docente que aportó el material.
+- **Los originales de los docentes no se commitean** (están en `.gitignore`): viven en
+  OneDrive. El repo versiona lo que sale de ellos — `01-fuente.md` y las imágenes
+  extraídas a `diseno/assets/capNN/`, que el libro necesita para construirse.
 
 ## Docentes y módulos
 

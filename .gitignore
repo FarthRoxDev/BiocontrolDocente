@@ -7,3 +7,12 @@ salidas/**/*.png
 .DS_Store
 salidas/**/*.html
 salidas/**/*.json
+
+# --- Material original de los docentes -----------------------------------
+# Los .pptx/.docx/.pdf originales viven en OneDrive, que es su lugar: pesan,
+# cambian poco y git no los versiona bien. El repo guarda lo que SI se
+# versiona: el 01-fuente.md que sale de ellos y las imagenes extraidas a
+# diseno/assets/, que el libro necesita para construirse.
+contenido/fuentes/*
+!contenido/fuentes/.gitkeep
+!contenido/fuentes/*.md
