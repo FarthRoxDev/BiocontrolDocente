@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>{{ libro.titulo }} — Capítulo {{ capitulo.numero }}: {{ capitulo.titulo }}</title>
+<style>{{ css_tokens }}</style>
+<style>{{ css_libro }}</style>
+</head>
+{# counter-reset en body: fija el número de capítulo para figuras, tablas y cintillos #}
+<body class="{% if numeracion_propia %}bc-numeracion-propia{% endif %}" style="counter-reset:capitulo {{ capitulo.numero_int }}">
+
+{% include 'portada.html' %}
+
+{% if indice %}
+<section class="bc-indice bc-libro" id="indice">
+  <h1>Índice del capítulo</h1>
+  <ol>
+    {% for it in indice %}
+    <li class="bc-indice--n{{ it.nivel }}">
+      <span class="bc-indice__num">{{ it.numero }}</span>
+      <span class="bc-indice__texto">{{ it.titulo }}</span>
+      <span class="bc-indice__relleno"></span>
+      <span class="bc-indice__pag">{{ it.pagina | default('—') }}</span>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}
+
+<main class="bc-libro" id="cuerpo">
+
+  <header class="bc-apertura" id="apertura">
+    <p class="bc-apertura__rotulo">Capítulo</p>
+    <span class="bc-apertura__numero">{{ capitulo.numero }}</span>
+    <h1 class="bc-apertura__titulo">{{ capitulo.titulo }}</h1>
+    {% if capitulo.bajada %}
+    <p class="bc-apertura__bajada">{{ capitulo.bajada }}</p>
+    {% endif %}
+    <p class="bc-apertura__meta">
+      {% if capitulo.docente %}Material aportado por {{ capitulo.docente }}{% endif %}
+      {%- if capitulo.duracion %} &middot; {{ capitulo.duracion }}{% endif %}
+    </p>
+  </header>
+
+  {{ cuerpo_html }}
+
+  {% if resumen %}
+  <section class="bc-resumen" id="resumen">
+    <h2 class="bc-resumen__titulo">Resumen del capítulo</h2>
+    <ul>
+      {% for punto in resumen %}<li>{{ punto }}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+</main>
+
+{% if ejercicios %}{% include 'ejercicios.html' %}{% endif %}
+
+</body>
+</html>

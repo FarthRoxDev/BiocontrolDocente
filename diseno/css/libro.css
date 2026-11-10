@@ -1,0 +1,830 @@
+/* ============================================================
+   BIOCONTROL — libro.css
+   Motor de maquetación de LIBRO DE TEXTO (A4, impresión).
+   Depende de tokens.css: SOLO se usan var(--bc-*).
+   No definir colores, tipografías ni espaciados literales aquí.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. Caja de página A4 y márgenes simétricos (lomo mayor)
+   ------------------------------------------------------------ */
+@page{
+  size:A4;
+  margin:var(--bc-margen-sup) var(--bc-margen-ext) var(--bc-margen-inf) var(--bc-margen-int);
+}
+/* Páginas derechas (impares): interior a la izquierda */
+@page :right{
+  margin-left:var(--bc-margen-int);
+  margin-right:var(--bc-margen-ext);
+}
+/* Páginas izquierdas (pares): interior a la derecha */
+@page :left{
+  margin-left:var(--bc-margen-ext);
+  margin-right:var(--bc-margen-int);
+}
+/* La portada va a sangre completa: sin márgenes */
+@page portada{ margin:0; }
+
+/* ------------------------------------------------------------
+   2. Base
+   ------------------------------------------------------------ */
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{
+  font-size:var(--bc-t-cuerpo);
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+}
+body{
+  margin:0;
+  background:var(--bc-papel);
+  color:var(--bc-tinta);
+  font-family:var(--bc-font-cuerpo);
+  font-size:var(--bc-t-cuerpo);
+  line-height:var(--bc-lh-cuerpo);
+  text-align:justify;
+  hyphens:auto;
+  -webkit-hyphens:auto;
+  orphans:3;
+  widows:3;
+}
+p{ margin:0 0 var(--bc-s3); orphans:3; widows:3; }
+p.bc-entrada::first-letter{
+  font-family:var(--bc-font-titulo);
+  color:var(--bc-verde-700);
+  font-size:3em;
+  line-height:.82;
+  float:left;
+  padding:0 var(--bc-s2) 0 0;
+}
+strong{ color:var(--bc-verde-900); }
+em{ color:var(--bc-tierra-700); font-style:italic; }
+a{ color:var(--bc-agua-700); text-decoration:none; }
+code,kbd,samp{
+  font-family:var(--bc-font-mono);
+  font-size:.92em;
+  background:var(--bc-papel-alt);
+  border:1px solid var(--bc-linea);
+  border-radius:var(--bc-radio);
+  padding:0 var(--bc-s1);
+}
+hr{
+  border:0;
+  border-top:1px solid var(--bc-linea);
+  margin:var(--bc-s5) 0;
+}
+
+/* Contenedor de la caja de texto */
+.bc-libro{ counter-reset:figura tabla actividad ejercicio; }
+
+/* ------------------------------------------------------------
+   3. Jerarquía tipográfica
+   ------------------------------------------------------------ */
+h1,h2,h3,h4{
+  font-family:var(--bc-font-titulo);
+  color:var(--bc-verde-900);
+  text-align:left;
+  hyphens:none;
+  break-after:avoid-page;
+  page-break-after:avoid;
+  break-inside:avoid;
+}
+h1{ font-size:var(--bc-t-h1); line-height:1.12; margin:0 0 var(--bc-s5); }
+
+/* Cintillo de sección: h2 con franja verde a todo el ancho de la caja */
+h2{
+  font-size:var(--bc-t-h2);
+  line-height:1.2;
+  margin:var(--bc-s6) 0 var(--bc-s4);
+  padding:var(--bc-s2) var(--bc-s3) var(--bc-s2) var(--bc-s4);
+  background:var(--bc-verde-100);
+  border-left:var(--bc-s2) solid var(--bc-verde-700);
+  border-radius:0 var(--bc-radio) var(--bc-radio) 0;
+  counter-increment:seccion;
+  counter-reset:subseccion;
+}
+h2::before{
+  content:counter(capitulo) "." counter(seccion) "  ";
+  color:var(--bc-verde-400);
+  font-variant-numeric:tabular-nums;
+}
+h3{
+  font-size:var(--bc-t-h3);
+  margin:var(--bc-s5) 0 var(--bc-s2);
+  color:var(--bc-tierra-700);
+  counter-increment:subseccion;
+}
+h3::before{
+  content:counter(capitulo) "." counter(seccion) "." counter(subseccion) "  ";
+  color:var(--bc-tierra-500);
+  font-variant-numeric:tabular-nums;
+}
+h4{
+  font-size:var(--bc-t-cuerpo);
+  margin:var(--bc-s4) 0 var(--bc-s2);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+
+/* Listas del cuerpo con viñeta ocre */
+.bc-libro ul{ list-style:none; padding-left:var(--bc-s5); margin:0 0 var(--bc-s3); }
+.bc-libro ul>li{ position:relative; margin-bottom:var(--bc-s1); }
+.bc-libro ul>li::before{
+  content:"\25AA";
+  position:absolute;
+  left:calc(-1 * var(--bc-s4));
+  color:var(--bc-tierra-500);
+}
+.bc-libro ol{ padding-left:var(--bc-s5); margin:0 0 var(--bc-s3); }
+.bc-libro ol>li::marker{ color:var(--bc-tierra-500); font-weight:700; }
+li{ break-inside:avoid; }
+
+blockquote{
+  margin:var(--bc-s4) var(--bc-s5);
+  padding-left:var(--bc-s4);
+  border-left:2px solid var(--bc-tierra-500);
+  color:var(--bc-tinta-suave);
+  font-style:italic;
+  break-inside:avoid;
+}
+
+/* ------------------------------------------------------------
+   4. Portada a sangre completa
+   ------------------------------------------------------------ */
+.bc-portada{
+  page:portada;
+  width:var(--bc-pagina-ancho);
+  height:var(--bc-pagina-alto);
+  margin:0;
+  padding:0;
+  position:relative;
+  overflow:hidden;
+  background:var(--bc-verde-900);
+  color:var(--bc-papel);
+  break-after:page;
+  page-break-after:always;
+}
+.bc-portada__banda{
+  position:absolute; inset:0;
+  background:
+    linear-gradient(160deg,var(--bc-verde-900) 0%,var(--bc-verde-700) 58%,var(--bc-verde-400) 100%);
+}
+.bc-portada__trama{
+  position:absolute; left:0; right:0; bottom:0;
+  height:38%;
+  background:
+    repeating-linear-gradient(90deg,
+      var(--bc-tierra-500) 0 2mm,
+      transparent 2mm 10mm);
+  opacity:.28;
+}
+.bc-portada__contenido{
+  position:absolute;
+  left:var(--bc-margen-int);
+  right:var(--bc-margen-ext);
+  top:calc(var(--bc-margen-sup) * 3);
+}
+.bc-portada__colec{
+  font-family:var(--bc-font-cuerpo);
+  font-size:var(--bc-t-pie);
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--bc-tierra-100);
+  margin:0 0 var(--bc-s4);
+}
+.bc-portada__titulo{
+  font-family:var(--bc-font-titulo);
+  font-size:calc(var(--bc-t-h1) * 1.8);
+  line-height:1.04;
+  color:var(--bc-papel);
+  margin:0 0 var(--bc-s4);
+  text-align:left;
+  hyphens:none;
+}
+.bc-portada__subtitulo{
+  font-family:var(--bc-font-titulo);
+  font-size:var(--bc-t-h2);
+  color:var(--bc-tierra-100);
+  margin:0 0 var(--bc-s6);
+  text-align:left;
+}
+.bc-portada__regla{
+  width:40mm; height:var(--bc-s1);
+  background:var(--bc-tierra-500);
+  border:0; margin:0 0 var(--bc-s5);
+}
+.bc-portada__pie{
+  position:absolute;
+  left:var(--bc-margen-int);
+  right:var(--bc-margen-ext);
+  bottom:calc(var(--bc-margen-inf) * 1.6);
+  font-size:var(--bc-t-pie);
+  color:var(--bc-papel);
+  text-align:left;
+}
+.bc-portada__pie strong{ color:var(--bc-papel); }
+.bc-portada__sello{
+  display:inline-block;
+  border:1px solid var(--bc-tierra-100);
+  border-radius:var(--bc-radio);
+  padding:var(--bc-s1) var(--bc-s3);
+  font-size:var(--bc-t-micro);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:var(--bc-s3);
+}
+
+/* ------------------------------------------------------------
+   5. Página de créditos
+   ------------------------------------------------------------ */
+.bc-creditos{
+  break-after:page;
+  page-break-after:always;
+  font-size:var(--bc-t-pie);
+  color:var(--bc-tinta-suave);
+  text-align:left;
+}
+.bc-creditos h2{
+  background:none;
+  border:0;
+  padding:0;
+  font-size:var(--bc-t-h3);
+  color:var(--bc-verde-900);
+  margin:0 0 var(--bc-s4);
+}
+.bc-creditos h2::before{ content:none; }
+.bc-creditos dl{ margin:0 0 var(--bc-s5); }
+.bc-creditos dt{
+  font-family:var(--bc-font-cuerpo);
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-size:var(--bc-t-micro);
+  color:var(--bc-verde-700);
+  margin-top:var(--bc-s3);
+}
+.bc-creditos dd{ margin:0; color:var(--bc-tinta); }
+.bc-creditos__legal{
+  border-top:1px solid var(--bc-linea);
+  padding-top:var(--bc-s3);
+  font-size:var(--bc-t-micro);
+}
+
+/* ------------------------------------------------------------
+   6. Índice
+   ------------------------------------------------------------ */
+.bc-indice{
+  break-after:page;
+  page-break-after:always;
+  text-align:left;
+}
+.bc-indice h1{
+  border-bottom:var(--bc-s1) solid var(--bc-tierra-500);
+  padding-bottom:var(--bc-s2);
+}
+.bc-indice ol{ list-style:none; margin:0; padding:0; counter-reset:idx; }
+.bc-indice li{
+  display:flex;
+  align-items:baseline;
+  gap:var(--bc-s2);
+  padding:var(--bc-s2) 0;
+  border-bottom:1px dotted var(--bc-linea);
+}
+.bc-indice li.bc-indice--n3{ padding-left:var(--bc-s5); font-size:var(--bc-t-pie); }
+.bc-indice__num{
+  font-family:var(--bc-font-titulo);
+  color:var(--bc-verde-400);
+  min-width:14mm;
+  font-variant-numeric:tabular-nums;
+}
+.bc-indice__texto{ flex:0 1 auto; }
+.bc-indice__relleno{
+  flex:1 1 auto;
+  border-bottom:1px dotted var(--bc-linea);
+  transform:translateY(-.2em);
+}
+.bc-indice__pag{
+  font-variant-numeric:tabular-nums;
+  color:var(--bc-verde-700);
+  font-weight:700;
+}
+
+/* ------------------------------------------------------------
+   7. Apertura de capítulo (número grande)
+   ------------------------------------------------------------ */
+.bc-apertura{
+  break-before:page;
+  page-break-before:always;
+  break-after:avoid-page;
+  position:relative;
+  margin-bottom:var(--bc-s6);
+  padding-bottom:var(--bc-s4);
+  border-bottom:var(--bc-s1) solid var(--bc-verde-700);
+  text-align:left;
+  counter-reset:seccion;
+}
+.bc-apertura__rotulo{
+  font-size:var(--bc-t-micro);
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--bc-tierra-700);
+  margin:0 0 var(--bc-s2);
+}
+.bc-apertura__numero{
+  display:block;
+  font-family:var(--bc-font-titulo);
+  font-size:calc(var(--bc-t-h1) * 3.2);
+  line-height:.85;
+  color:var(--bc-verde-100);
+  -webkit-text-stroke:1px var(--bc-verde-400);
+  margin:0 0 calc(-1 * var(--bc-s3));
+  font-variant-numeric:lining-nums;
+}
+.bc-apertura__titulo{
+  font-family:var(--bc-font-titulo);
+  font-size:var(--bc-t-h1);
+  line-height:1.1;
+  color:var(--bc-verde-900);
+  margin:0 0 var(--bc-s3);
+  position:relative;
+}
+.bc-apertura__bajada{
+  font-size:var(--bc-t-h3);
+  font-family:var(--bc-font-titulo);
+  color:var(--bc-tinta-suave);
+  margin:0;
+  text-align:left;
+}
+.bc-apertura__meta{
+  margin-top:var(--bc-s3);
+  font-size:var(--bc-t-micro);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--bc-tinta-suave);
+}
+
+/* ------------------------------------------------------------
+   8. Bloques didácticos — base común
+   Caja con franja de color lateral, icono tipográfico y etiqueta.
+   ------------------------------------------------------------ */
+.bc-caja{
+  --bc-caja-color:var(--bc-verde-700);
+  --bc-caja-fondo:var(--bc-verde-100);
+  position:relative;
+  margin:var(--bc-s5) 0;
+  padding:var(--bc-s4) var(--bc-s4) var(--bc-s4) var(--bc-s5);
+  background:var(--bc-caja-fondo);
+  border:1px solid var(--bc-linea);
+  border-left:var(--bc-s3) solid var(--bc-caja-color);
+  border-radius:0 var(--bc-radio-lg) var(--bc-radio-lg) 0;
+  break-inside:avoid;
+  page-break-inside:avoid;
+  text-align:left;
+}
+.bc-caja__etiqueta{
+  display:flex;
+  align-items:center;
+  gap:var(--bc-s2);
+  font-family:var(--bc-font-cuerpo);
+  font-size:var(--bc-t-micro);
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--bc-caja-color);
+  margin:0 0 var(--bc-s3);
+}
+.bc-caja__icono{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:var(--bc-s5);
+  height:var(--bc-s5);
+  border-radius:50%;
+  background:var(--bc-caja-color);
+  color:var(--bc-papel);
+  font-family:var(--bc-font-titulo);
+  font-size:var(--bc-t-pie);
+  line-height:1;
+  letter-spacing:0;
+}
+.bc-caja>:last-child{ margin-bottom:0; }
+.bc-caja p{ font-size:var(--bc-t-pie); }
+.bc-caja ul,.bc-caja ol{ margin-bottom:0; font-size:var(--bc-t-pie); }
+
+/* --- Variantes -------------------------------------------- */
+.bc-caja--objetivos{
+  --bc-caja-color:var(--bc-verde-700);
+  --bc-caja-fondo:var(--bc-verde-100);
+  border:1px solid var(--bc-verde-400);
+  border-left:var(--bc-s3) solid var(--bc-verde-700);
+}
+.bc-caja--objetivos .bc-caja__icono::before{ content:"\25C9"; }
+.bc-caja--objetivos ul{ list-style:none; padding-left:var(--bc-s5); }
+.bc-caja--objetivos li{ position:relative; margin-bottom:var(--bc-s2); }
+.bc-caja--objetivos li::before{
+  content:"\2713";
+  position:absolute; left:calc(-1 * var(--bc-s4));
+  color:var(--bc-verde-700); font-weight:700;
+}
+
+.bc-caja--nota{
+  --bc-caja-color:var(--bc-agua-500);
+  --bc-caja-fondo:var(--bc-agua-100);
+}
+.bc-caja--nota .bc-caja__icono::before{ content:"i"; }
+
+.bc-caja--ejemplo{
+  --bc-caja-color:var(--bc-tierra-700);
+  --bc-caja-fondo:var(--bc-tierra-100);
+}
+.bc-caja--ejemplo .bc-caja__icono::before{ content:"\25C6"; }
+
+.bc-caja--precaucion{
+  --bc-caja-color:var(--bc-alerta-600);
+  --bc-caja-fondo:var(--bc-alerta-100);
+  border-left-style:solid;
+}
+.bc-caja--precaucion .bc-caja__icono{ border-radius:var(--bc-radio); }
+.bc-caja--precaucion .bc-caja__icono::before{ content:"\0021"; }
+.bc-caja--precaucion::after{
+  content:"";
+  position:absolute; top:0; right:0; bottom:0;
+  width:var(--bc-s1);
+  background:repeating-linear-gradient(
+    45deg,var(--bc-alerta-600) 0 var(--bc-s1),
+    transparent var(--bc-s1) var(--bc-s2));
+}
+
+.bc-caja--glosario{
+  --bc-caja-color:var(--bc-verde-400);
+  --bc-caja-fondo:var(--bc-papel-alt);
+}
+.bc-caja--glosario .bc-caja__icono::before{ content:"\2756"; }
+.bc-caja--glosario dl{ margin:0; }
+.bc-caja--glosario dt,
+.bc-caja--glosario strong:first-child{
+  font-family:var(--bc-font-titulo);
+  color:var(--bc-verde-900);
+}
+.bc-caja--glosario p{ margin-bottom:var(--bc-s2); }
+
+.bc-caja--sabias-que{
+  --bc-caja-color:var(--bc-verde-400);
+  --bc-caja-fondo:var(--bc-verde-100);
+  border-radius:var(--bc-radio-lg);
+  border-left:var(--bc-s3) solid var(--bc-verde-400);
+}
+.bc-caja--sabias-que .bc-caja__icono::before{ content:"\2605"; }
+.bc-caja--sabias-que p{ font-style:italic; }
+
+.bc-caja--actividad{
+  --bc-caja-color:var(--bc-tierra-500);
+  --bc-caja-fondo:var(--bc-papel);
+  border:1px dashed var(--bc-tierra-500);
+  border-left:var(--bc-s3) solid var(--bc-tierra-500);
+  counter-increment:actividad;
+}
+.bc-caja--actividad .bc-caja__icono::before{ content:"\270E"; }
+.bc-caja--actividad .bc-caja__etiqueta::after{
+  content:" " counter(actividad);
+  font-variant-numeric:tabular-nums;
+}
+
+/* ------------------------------------------------------------
+   9. Figura y tabla
+   ------------------------------------------------------------ */
+.bc-figura{
+  margin:var(--bc-s5) 0;
+  padding:var(--bc-s3);
+  background:var(--bc-papel-alt);
+  border:1px solid var(--bc-linea);
+  border-radius:var(--bc-radio);
+  break-inside:avoid;
+  page-break-inside:avoid;
+  counter-increment:figura;
+  text-align:center;
+}
+.bc-figura img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:0 auto var(--bc-s2);
+  border-radius:var(--bc-radio);
+}
+.bc-figura__hueco{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:45mm;
+  margin-bottom:var(--bc-s2);
+  border:1px dashed var(--bc-verde-400);
+  border-radius:var(--bc-radio);
+  background:var(--bc-papel);
+  color:var(--bc-tinta-suave);
+  font-size:var(--bc-t-micro);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.bc-figura figcaption,
+.bc-figura__pie{
+  font-size:var(--bc-t-pie);
+  color:var(--bc-tinta-suave);
+  text-align:left;
+  line-height:1.35;
+  margin:0;
+}
+.bc-figura__pie::before{
+  content:"Figura " counter(capitulo) "." counter(figura) ". ";
+  font-weight:700;
+  color:var(--bc-verde-700);
+  font-variant-numeric:tabular-nums;
+}
+
+.bc-tabla{
+  margin:var(--bc-s5) 0;
+  counter-increment:tabla;
+  break-inside:avoid;
+  page-break-inside:avoid;
+}
+.bc-tabla__titulo{
+  font-family:var(--bc-font-titulo);
+  font-size:var(--bc-t-pie);
+  color:var(--bc-verde-900);
+  margin:0 0 var(--bc-s2);
+  text-align:left;
+}
+.bc-tabla__titulo::before{
+  content:"Tabla " counter(capitulo) "." counter(tabla) ". ";
+  color:var(--bc-tierra-700);
+  font-variant-numeric:tabular-nums;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:var(--bc-t-pie);
+  text-align:left;
+}
+thead{ display:table-header-group; }
+tr{ break-inside:avoid; page-break-inside:avoid; }
+th{
+  background:var(--bc-verde-700);
+  color:var(--bc-papel);
+  font-family:var(--bc-font-cuerpo);
+  font-weight:700;
+  font-size:var(--bc-t-micro);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:var(--bc-s2) var(--bc-s3);
+  border:1px solid var(--bc-verde-900);
+}
+td{
+  padding:var(--bc-s2) var(--bc-s3);
+  border:1px solid var(--bc-linea);
+  vertical-align:top;
+}
+tbody tr:nth-child(even) td{ background:var(--bc-papel-alt); }
+
+/* ------------------------------------------------------------
+   10. Resumen del capítulo
+   ------------------------------------------------------------ */
+.bc-resumen{
+  margin:var(--bc-s7) 0 var(--bc-s5);
+  padding:var(--bc-s5);
+  background:var(--bc-verde-100);
+  border:var(--bc-s1) solid var(--bc-verde-700);
+  border-radius:var(--bc-radio-lg);
+  break-inside:avoid;
+  page-break-inside:avoid;
+  text-align:left;
+}
+.bc-resumen__titulo{
+  background:none;
+  border:0;
+  padding:0;
+  font-family:var(--bc-font-titulo);
+  font-size:var(--bc-t-h3);
+  color:var(--bc-verde-900);
+  margin:0 0 var(--bc-s3);
+  padding-bottom:var(--bc-s2);
+  border-bottom:1px solid var(--bc-verde-400);
+}
+.bc-resumen__titulo::before{
+  content:"\25A0\00A0";
+  color:var(--bc-tierra-500);
+}
+.bc-resumen ul{ list-style:none; margin:0; padding:0; }
+.bc-resumen li{
+  position:relative;
+  padding-left:var(--bc-s5);
+  margin-bottom:var(--bc-s2);
+  font-size:var(--bc-t-pie);
+}
+.bc-resumen li::before{
+  content:"\2794";
+  position:absolute; left:0;
+  color:var(--bc-verde-700);
+}
+.bc-resumen>:last-child{ margin-bottom:0; }
+
+/* ------------------------------------------------------------
+   11. Ejercicios — numeración y renglones para escribir a mano
+   ------------------------------------------------------------ */
+.bc-ejercicios{
+  break-before:page;
+  page-break-before:always;
+  counter-reset:ejercicio;
+  text-align:left;
+}
+.bc-ejercicios__cabecera{
+  margin-bottom:var(--bc-s6);
+  padding:var(--bc-s4);
+  background:var(--bc-tierra-100);
+  border-left:var(--bc-s3) solid var(--bc-tierra-500);
+  border-radius:0 var(--bc-radio-lg) var(--bc-radio-lg) 0;
+  break-after:avoid-page;
+}
+.bc-ejercicios__cabecera h1{ margin:0 0 var(--bc-s2); }
+.bc-ejercicios__instruccion{
+  margin:0;
+  font-size:var(--bc-t-pie);
+  color:var(--bc-tinta-suave);
+}
+.bc-ejercicio{
+  position:relative;
+  margin:0 0 var(--bc-s6);
+  padding-left:calc(var(--bc-s7) + var(--bc-s2));
+  counter-increment:ejercicio;
+  break-inside:avoid;
+  page-break-inside:avoid;
+}
+.bc-ejercicio::before{
+  content:counter(ejercicio);
+  position:absolute;
+  left:0; top:0;
+  width:var(--bc-s7); height:var(--bc-s7);
+  display:flex; align-items:center; justify-content:center;
+  background:var(--bc-verde-700);
+  color:var(--bc-papel);
+  font-family:var(--bc-font-titulo);
+  font-size:var(--bc-t-h3);
+  border-radius:50%;
+  font-variant-numeric:tabular-nums;
+}
+.bc-ejercicio__enunciado{ margin:0 0 var(--bc-s3); }
+.bc-ejercicio__tipo{
+  display:inline-block;
+  margin-bottom:var(--bc-s2);
+  padding:0 var(--bc-s2);
+  font-size:var(--bc-t-micro);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--bc-tierra-700);
+  background:var(--bc-tierra-100);
+  border-radius:var(--bc-radio);
+}
+/* Espacio en blanco con líneas punteadas para escribir a mano */
+.bc-renglones{
+  margin:var(--bc-s3) 0 0;
+  padding:0;
+  list-style:none;
+  break-inside:avoid;
+}
+.bc-renglones li{
+  height:var(--bc-s5);
+  border-bottom:1px dotted var(--bc-tinta-suave);
+}
+.bc-renglones li:first-child{ border-top:0; }
+.bc-recuadro-respuesta{
+  margin-top:var(--bc-s3);
+  min-height:30mm;
+  border:1px dashed var(--bc-linea);
+  border-radius:var(--bc-radio);
+  background:var(--bc-papel);
+  break-inside:avoid;
+}
+.bc-opciones{ list-style:none; margin:var(--bc-s2) 0 0; padding:0; }
+.bc-opciones li{
+  position:relative;
+  padding-left:var(--bc-s5);
+  margin-bottom:var(--bc-s2);
+  font-size:var(--bc-t-pie);
+}
+.bc-opciones li::before{
+  content:"";
+  position:absolute; left:0; top:.25em;
+  width:var(--bc-s3); height:var(--bc-s3);
+  border:1px solid var(--bc-tinta-suave);
+  border-radius:var(--bc-radio);
+  background:var(--bc-papel);
+}
+.bc-clave{
+  break-before:page;
+  page-break-before:always;
+  font-size:var(--bc-t-pie);
+}
+.bc-clave h2{ background:var(--bc-papel-alt); border-left-color:var(--bc-tierra-500); }
+
+/* ------------------------------------------------------------
+   12. Utilidades de paginación
+   ------------------------------------------------------------ */
+.bc-salto-pagina{ break-before:page; page-break-before:always; }
+.bc-evitar-corte{ break-inside:avoid; page-break-inside:avoid; }
+.bc-juntar{ break-after:avoid-page; page-break-after:avoid; }
+.bc-ancla{ display:block; height:0; overflow:hidden; }
+
+/* ------------------------------------------------------------
+   13. Encabezado y pie corridos
+   Chromium los compone en el área de margen a partir de las
+   plantillas de Playwright; estas reglas describen su estilo y
+   sirven de vista previa en pantalla.
+   ------------------------------------------------------------ */
+.bc-corrido{
+  font-family:var(--bc-font-cuerpo);
+  font-size:var(--bc-t-micro);
+  color:var(--bc-tinta-suave);
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 var(--bc-margen-ext) 0 var(--bc-margen-int);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.bc-corrido--encabezado{
+  border-bottom:1px solid var(--bc-linea);
+  padding-bottom:var(--bc-s1);
+}
+.bc-corrido--pie{
+  border-top:1px solid var(--bc-linea);
+  padding-top:var(--bc-s1);
+}
+.bc-corrido__capitulo{ color:var(--bc-verde-700); }
+.bc-corrido__folio{
+  font-family:var(--bc-font-titulo);
+  font-size:var(--bc-t-pie);
+  color:var(--bc-verde-900);
+  font-variant-numeric:tabular-nums;
+}
+
+/* ------------------------------------------------------------
+   14. Impresión
+   ------------------------------------------------------------ */
+@media print{
+  html,body{ background:var(--bc-papel); }
+  .bc-solo-pantalla{ display:none !important; }
+  .bc-caja,.bc-figura,.bc-tabla,.bc-resumen,.bc-ejercicio{
+    break-inside:avoid;
+    page-break-inside:avoid;
+  }
+  h1,h2,h3,h4{ break-after:avoid-page; page-break-after:avoid; }
+  p,li,blockquote{ orphans:3; widows:3; }
+  a{ color:var(--bc-tinta); text-decoration:none; }
+}
+
+/* Vista previa en pantalla: simula el pliego de papel */
+@media screen{
+  body{ padding:var(--bc-s7) var(--bc-s5); }
+  .bc-libro{
+    max-width:var(--bc-pagina-ancho);
+    margin:0 auto;
+    padding:var(--bc-margen-sup) var(--bc-margen-ext) var(--bc-margen-inf) var(--bc-margen-int);
+    background:var(--bc-papel);
+    box-shadow:0 0 0 1px var(--bc-linea);
+  }
+}
+
+/* Los cintillos de las secciones de ejercicios y clave no se numeran */
+.bc-ejercicios h2::before{ content:none; }
+.bc-ejercicios h2{ padding-left:var(--bc-s4); }
+
+/* ------------------------------------------------------------
+   15. Afinado de viñetas: las listas con rol propio no llevan la
+   viñeta ocre genérica del cuerpo (misma especificidad, gana el
+   orden de aparición).
+   ------------------------------------------------------------ */
+.bc-libro ul.bc-renglones>li::before,
+ul.bc-renglones>li::before{ content:none; }
+.bc-libro ul.bc-opciones>li::before,
+ul.bc-opciones>li::before{
+  content:"";
+  position:absolute; left:0; top:.25em;
+  width:var(--bc-s3); height:var(--bc-s3);
+  border:1px solid var(--bc-tinta-suave);
+  border-radius:var(--bc-radio);
+  background:var(--bc-papel);
+}
+.bc-libro .bc-resumen li::before{
+  content:"\2794";
+  position:absolute; left:0;
+  color:var(--bc-verde-700);
+}
+.bc-libro .bc-caja--objetivos li::before{
+  content:"\2713";
+  position:absolute; left:calc(-1 * var(--bc-s4));
+  color:var(--bc-verde-700); font-weight:700;
+}
+
+/* El markdown ya trae los títulos numerados: se apagan los contadores
+   para no duplicar la numeración. */
+.bc-numeracion-propia h2::before,
+.bc-numeracion-propia h3::before{ content:none; }

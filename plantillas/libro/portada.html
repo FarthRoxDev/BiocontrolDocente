@@ -1,0 +1,55 @@
+{# ------------------------------------------------------------------
+   portada.html — portada a sangre completa + página de créditos.
+   Variables: libro{coleccion,titulo,subtitulo,edicion,anio,editor,
+                    isbn,licencia,nota_legal}, capitulo{...},
+              creditos[] (lista de {rol, nombre})
+   ------------------------------------------------------------------ #}
+<section class="bc-portada" id="portada">
+  <div class="bc-portada__banda"></div>
+  <div class="bc-portada__trama"></div>
+
+  <div class="bc-portada__contenido">
+    <p class="bc-portada__colec">{{ libro.coleccion | default('Colección Biocontrol') }}</p>
+    <h1 class="bc-portada__titulo">{{ libro.titulo }}</h1>
+    {% if libro.subtitulo %}
+    <p class="bc-portada__subtitulo">{{ libro.subtitulo }}</p>
+    {% endif %}
+    <hr class="bc-portada__regla">
+    <p class="bc-portada__subtitulo" style="font-size:var(--bc-t-h3)">
+      Capítulo {{ capitulo.numero }} &middot; {{ capitulo.titulo }}
+    </p>
+  </div>
+
+  <div class="bc-portada__pie">
+    {% if libro.muestra %}<span class="bc-portada__sello">[MUESTRA]</span><br>{% endif %}
+    <strong>{{ libro.editor | default('Equipo Biocontrol') }}</strong><br>
+    {{ libro.edicion | default('Primera edición') }} &middot; {{ libro.anio }}
+  </div>
+</section>
+
+<section class="bc-creditos bc-libro" id="creditos">
+  <h2>Créditos de la edición</h2>
+  <dl>
+    <dt>Título</dt>
+    <dd>{{ libro.titulo }}{% if libro.subtitulo %}. {{ libro.subtitulo }}{% endif %}</dd>
+    <dt>Capítulo</dt>
+    <dd>{{ capitulo.numero }}. {{ capitulo.titulo }}</dd>
+    {% for c in creditos %}
+    <dt>{{ c.rol }}</dt>
+    <dd>{{ c.nombre }}</dd>
+    {% endfor %}
+    {% if capitulo.duracion %}
+    <dt>Duración estimada</dt>
+    <dd>{{ capitulo.duracion }}</dd>
+    {% endif %}
+    <dt>Edición</dt>
+    <dd>{{ libro.edicion | default('Primera edición') }}, {{ libro.anio }}</dd>
+  </dl>
+  <p class="bc-creditos__legal">
+    {{ libro.nota_legal | default('Material didáctico de uso interno para capacitación de productores agrícolas.
+    Las dosis, cepas y cifras que aparecen en este capítulo provienen del material aportado por el docente;
+    ante cualquier duda, consultar siempre con el asesor técnico responsable del lote.') }}
+    {% if libro.isbn %}<br>ISBN {{ libro.isbn }}.{% endif %}
+    {% if libro.licencia %}<br>{{ libro.licencia }}.{% endif %}
+  </p>
+</section>

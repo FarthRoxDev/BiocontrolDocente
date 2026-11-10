@@ -1,0 +1,46 @@
+{# ------------------------------------------------------------------
+   ejercicios.html — sección de ejercicios con numeración automática
+   y espacio en blanco (renglones punteados) para escribir a mano.
+   Variables: capitulo{numero,titulo}, ejercicios[] con
+     {enunciado_html, tipo, renglones, opciones[], recuadro},
+     clave[] con {numero, respuesta_html}
+   ------------------------------------------------------------------ #}
+<section class="bc-ejercicios bc-libro" id="ejercicios">
+  <header class="bc-ejercicios__cabecera">
+    <h1 id="ejercicios-titulo">Ejercicios del capítulo {{ capitulo.numero }}</h1>
+    <p class="bc-ejercicios__instruccion">
+      {{ instruccion | default('Resolvé los ejercicios con lápiz sobre las líneas punteadas.
+      Si necesitás más espacio, usá el reverso de la hoja. Al final encontrarás la clave de respuestas.') }}
+    </p>
+  </header>
+
+  {% for ej in ejercicios %}
+  <article class="bc-ejercicio">
+    {% if ej.tipo %}<span class="bc-ejercicio__tipo">{{ ej.tipo }}</span>{% endif %}
+    <div class="bc-ejercicio__enunciado">{{ ej.enunciado_html }}</div>
+
+    {% if ej.opciones %}
+    <ul class="bc-opciones">
+      {% for op in ej.opciones %}<li>{{ op }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if ej.recuadro %}
+    <div class="bc-recuadro-respuesta"></div>
+    {% elif ej.renglones | default(3) > 0 %}
+    <ul class="bc-renglones">
+      {% for _ in range(ej.renglones | default(3)) %}<li></li>{% endfor %}
+    </ul>
+    {% endif %}
+  </article>
+  {% endfor %}
+
+  {% if clave %}
+  <section class="bc-clave">
+    <h2 id="clave-respuestas">Clave de respuestas</h2>
+    <ol>
+      {% for r in clave %}<li>{{ r.respuesta_html }}</li>{% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+</section>

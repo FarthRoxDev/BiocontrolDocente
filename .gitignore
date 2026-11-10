@@ -5,3 +5,5 @@ salidas/**/*.pptx
 salidas/**/*.png
 !salidas/.gitkeep
 .DS_Store
+salidas/**/*.html
+salidas/**/*.json
