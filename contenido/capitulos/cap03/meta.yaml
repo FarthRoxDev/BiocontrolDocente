@@ -1,5 +1,6 @@
 # ============================================================
 # CAP03 — metadatos
+# Redactado desde el material real del docente (01-fuente.md).
 # ============================================================
 
 capitulo: 03
@@ -13,8 +14,84 @@ es_muestra: false
 
 # --- Atribución --------------------------------------------------------
 # Completar con el docente que entregó el material.
-docente: null
+docente: null            # FALTA: confirmar quién aportó monitoreo-control-insectos.docx
 fuente_original: "monitoreo-control-insectos.docx"
+docente_revisor: null    # <!-- FALTA: confirmar con el docente -->
+fecha_material: null
+
+curso: "Biocontrol y manejo biológico para productores agrícolas"
+institucion: "Laboratorio de Biocontrol, Centro de Investigación en Biotecnología (CIB) — TEC, Costa Rica"
+publico: "Productores agrícolas"
 
 # --- Clase -------------------------------------------------------------
-duracion: "90 min"
+# Es el capítulo más extenso de los cuatro: el material del docente trae
+# 3.1.1 a 3.1.6 completos. No cabe en 90 min sin recortar las dos páginas
+# que deciden (umbral y rotación IRAC).
+duracion: "150 min"
+duracion_min: 150
+duracion_detalle:
+  exposicion_min: 120
+  ejercicios_min: 20
+  cierre_min: 10
+
+# --- Paginación --------------------------------------------------------
+# Numeración GLOBAL del libro, tomada de salidas/libro/cap03-paginas.json
+# (lo produce construir_libro.py al medir el PDF). Las diapositivas de
+# 05-diapositivas.md apuntan a estas mismas páginas.
+pagina_inicio: 6
+paginas_total: 32        # cuerpo, páginas 6–37; los ejercicios ocupan 38–44
+
+# --- Objetivos de aprendizaje -----------------------------------------
+objetivos:
+  - "Distinguir daño, síntoma, signo y causa, y no aplicar un insecticida sobre un problema que no es de insectos."
+  - "Hacer un recorrido de monitoreo que represente el lote completo y no solo el borde."
+  - "Revisar la planta por órgano —brotes, envés, flores, frutos, tallos, raíz— sabiendo qué buscar en cada uno."
+  - "Instalar y leer trampas amarillas y azules sin confundir captura con infestación."
+  - "Llenar una hoja de registro con unidades que se puedan comparar entre fechas."
+  - "Decidir si interviene a partir de la tendencia, el daño reciente, la etapa del cultivo y los benéficos presentes."
+  - "Escoger la medida por niveles: cultural, mecánico, biológico y químico responsable."
+  - "Reconocer las señales de resistencia a insecticidas y rotar de verdad por modo de acción."
+
+temas:
+  - diagnóstico en campo: daño, síntoma, signo y causa
+  - monitoreo directo e indirecto, recorridos y trampas
+  - registro, unidades comparables y tendencia
+  - umbral de acción y criterio de decisión
+  - MIP por niveles
+  - resistencia a insecticidas y rotación por modo de acción
+
+requisitos_previos:
+  - "Ninguno. Se parte de la experiencia de campo del participante."
+
+materiales_clase:
+  - "Hojas con daño real de masticación y de raspado (trips), para pasar de mano en mano."
+  - "Dos trampas adhesivas sin usar, una amarilla y una azul, y si se consigue una ya expuesta en campo."
+  - "Lupa de mano o lupa de celular para revisar el envés."
+  - "Copias impresas de la hoja de registro del Cuadro 4 (página 19), una por participante."
+  - "Etiquetas de dos o tres insecticidas distintos donde se vea el grupo IRAC."
+  - "Pizarra o papelógrafo: se usa en casi todos los tramos."
+
+archivos:
+  fuente: 01-fuente.md
+  libro: 02-libro.md
+  ejercicios: 03-ejercicios.md
+  docente: 04-docente.md
+  diapositivas: 05-diapositivas.md
+
+# --- Cobertura del temario oficial -------------------------------------
+# 3.1.1 Diagnóstico rápido: daño vs síntoma vs causa .......... cubierto
+# 3.1.2 Monitoreo práctico, recorridos y trampas .............. cubierto
+#        (sin número de plantas por recorrido ni frecuencia en días)
+# 3.1.3 Registro para decisiones, umbrales, tendencias ........ cubierto
+#        (sin umbrales numéricos validados)
+# 3.1.4 MIP por niveles ....................................... cubierto
+#        (sin rotación numérica; remite a 3.1.5)
+# 3.1.5 Resistencia: señales y cómo evitarla .................. cubierto
+#        (sin secuencia concreta de grupos IRAC ni duración de ventanas)
+
+# --- Control de datos faltantes ---------------------------------------
+# Todo dato numérico técnico (umbrales, dosis, días entre recorridos,
+# plantas por recorrido, nombres comerciales) quedó marcado en el texto con:
+#   <!-- FALTA: confirmar con el docente -->
+# Buscar esos marcadores antes de aprobar el capítulo.
+datos_pendientes: true

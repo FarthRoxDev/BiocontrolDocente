@@ -131,7 +131,7 @@ cambia cómo se comprueba la calidad.
 | **Artificial** | Propágulos encapsulados | Viabilidad, protocolo, almacenamiento y evidencia |
 :::
 
-:::figura{src="../../../diseno/assets/cap02/material-siembra-elite-d01-3.png" pie="El mismo cultivo en cuatro momentos: planta madre en campo, multiplicación en frasco, aclimatación en bandeja bajo sombra y establecimiento en finca."}
+:::figura{src="../../../diseno/assets/cap02/material-siembra-elite-d01-3.jpg" pie="El mismo cultivo en cuatro momentos: planta madre en campo, multiplicación en frasco, aclimatación en bandeja bajo sombra y establecimiento en finca."}
 :::
 
 :::precaucion
@@ -214,7 +214,7 @@ Dentro del frasco la planta vive protegida: humedad alta, sin viento, sin sol
 directo. Al salir tiene que aprender a controlar su propia agua y a funcionar en
 un ambiente real. Ese cambio tiene que ser **gradual**.
 
-:::figura{src="../../../diseno/assets/cap02/material-siembra-elite-d07-3.png" pie="De izquierda a derecha, la secuencia completa: plántulas en frasco, bandeja bajo domo con humedad alta y plantas ya firmes, listas para el campo."}
+:::figura{src="../../../diseno/assets/cap02/material-siembra-elite-d07-3.jpg" pie="De izquierda a derecha, la secuencia completa: plántulas en frasco, bandeja bajo domo con humedad alta y plantas ya firmes, listas para el campo."}
 :::
 
 :::tabla{titulo="Cuadro 4. Los cuatro pasos de la aclimatación"}
@@ -257,7 +257,7 @@ cuando llega toma minutos. No revisarlo le puede costar el ciclo completo,
 porque después ya no se puede separar el problema del material del problema del
 manejo de su finca.
 
-:::figura{src="../../../diseno/assets/cap02/material-siembra-elite-d08-3.png" pie="La revisión se hace con el lote en la mano y antes de sembrar: plantas, raíces y etiqueta, bandeja por bandeja."}
+:::figura{src="../../../diseno/assets/cap02/material-siembra-elite-d08-3.jpg" pie="La revisión se hace con el lote en la mano y antes de sembrar: plantas, raíces y etiqueta, bandeja por bandeja."}
 :::
 
 :::tabla{titulo="Cuadro 5. Las cinco preguntas al abrir el lote"}
@@ -475,7 +475,7 @@ No reemplaza la etiqueta ni una prueba sobre unas pocas plantas.
 Un material caro y bien cuidado durante meses se puede perder en minutos: sol,
 viento, un golpe, una profundidad equivocada.
 
-:::figura{src="../../../diseno/assets/cap02/material-siembra-elite-d13-3.png" pie="La plántula se toma por el cepellón, nunca por el tallo, y el agua está lista antes de sacarla de la sombra."}
+:::figura{src="../../../diseno/assets/cap02/material-siembra-elite-d13-3.jpg" pie="La plántula se toma por el cepellón, nunca por el tallo, y el agua está lista antes de sacarla de la sombra."}
 :::
 
 Cinco reglas, en orden:

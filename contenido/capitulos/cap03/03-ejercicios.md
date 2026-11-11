@@ -50,7 +50,7 @@ El propósito del recorrido en W o en zigzag es:
 :::
 
 :::ejercicio{tipo="seleccion" renglones=1}
-**4. Trampa amarilla o azul** *(página 16)*
+**4. Trampa amarilla o azul** *(página 17)*
 
 Usted ya confirmó que su problema son trips y quiere seguir su actividad de forma
 dirigida. La trampa más indicada es:
@@ -101,7 +101,7 @@ Para saber si de verdad rotó, debe mirar:
 :::
 
 :::ejercicio{tipo="falso-verdadero" renglones=0}
-**8. Decisión, MIP y resistencia** *(páginas 22 a 33)*
+**8. Decisión, MIP y resistencia** *(páginas 22 a 34)*
 
 | # | Afirmación | F | V |
 |---|---|---|---|
@@ -131,7 +131,7 @@ Una la manifestación de la izquierda con el tipo de daño de la derecha.
 :::
 
 :::ejercicio{tipo="relacionar" renglones=0}
-**10. Nivel del MIP y medida** *(páginas 24 a 27)*
+**10. Nivel del MIP y medida** *(páginas 25 a 28)*
 
 | # | Medida | | Nivel |
 |---|---|---|---|
@@ -172,7 +172,7 @@ Al ver el «12» decide aplicar un insecticida de amplio espectro a todo el lote
 :::
 
 :::ejercicio{tipo="caso" renglones=8 recuadro=si}
-**13. La mosca blanca que no se muere** *(páginas 30 a 34)*
+**13. La mosca blanca que no se muere** *(páginas 30 a 35)*
 
 Doña Marta tiene tomate. Aplicó contra mosca blanca el 1 de mayo con el Producto
 A y le fue bien. El 12 de mayo volvió a aplicar, esta vez con el Producto B, de
@@ -199,7 +199,7 @@ resistencia.
 ## E. Cálculo sencillo
 
 :::ejercicio{tipo="calculo" renglones=8 recuadro=si}
-**14. Dejar la serie comparable** *(páginas 18 y 19)*
+**14. Dejar la serie comparable** *(páginas 19 y 20)*
 
 En su lote usted usa la unidad **adultos por trampa por siete días**, igual que la
 hoja de registro del libro.

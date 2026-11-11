@@ -257,7 +257,7 @@ layout: tabla
 voladores**: llegada, zonas de mayor actividad, cambios relativos entre
 fechas. Hay otros colores, y algunas llevan feromonas, semioquímicos o luz.
 
-Pasar enseguida a la página 17: para comparar hay que mantener constantes
+Pasar enseguida a la página 18: para comparar hay que mantener constantes
 color, tamaño, ubicación, altura, tiempo de exposición, frecuencia de cambio
 e identificación. Y en cada lectura anotar código, ubicación, fecha de
 instalación, fecha de lectura, grupos objetivo y capturas.
@@ -265,7 +265,7 @@ instalación, fecha de lectura, grupos objetivo y capturas.
 Escribir la regla de oro en la pizarra y dejarla ahí el resto de la clase:
 **la trampa detecta actividad; la planta confirma lo que pasa en el cultivo.**
 
-Contar el ejemplo del tomate (página 17): trampas que suben, cincuenta plantas
+Contar el ejemplo del tomate (página 18): trampas que suben, cincuenta plantas
 sin una ninfa, cultivo vecino recién cosechado.
 :::
 
@@ -400,7 +400,7 @@ seccion: mip-por-niveles-empezar-por-abajo
 titulo: "Se empieza por arriba y se baja solo si hace falta"
 layout: imagen
 imagen: "../../../diseno/assets/cap03/monitoreo-control-insectos-img-4.png"
-pie: "Figura 4 del libro, página 24: el MIP por niveles."
+pie: "Figura 4 del libro, página 25: el MIP por niveles."
 ---
 
 :::notas
@@ -416,7 +416,7 @@ poda de brotes, retiro de frutos, mallas, barreras, embolsado) — y tratar el
 foco antes que el lote.
 
 Nivel 3: distinguir biológico **natural**, por **conservación** y
-**aumentativo**. Y la advertencia de la página 26: «biológico» no es
+**aumentativo**. Y la advertencia de la página 27: «biológico» no es
 automáticamente inocuo; algunos bioplaguicidas tienen efectos adversos,
 incluso subletales, sobre polinizadores. Toda herramienta se evalúa por
 eficacia, selectividad y riesgo.
@@ -510,14 +510,14 @@ Rotar de verdad es alternar grupos diferentes (Grupo 1 → Grupo 2 → Grupo 3),
 con productos autorizados, eficaces y usados conforme a la etiqueta, evitando
 exponer generaciones sucesivas al mismo grupo.
 
-Página 33: la dosis es **la de la etiqueta** —ni subdosificar ni aumentar
+Página 34: la dosis es **la de la etiqueta** —ni subdosificar ni aumentar
 arbitrariamente—; la mala cobertura **simula** resistencia; y una mezcla no
 garantiza mejor manejo de resistencia.
 
 **Dato pendiente, no improvisar:** el material no trae la secuencia concreta
 de grupos IRAC ni la duración de las ventanas para los cultivos del curso.
 
-Actividad de la página 33: auditar la temporada pasada y contar cuántas veces
+Actividad de la página 34: auditar la temporada pasada y contar cuántas veces
 seguidas aparece el mismo grupo.
 :::
 
@@ -528,7 +528,7 @@ seccion: que-hacer-cuando-sospecha-resistencia
 titulo: "Subir la dosis y mezclar a ojo empeora todo"
 layout: imagen
 imagen: "../../../diseno/assets/cap03/monitoreo-control-insectos-img-2.png"
-pie: "Figura 6 del libro, página 34."
+pie: "Figura 6 del libro, página 35."
 ---
 
 Menos aplicaciones + mejor momento + mejor cobertura + dosis correcta +
@@ -539,8 +539,8 @@ rotación real + MIP = **menor presión de selección**
 justamente las situaciones del Cuadro 6 que se confunden con resistencia:
 descartarlas primero ahorra cambiar de producto sin necesidad.
 
-Leer la fórmula de la página 35 en voz alta y dejarla proyectada mientras se
-repasa el resumen del capítulo (página 36).
+Leer la fórmula de la página 36 en voz alta y dejarla proyectada mientras se
+repasa el resumen del capítulo (página 37).
 
 Cierre accionable, tres compromisos que cada quien escribe en su libro:
 1. la ruta de monitoreo que va a repetir todas las semanas,

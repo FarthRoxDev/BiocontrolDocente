@@ -30,11 +30,11 @@ CIB · Tecnológico de Costa Rica
 Con financiamiento de la Dirección de Extensión
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-3.png)
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-3.jpg)
 
 
 > **Notas del docente:** Presente el propósito práctico: tomar mejores decisiones desde la compra del material hasta los primeros 30 días de establecimiento.
@@ -96,11 +96,11 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 02
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -143,13 +143,13 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 03
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d03-3.png)
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -207,11 +207,11 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 04
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -278,11 +278,11 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 05
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -341,11 +341,11 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 06
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -403,13 +403,13 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 07
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d07-3.png)
+![](../../../diseno/assets/cap02/material-siembra-elite-d07-3.jpg)
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -467,13 +467,13 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 08
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d08-3.png)
+![](../../../diseno/assets/cap02/material-siembra-elite-d08-3.jpg)
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -540,11 +540,11 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 09
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -593,11 +593,11 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 10
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -657,11 +657,11 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 11
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -707,13 +707,13 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 12
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d12-3.png)
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -767,13 +767,13 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 13
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d13-3.png)
+![](../../../diseno/assets/cap02/material-siembra-elite-d13-3.jpg)
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -833,11 +833,11 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 14
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -919,11 +919,11 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 15
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -1006,11 +1006,11 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 16
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -1075,11 +1075,11 @@ Con financiamiento de la Dirección de Extensión del Tecnológico de Costa Rica
 17
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
@@ -1138,7 +1138,7 @@ Con financiamiento de la Dirección de Extensión
 Gracias
 
 
-![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.png)  <!-- repetida en el material (logo o plantilla?) -->
+![](../../../diseno/assets/cap02/material-siembra-elite-d01-1.jpg)  <!-- repetida en el material (logo o plantilla?) -->
 
 ![](../../../diseno/assets/cap02/material-siembra-elite-d01-2.png)  <!-- repetida en el material (logo o plantilla?) -->
 
