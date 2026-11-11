@@ -21,8 +21,8 @@
   --bc-alerta-600:#B3432B;  /* precaución, dosis, fitotoxicidad */
   --bc-alerta-100:#FBE8E3;
 
-  --bc-papel:#FAF7F0;       /* fondo página (crema, tipo libro) */
-  --bc-papel-alt:#F2EDE2;
+  --bc-papel:#FFFFFF;       /* fondo de página (blanco) */
+  --bc-papel-alt:#F4F5F4;   /* gris casi blanco, para separar bloques */
   --bc-tinta:#1A2420;       /* texto cuerpo */
   --bc-tinta-suave:#5A6560; /* texto secundario, pies de figura */
   --bc-linea:#D8D2C4;

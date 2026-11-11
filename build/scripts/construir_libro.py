@@ -629,8 +629,8 @@ def main(argv=None) -> int:
     ap.add_argument("--fuente", help="markdown alternativo (por defecto contenido/capitulos/<cap>/02-libro.md)")
     ap.add_argument("--ejercicios", help="markdown adicional con bloques :::ejercicio y :::clave")
     ap.add_argument("--sin-pdf", action="store_true", help="solo generar el HTML")
-    ap.add_argument("--papel", choices=("crema", "blanco"), default="crema",
-                    help="color de fondo de pagina: 'crema' (por defecto) o 'blanco'")
+    ap.add_argument("--papel", choices=("blanco", "crema"), default="blanco",
+                    help="color de fondo de pagina: 'blanco' (por defecto) o 'crema'")
     ap.add_argument("--edicion", choices=("productor", "docente"), default="productor",
                     help="'docente' agrega la guia de clase y las respuestas explicadas")
     args = ap.parse_args(argv)
@@ -650,14 +650,14 @@ def main(argv=None) -> int:
     tokens = CSS_TOKENS.read_text(encoding="utf-8")
     css_libro = CSS_LIBRO.read_text(encoding="utf-8")
 
-    # Papel blanco: se sobreescriben solo los dos tokens de fondo de pagina.
-    # Las cajas didacticas conservan su color, que es lo que las distingue
-    # entre si de un vistazo.
-    if args.papel == "blanco":
+    # El papel por defecto es blanco. Con --papel crema se recupera el
+    # fondo calido original. En los dos casos las cajas didacticas
+    # conservan su color, que es lo que las distingue de un vistazo.
+    if args.papel == "crema":
         tokens = re.sub(r"--bc-papel:\s*#[0-9A-Fa-f]{3,8};",
-                        "--bc-papel:#FFFFFF;", tokens)
+                        "--bc-papel:#FAF7F0;", tokens)
         tokens = re.sub(r"--bc-papel-alt:\s*#[0-9A-Fa-f]{3,8};",
-                        "--bc-papel-alt:#F4F5F4;", tokens)
+                        "--bc-papel-alt:#F2EDE2;", tokens)
 
     # La edicion docente es el mismo libro del productor con una capa
     # encima: mismas paginas, misma maquetacion, para que el docente
