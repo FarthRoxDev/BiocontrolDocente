@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340" role="img"
+     aria-label="El fósforo del suelo está mayormente bloqueado; las bacterias solubilizadoras lo liberan">
+  <g font-family="Source Sans 3, Segoe UI, sans-serif">
+    <!-- proporcion 90/10 -->
+    <text x="60" y="38" font-size="18" font-weight="700" fill="#0C3F28">El fósforo que hay en su suelo</text>
+    <rect x="60" y="54" width="702" height="54" rx="6" fill="#9A5C13"/>
+    <rect x="762" y="54" width="78" height="54" rx="6" fill="#4E9B6E"/>
+    <text x="411" y="88" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">90 % bloqueado — la planta no lo puede tomar</text>
+    <text x="801" y="80" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">10 %</text>
+    <text x="801" y="98" text-anchor="middle" font-size="12" fill="#FFFFFF">libre</text>
+
+    <!-- flecha de transformacion -->
+    <g>
+      <path d="M300 136 L300 176" stroke="#2B7A9B" stroke-width="4"/>
+      <path d="M292 170 L300 184 L308 170 Z" fill="#2B7A9B"/>
+      <rect x="330" y="140" width="330" height="40" rx="8" fill="#E4F0F5"/>
+      <text x="350" y="166" font-size="16" fill="#1F5A73">Bacterias solubilizadoras de fósforo</text>
+    </g>
+
+    <!-- resultado -->
+    <rect x="60" y="206" width="780" height="54" rx="6" fill="#4E9B6E" opacity=".35"/>
+    <rect x="60" y="206" width="300" height="54" rx="6" fill="#4E9B6E"/>
+    <text x="210" y="240" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">pasa a forma aprovechable</text>
+
+    <text x="60" y="296" font-size="16" fill="#5A6560">No traen fósforo nuevo al suelo: abren el que ya estaba ahí.</text>
+    <text x="60" y="320" font-size="16" fill="#5A6560">Por eso trabajan mejor donde el fósforo escasea, y no donde ya se aplicó en exceso.</text>
+  </g>
+</svg>

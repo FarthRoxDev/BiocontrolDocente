@@ -146,6 +146,9 @@ El trato es simple y es de ida y vuelta: la planta le pasa azúcares al hongo, y
 el hongo le consigue a la planta nutrientes y agua que la raíz sola no alcanza.
 No es que el hongo fabrique fósforo: es que **llega a donde la raíz no llega**.
 
+:::figura{src="../../../diseno/assets/cap01/fig-micorriza.svg" pie="Lo que cambia la micorriza no es la raíz, sino el volumen de suelo que la planta alcanza."}
+:::
+
 :::glosario
 **Micorriza.** Asociación entre un hongo del suelo y la raíz de una planta, en la que los dos salen ganando.
 
@@ -163,7 +166,7 @@ Además de los nutrientes, las micorrizas le ayudan a la planta a aguantar
 condiciones adversas y le activan el sistema inmune. Es decir: la planta
 micorrizada resiste mejor el estrés, no solo come mejor.
 
-<!-- pagina: 7 -->
+<!-- pagina: 8 -->
 
 ## Qué micorriza viene en el producto
 
@@ -192,7 +195,7 @@ otros microorganismos benéficos, responden mejor que las de una sola. Si está
 comparando dos productos de precio parecido, ese es un criterio a favor.
 :::
 
-<!-- pagina: 8 -->
+<!-- pagina: 9 -->
 
 ## Fijadores de nitrógeno: sacarlo del aire
 
@@ -241,6 +244,9 @@ vegetal, aun en suelos donde el análisis muestra que hay.
 Las bacterias solubilizadoras transforman esa fracción bloqueada en formas
 aprovechables. No traen fósforo: **abren el que ya estaba ahí**.
 
+:::figura{src="../../../diseno/assets/cap01/fig-fosforo.svg" pie="En un suelo con fósforo suficiente en el análisis, la planta puede estar pasando hambre: casi todo está en formas que no puede tomar."}
+:::
+
 :::glosario
 **Solubilización.** Convertir un nutriente que está en forma bloqueada en una forma que la planta puede absorber.
 :::
@@ -284,13 +290,16 @@ durante el ciclo: cada 15 a 30 días, según el producto y el cultivo. Los otros
 tres se aplican sobre todo al inicio.
 :::
 
-<!-- pagina: 10 -->
+<!-- pagina: 11 -->
 
 ## Cuándo aplicar cada grupo
 
 Acá está la tabla que conviene que lleve al campo. El éxito de la
 biofertilización depende tanto del microorganismo como de **cuándo, dónde y
 cómo** se aplica.
+
+:::figura{src="../../../diseno/assets/cap01/fig-cuando-aplicar.svg" pie="Ventana de aplicación de cada grupo a lo largo del ciclo del cultivo."}
+:::
 
 :::tabla{titulo="Cuadro 1. Cuándo y cómo aplicar cada grupo"}
 | Grupo | Momento principal | Aplicaciones posteriores | Forma de aplicación |
@@ -310,7 +319,7 @@ cómo** se aplica.
 Note el patrón: **los cuatro grupos se aplican temprano.** Si ya va por media
 cosecha y nunca inoculó, el momento se pasó para tres de los cuatro.
 
-<!-- pagina: 11 -->
+<!-- pagina: 12 -->
 
 ## Consideraciones por grupo
 
@@ -347,7 +356,7 @@ no los invalida: lo que hay que buscar es evidencia de que funcionaron en un
 cultivo como el suyo y en **condiciones parecidas** a las suyas.
 :::
 
-<!-- pagina: 12 -->
+<!-- pagina: 13 -->
 
 ## Con qué NO se puede mezclar
 
@@ -387,7 +396,7 @@ Y una que sorprende: **fósforo alto mata la micorriza**. No porque la envenene,
 sino porque la planta deja de necesitarla y corta la sociedad.
 :::
 
-<!-- pagina: 13 -->
+<!-- pagina: 14 -->
 
 ## Cómo reconocer un producto de buena calidad
 
@@ -428,7 +437,7 @@ y cuánto le queda de vida. El primero no le permite verificar nada. Al mismo
 precio, no son el mismo producto.
 :::
 
-<!-- pagina: 13 -->
+<!-- pagina: 15 -->
 
 ## Antes de comprar
 
@@ -466,7 +475,7 @@ de nitrógeno sobre todo en líquido y menos en granulado.
      cómo se almacena y cómo cambia la forma de aplicar. -->
 :::
 
-<!-- pagina: 15 -->
+<!-- pagina: 17 -->
 
 ## Resumen del capítulo
 

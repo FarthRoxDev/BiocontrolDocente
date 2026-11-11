@@ -185,7 +185,7 @@ Libro, **página 7**, bloque de precaución.
 
 ---
 slide: 8
-pagina: 7
+pagina: 8
 seccion: que-micorriza-viene-en-el-producto
 titulo: "La etiqueta dice qué especie trae"
 layout: columnas
@@ -216,7 +216,7 @@ No atribuir efectos por género más allá de la tabla del libro
 
 ---
 slide: 9
-pagina: 8
+pagina: 9
 seccion: fijadores-de-nitrogeno-sacarlo-del-aire
 titulo: "El nitrógeno del aire, convertido en amonio"
 layout: vinetas
@@ -290,7 +290,7 @@ Géneros: Bacillus, Paenibacillus, Pseudomonas. Libro, **página 10**.
 
 ---
 slide: 12
-pagina: 10
+pagina: 11
 seccion: cuando-aplicar-cada-grupo
 titulo: "Los cuatro se aplican temprano"
 layout: tabla
@@ -319,7 +319,7 @@ cuatro grupos, el momento ya pasó.
 
 ---
 slide: 13
-pagina: 11
+pagina: 12
 seccion: consideraciones-por-grupo
 titulo: "Cada grupo tiene su condición"
 layout: columnas
@@ -350,7 +350,7 @@ en un cultivo y condiciones parecidas a las suyas. Libro, **página 11**.
 
 ---
 slide: 14
-pagina: 12
+pagina: 13
 seccion: con-que-no-se-puede-mezclar
 titulo: "Fungicida, bactericida y cobre matan el biofertilizante"
 layout: dato
@@ -380,7 +380,7 @@ fabricante. **No improvisar ese número.**
 
 ---
 slide: 15
-pagina: 12
+pagina: 13
 seccion: con-que-no-se-puede-mezclar
 titulo: "Compatible, espaciar o no mezclar"
 layout: tabla
@@ -410,7 +410,7 @@ un número de horas ni de días.
 
 ---
 slide: 16
-pagina: 13
+pagina: 14
 seccion: como-reconocer-un-producto-de-buena-calidad
 titulo: "Cuatro datos o no se puede verificar nada"
 layout: vinetas
@@ -437,7 +437,7 @@ Pregunta: «¿quién sabe el lote del producto que tiene en la bodega?».
 
 ---
 slide: 17
-pagina: 13
+pagina: 15
 seccion: antes-de-comprar
 titulo: "Pregunte en qué cultivo se probó"
 layout: vinetas
@@ -470,7 +470,7 @@ ventajas de cada presentación o por almacenamiento,
 
 ---
 slide: 18
-pagina: 15
+pagina: 17
 seccion: resumen-del-capitulo
 titulo: "Lo que se lleva al campo"
 layout: cierre

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" role="img"
+     aria-label="Comparación entre el alcance de la raíz sola y el alcance de la raíz con micorriza">
+  <defs>
+    <radialGradient id="alcRaiz" cx="50%" cy="22%" r="62%">
+      <stop offset="0%" stop-color="#4E9B6E" stop-opacity=".30"/>
+      <stop offset="100%" stop-color="#4E9B6E" stop-opacity=".06"/>
+    </radialGradient>
+    <radialGradient id="alcHifa" cx="50%" cy="22%" r="62%">
+      <stop offset="0%" stop-color="#D08A2C" stop-opacity=".28"/>
+      <stop offset="100%" stop-color="#D08A2C" stop-opacity=".05"/>
+    </radialGradient>
+  </defs>
+
+  <!-- dos escenas: izquierda raiz sola, derecha raiz con micorriza -->
+  <g font-family="Source Sans 3, Segoe UI, sans-serif">
+
+    <!-- ===== IZQUIERDA ===== -->
+    <text x="225" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#0C3F28">Raíz sola</text>
+    <ellipse cx="225" cy="250" rx="118" ry="150" fill="url(#alcRaiz)"/>
+    <!-- linea de suelo -->
+    <line x1="30" y1="96" x2="420" y2="96" stroke="#9A5C13" stroke-width="3"/>
+    <!-- tallo -->
+    <path d="M225 96 L225 58" stroke="#14633F" stroke-width="6" stroke-linecap="round"/>
+    <path d="M225 70 q-26 -16 -40 -4 q18 16 40 4z" fill="#4E9B6E"/>
+    <path d="M225 70 q26 -16 40 -4 q-18 16 -40 4z" fill="#4E9B6E"/>
+    <!-- raiz principal y secundarias -->
+    <path d="M225 96 L225 300" stroke="#14633F" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M225 140 q-46 34 -60 86 M225 170 q50 34 62 92 M225 215 q-38 30 -46 76 M225 245 q40 26 48 64"
+          stroke="#14633F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- pelos radicales cortos -->
+    <g stroke="#4E9B6E" stroke-width="1.4" opacity=".9">
+      <path d="M205 160 l-14 7 M245 190 l15 7 M198 225 l-15 6 M252 240 l15 6 M212 275 l-13 8 M240 285 l14 8"/>
+    </g>
+    <text x="225" y="430" text-anchor="middle" font-size="16" fill="#5A6560">La raíz toma lo que alcanza</text>
+    <text x="225" y="452" text-anchor="middle" font-size="16" fill="#5A6560">con sus propios pelos.</text>
+
+    <!-- divisoria -->
+    <line x1="450" y1="60" x2="450" y2="420" stroke="#D8D2C4" stroke-width="2" stroke-dasharray="6 7"/>
+
+    <!-- ===== DERECHA ===== -->
+    <text x="675" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#0C3F28">Raíz con micorriza</text>
+    <ellipse cx="675" cy="255" rx="205" ry="178" fill="url(#alcHifa)"/>
+    <ellipse cx="675" cy="250" rx="118" ry="150" fill="url(#alcRaiz)"/>
+    <line x1="480" y1="96" x2="880" y2="96" stroke="#9A5C13" stroke-width="3"/>
+    <path d="M675 96 L675 58" stroke="#14633F" stroke-width="6" stroke-linecap="round"/>
+    <path d="M675 66 q-30 -19 -46 -5 q21 19 46 5z" fill="#4E9B6E"/>
+    <path d="M675 66 q30 -19 46 -5 q-21 19 -46 5z" fill="#4E9B6E"/>
+    <path d="M675 96 L675 300" stroke="#14633F" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M675 140 q-46 34 -60 86 M675 170 q50 34 62 92 M675 215 q-38 30 -46 76 M675 245 q40 26 48 64"
+          stroke="#14633F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- red de hifas: finas, ocres, mucho mas lejos -->
+    <g stroke="#D08A2C" stroke-width="1.5" fill="none" opacity=".95">
+      <path d="M625 190 q-70 6 -112 -22 M630 210 q-84 26 -138 20 M620 245 q-80 34 -120 76
+               M640 285 q-66 44 -96 82 M668 320 q-18 60 -40 92"/>
+      <path d="M725 185 q76 -4 120 -30 M722 215 q88 22 142 14 M730 250 q82 30 124 72
+               M712 290 q64 46 92 84 M690 322 q16 58 38 90"/>
+      <path d="M612 205 q-40 -26 -74 -24 M636 262 q-54 12 -82 44 M740 232 q46 -20 86 -14
+               M726 272 q56 14 86 46"/>
+    </g>
+    <text x="675" y="430" text-anchor="middle" font-size="16" fill="#5A6560">Las hifas del hongo llegan a un volumen</text>
+    <text x="675" y="452" text-anchor="middle" font-size="16" fill="#5A6560">de suelo mucho mayor, y le pasan a la planta</text>
+    <text x="675" y="474" text-anchor="middle" font-size="16" fill="#5A6560">fósforo y agua que la raíz sola no alcanzaba.</text>
+  </g>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img"
+     aria-label="Línea de tiempo del cultivo mostrando cuándo se aplica cada grupo de biofertilizante">
+  <g font-family="Source Sans 3, Segoe UI, sans-serif">
+    <!-- etapas -->
+    <g font-size="15" fill="#5A6560" text-anchor="middle">
+      <text x="120" y="42">Siembra o</text><text x="120" y="60">trasplante</text>
+      <text x="350" y="42">Establecimiento</text><text x="350" y="60">temprano</text>
+      <text x="580" y="42">Crecimiento</text><text x="580" y="60">activo</text>
+      <text x="800" y="42">Cosecha</text>
+    </g>
+    <!-- eje -->
+    <line x1="70" y1="88" x2="850" y2="88" stroke="#D8D2C4" stroke-width="3"/>
+    <g fill="#9A5C13">
+      <circle cx="120" cy="88" r="6"/><circle cx="350" cy="88" r="6"/>
+      <circle cx="580" cy="88" r="6"/><circle cx="800" cy="88" r="6"/>
+    </g>
+
+    <!-- barras: ventana de aplicacion de cada grupo -->
+    <g>
+      <rect x="85" y="118" width="300" height="38" rx="8" fill="#14633F"/>
+      <text x="100" y="143" font-size="17" font-weight="700" fill="#FFFFFF">Micorrizas (HMA)</text>
+      <text x="400" y="143" font-size="15" fill="#5A6560">Necesitan raíz viva. Si el momento pasó, se perdió.</text>
+
+      <rect x="85" y="170" width="300" height="38" rx="8" fill="#2B7A9B"/>
+      <text x="100" y="195" font-size="17" font-weight="700" fill="#FFFFFF">Fijadores de N</text>
+      <text x="400" y="195" font-size="15" fill="#5A6560">Los simbióticos, al establecimiento.</text>
+
+      <rect x="85" y="222" width="320" height="38" rx="8" fill="#9A5C13"/>
+      <text x="100" y="247" font-size="17" font-weight="700" fill="#FFFFFF">Solubilizadores de P</text>
+      <text x="420" y="247" font-size="15" fill="#5A6560">Y durante crecimiento activo, si el producto lo indica.</text>
+
+      <rect x="85" y="274" width="730" height="38" rx="8" fill="#D08A2C"/>
+      <text x="100" y="299" font-size="17" font-weight="700" fill="#FFFFFF">PGPR</text>
+      <text x="175" y="299" font-size="15" fill="#FFFFFF">— se repiten cada 15 a 30 días, según producto y cultivo</text>
+    </g>
+
+    <!-- conclusion -->
+    <rect x="85" y="336" width="730" height="44" rx="8" fill="#E6F1EA"/>
+    <text x="106" y="364" font-size="17" fill="#0C3F28">
+      <tspan font-weight="700">Los cuatro se aplican temprano.</tspan>
+      <tspan> Solo las PGPR acompañan el ciclo completo.</tspan>
+    </text>
+  </g>
+</svg>
