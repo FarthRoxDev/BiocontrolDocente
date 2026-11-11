@@ -3,6 +3,14 @@
 Pensado para trabajar con **Claude Code en la terminal**, dentro del repo.
 Todo esto se hace una sola vez.
 
+> **Antes que nada: ¿cmd o PowerShell?**
+> Los comandos de abajo están escritos para **cmd** (la ventana negra clásica),
+> porque es la que se abre por defecto. Funcionan igual en PowerShell salvo una
+> línea, que está marcada.
+>
+> **Nunca junte dos comandos con `;` en cmd**: cmd no lo entiende como separador
+> y el segundo comando se pierde sin avisar. Un comando por línea, siempre.
+
 ---
 
 ## 0. Requisitos previos
@@ -11,10 +19,14 @@ Todo esto se hace una sola vez.
 |---|---|---|
 | Git | `git --version` | https://git-scm.com/download/win |
 | Python 3.10+ | `py --version` | https://www.python.org/downloads/ (marcar **Add to PATH**) |
-| Claude Code | `claude --version` | `npm i -g @anthropic-ai/claude-code` |
+| Node.js | `node --version` | https://nodejs.org (versión LTS) |
+| Claude Code | `claude --version` | `npm install -g @anthropic-ai/claude-code` |
 | Chrome o Edge | ya viene en Windows | — |
 
-No hace falta Node para construir los entregables (sí para instalar Claude Code).
+Node **no** hace falta para construir los entregables, pero **sí** para instalar
+Claude Code, que se distribuye por npm. Si `claude` responde «no se reconoce
+como un comando», es que falta ese paso (o que hay que cerrar y volver a abrir
+la terminal para que tome el PATH nuevo).
 
 ---
 
@@ -23,28 +35,50 @@ No hace falta Node para construir los entregables (sí para instalar Claude Code
 Elegí una carpeta corta y sin espacios. El material de los docentes se queda
 donde está: **no hay que moverlo**.
 
-```powershell
+Un comando por línea. Si `C:\Proyectos` ya existe, el `mkdir` avisa y no pasa
+nada: siga con el resto.
+
+```bat
 mkdir C:\Proyectos
-cd C:\Proyectos
+```
+
+```bat
+cd /d C:\Proyectos
+```
+
+```bat
 git clone https://github.com/FarthRoxDev/BiocontrolDocente.git
+```
+
+```bat
 cd BiocontrolDocente
+```
+
+```bat
 git checkout claude/jolly-bardeen-mlivgy
 ```
+
+El `/d` del `cd` es necesario para cambiar de unidad (de `C:` a `D:`, por
+ejemplo). Cuesta nada ponerlo siempre.
 
 ---
 
 ## 2. Entorno de Python
 
-```powershell
+```bat
 py -m venv .venv
-.\.venv\Scripts\Activate.ps1
 ```
 
-> Si PowerShell se queja con «la ejecución de scripts está deshabilitada»,
-> corré esto una vez en esa misma ventana y repetí el activate:
+Activarlo. **Esta es la línea que cambia según la terminal:**
+
+```bat
+.venv\Scripts\activate.bat
+```
+
+> En PowerShell es `.\.venv\Scripts\Activate.ps1`. Si PowerShell se queja con
+> «la ejecución de scripts está deshabilitada», corra
 > `Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned`
->
-> En `cmd` en vez de PowerShell, el activate es `.venv\Scripts\activate.bat`.
+> una vez en esa misma ventana y repita el activate.
 
 Con el entorno activo (verás `(.venv)` al principio de la línea):
 
@@ -142,5 +176,7 @@ git push origin claude/jolly-bardeen-mlivgy
 | `no se pudo abrir Chromium` | falta `python -m playwright install chromium` |
 | `ModuleNotFoundError` | el entorno virtual no está activo (no aparece `(.venv)`) |
 | `nada coincide con: *.pptx` | la ruta está mal escrita, o falta ponerla entre comillas |
+| `The system cannot find the path specified` | se juntaron dos comandos con `;` en cmd: van en líneas separadas |
+| `'claude' is not recognized` | falta `npm install -g @anthropic-ai/claude-code`, o cerrar y reabrir la terminal |
 | El PDF sale sin una imagen | es un EMF/WMF o un gráfico nativo de PowerPoint: el ingestor lo avisa y hay que reexportarlo a PNG |
 | `verificar_sync` marca DESFASE | el libro cambió de largo: reconstruirlo y ajustar los `pagina:` de las diapositivas |
