@@ -452,7 +452,22 @@ sabe que perdió, pero no sabe si fue por madurez, por golpes, por insectos, por
 pudrición o por demora. Y sin eso no puede priorizar en qué invertir.
 :::
 
-<!-- pagina: 15 -->
+:::ejemplo
+**El cajón de rechazo al lado de la mesa de empaque.** Es la escena más común y
+la más cara. El cajón está abierto, recibe fruta podrida toda la mañana, y de
+ahí salpica, gotea y vuelan esporas sobre el producto que se está empacando a
+medio metro. Nadie lo ve como un problema porque «es basura».
+
+Cerrarlo y sacarlo del área no cuesta nada. Dejarlo ahí cuesta el lote.
+:::
+
+:::precaucion
+La ruta de salida del residuo **no puede cruzar** la ruta de los envases limpios
+ni la del producto listo para despacho. Si en su bodega las dos rutas pasan por
+la misma puerta, el orden de los horarios no basta: hay que cambiar la ruta.
+:::
+
+<!-- pagina: 16 -->
 
 ## Tratamientos según lo que usted puede invertir
 
@@ -480,7 +495,7 @@ lo cocina. El nivel bajo costo también tiene su riesgo, y es el más silencioso
 **falsa confianza sin seguimiento**.
 :::
 
-<!-- pagina: 16 -->
+<!-- pagina: 17 -->
 
 ## Qué conviene saber de cada tratamiento técnico
 
@@ -522,7 +537,7 @@ integrado.
 Invertir en el paso 4 antes de hacer el 3 es comprar a ciegas.
 :::
 
-<!-- pagina: 17 -->
+<!-- pagina: 18 -->
 
 ## El plan 3 + 2
 
@@ -570,7 +585,7 @@ aumentar el daño por frío. Fíjese en las dos partes de la meta: un número y 
 condición que no se puede empeorar para lograrlo.
 :::
 
-<!-- pagina: 18 -->
+<!-- pagina: 19 -->
 
 ## Cómo medir si sirvió
 
@@ -601,7 +616,7 @@ disposición.
 **Línea base.** El valor del indicador *antes* de hacer el cambio. Es contra lo que se compara todo lo demás.
 :::
 
-<!-- pagina: 19 -->
+<!-- pagina: 20 -->
 
 ## El tablero semanal
 
