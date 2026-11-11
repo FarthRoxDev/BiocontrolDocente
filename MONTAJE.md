@@ -63,6 +63,17 @@ ejemplo). Cuesta nada ponerlo siempre.
 
 ---
 
+## Atajo: `montar.bat`
+
+Una vez clonado el repo y parado dentro de su carpeta, esto hace los pasos 2 y 3
+de una sola vez (rama, entorno, dependencias, Chromium y comprobación):
+
+```bat
+montar.bat
+```
+
+Si preferís hacerlo paso a paso, seguí abajo.
+
 ## 2. Entorno de Python
 
 ```bat
