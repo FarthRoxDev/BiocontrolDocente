@@ -22,27 +22,23 @@ metiera la pala.
 
 Este capítulo trata de las decisiones que se toman **antes de sembrar**: qué
 pedir, qué revisar cuando llega el lote, qué separar y qué anotar. Son
-decisiones baratas. Equivocarse en ellas, no.
-
-Hay una advertencia que conviene dejar clara desde la primera línea: el buen
-material **no arregla nada más**. No corrige un drenaje malo, ni un riego
-irregular, ni una nutrición mal llevada. Lo único que hace es cambiarle el punto
-de partida. Eso ya es bastante, pero no es magia.
+decisiones baratas; equivocarse en ellas, no. Y conviene dejar algo claro desde
+la primera línea: el buen material **no arregla nada más**. Lo único que hace es
+cambiarle el punto de partida.
 
 :::objetivos
 Al terminar este capítulo, usted podrá:
 
 - Explicar qué cambia —y qué no cambia— cuando se siembra material de alta calidad.
 - Distinguir los cuatro tipos de material de siembra y qué se vigila en cada uno.
-- Aplicar los cuatro filtros —identidad, sanidad, vigor y trazabilidad— antes de aceptar un lote.
-- Hacer la revisión de recepción con las cinco preguntas, y saber qué separar.
+- Aplicar los cuatro filtros —identidad, sanidad, vigor y trazabilidad— antes de aceptar un lote, y hacer la revisión de recepción con las cinco preguntas.
 - Llevar el registro de los primeros 30 días y calcular el prendimiento.
-- Decir con sus palabras qué es la semilla artificial y qué debe exigirle antes de comprarla.
+- Decir qué es la semilla artificial y qué debe exigirle antes de comprarla.
 - Decidir una mezcla de material preinoculado con el semáforo verde-amarillo-rojo.
 - Comparar material habitual contra material nuevo por margen, no por precio de compra.
 :::
 
-<!-- pagina: 5 -->
+<!-- pagina: 4 -->
 
 ## El material de siembra cambia el punto de partida
 

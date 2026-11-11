@@ -1,5 +1,6 @@
 # ============================================================
 # CAP05 — metadatos
+# Redactado desde el material real del docente (01-fuente.md).
 # ============================================================
 
 capitulo: 05
@@ -13,8 +14,74 @@ es_muestra: false
 
 # --- Atribución --------------------------------------------------------
 # Completar con el docente que entregó el material.
-docente: null
+docente: null            # FALTA: confirmar quién aportó tratamientos-poscosecha.docx
 fuente_original: "tratamientos-poscosecha.docx"
+fecha_material: "2026-08"  # "Versión técnica | Agosto de 2026", según la portada del material
+
+curso: "Biocontrol y manejo biológico para productores agrícolas"
+institucion: "Laboratorio de Biocontrol, Centro de Investigación en Biotecnología (CIB) — TEC, Costa Rica"
+publico: "Productores agrícolas y personal de manejo hortifrutícola"
 
 # --- Clase -------------------------------------------------------------
 duracion: "90 min"
+duracion_min: 90
+duracion_detalle:
+  exposicion_min: 55
+  ejercicios_min: 25
+  cierre_min: 10
+
+# --- Paginación --------------------------------------------------------
+# Numeración GLOBAL del libro, tomada de salidas/libro/cap05-paginas.json
+# (lo produce construir_libro.py al medir el PDF). Las diapositivas de
+# 05-diapositivas.md apuntan a estas mismas páginas.
+pagina_inicio: 4
+paginas_total: 18        # cuerpo del capítulo: páginas 4–21
+paginas_ejercicios: "22–28"
+diapositivas_total: 18
+
+# --- Objetivos de aprendizaje -----------------------------------------
+objetivos:
+  - "Distinguir si el daño del producto viene de microorganismos, de artrópodos o de manipulación."
+  - "Ubicar el punto de la cadena —cosecha, manejo, lavado, empaque, transporte o almacenamiento— donde se originó el problema."
+  - "Aplicar buenas prácticas de cosecha: criterio de madurez, horario, sombra y prevención de golpes."
+  - "Controlar el agua de lavado y explicar cómo ocurre la contaminación cruzada en el tanque."
+  - "Manejar la fruta podrida y los residuos como fuente de inóculo."
+  - "Escoger tratamientos poscosecha proporcionales al nivel de inversión disponible."
+  - "Armar un plan de tres acciones inmediatas y dos mejoras de mediano plazo."
+  - "Medir el resultado con cuatro indicadores por lote: % de rechazo, vida útil, reclamos y pérdida."
+
+temas:
+  - diagnóstico rápido poscosecha
+  - puntos críticos del proceso
+  - buenas prácticas de cosecha y manipulación
+  - manejo del agua de lavado
+  - empaque, transporte y almacenamiento
+  - fruta podrida y residuos como inóculo
+  - tratamientos por nivel de inversión
+  - plan de acción 3 + 2
+  - medición de resultados
+
+requisitos_previos:
+  - "Ninguno. Se parte de la experiencia de campo del participante."
+
+materiales_clase:
+  - "Dos cajas de cosecha: una limpia e íntegra y otra deformada o con bordes salidos, para comparar."
+  - "Un balde con agua y restos vegetales, para mostrar qué es carga orgánica en el tanque (no usar desinfectante real)."
+  - "Tiras o kit de medición de pH, solo para mostrar el método; no se dosifica nada en clase."
+  - "Fruta o producto con daño visible: pudrición, perforación de insecto y magulladura, una pieza de cada tipo."
+  - "Copias impresas del Cuadro 7 (tablero semanal) en tamaño carta, una por participante."
+  - "Calculadora o celular para el ejercicio 14."
+
+archivos:
+  fuente: 01-fuente.md
+  libro: 02-libro.md
+  ejercicios: 03-ejercicios.md
+  docente: 04-docente.md
+  diapositivas: 05-diapositivas.md
+
+# --- Control de datos faltantes ---------------------------------------
+# Todo dato numérico técnico (concentraciones, pH, temperaturas, tiempos,
+# porcentajes) quedó marcado en el texto con:
+#   <!-- FALTA: confirmar con el docente -->
+# Buscar esos marcadores antes de aprobar el capítulo.
+datos_pendientes: true

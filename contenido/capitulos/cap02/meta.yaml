@@ -1,5 +1,6 @@
 # ============================================================
 # CAP02 — metadatos
+# Redactado desde el material real del docente (01-fuente.md).
 # ============================================================
 
 capitulo: 02
@@ -12,9 +13,71 @@ estado: borrador         # muestra | borrador | revisado | aprobado
 es_muestra: false
 
 # --- Atribución --------------------------------------------------------
-# Completar con el docente que entregó el material.
-docente: null
+# No se sabe quién entregó material-siembra-elite.pptx. NO adivinar.
+docente: null            # <!-- FALTA: confirmar con el docente -->
 fuente_original: "material-siembra-elite.pptx"
+docente_revisor: null    # <!-- FALTA: confirmar con el docente -->
+fecha_material: null
+
+curso: "Biocontrol y manejo biológico para productores agrícolas"
+institucion: "Laboratorio de Biocontrol, Centro de Investigación en Biotecnología (CIB) — TEC, Costa Rica"
+publico: "Productores agrícolas y extensionistas"
 
 # --- Clase -------------------------------------------------------------
 duracion: "90 min"
+duracion_min: 90
+duracion_detalle:
+  exposicion_min: 77     # tramos 0–77, con las actividades del libro intercaladas
+  ejercicios_min: 5      # 77–82, actividad de los ocho hábitos
+  cierre_min: 8          # 82–90
+
+# --- Paginación --------------------------------------------------------
+# Numeración GLOBAL del libro, medida sobre salidas/libro/cap02-paginas.json.
+# Cuerpo del capítulo: páginas 4–22. Ejercicios: 23–28. Clave: 29.
+# Si el texto cambia de largo, reconstruir y correr realinear_paginas.py.
+pagina_inicio: 4
+paginas_total: 19
+
+# --- Objetivos de aprendizaje -----------------------------------------
+objetivos:
+  - "Explicar qué cambia —y qué no cambia— cuando se siembra material de alta calidad."
+  - "Distinguir los cuatro tipos de material de siembra y qué se vigila en cada uno."
+  - "Aplicar los cuatro filtros —identidad, sanidad, vigor y trazabilidad— antes de aceptar un lote, y hacer la revisión de recepción con las cinco preguntas."
+  - "Llevar el registro de los primeros 30 días y calcular el prendimiento."
+  - "Decir qué es la semilla artificial y qué debe exigirle antes de comprarla."
+  - "Decidir una mezcla de material preinoculado con el semáforo verde-amarillo-rojo."
+  - "Comparar material habitual contra material nuevo por margen bruto, no por precio de compra."
+
+temas:
+  - tipos de material de siembra
+  - los cuatro filtros y la trazabilidad del lote
+  - cultivo in vitro y aclimatación
+  - recepción del lote y primeros 30 días
+  - semilla artificial
+  - material preinoculado y compatibilidad de mezclas
+  - trasplante y decisión económica
+
+requisitos_previos:
+  - "Ninguno. Se parte de la experiencia de campo del participante."
+
+materiales_clase:
+  - "Una bandeja de plántulas real, de cualquier cultivo, para la revisión de recepción (tramo 36–44 min) y la demostración del cepellón (67–72 min)."
+  - "Una bolsa de semilla o un atado de estacas con su etiqueta, para el ejercicio de los cuatro filtros."
+  - "Una etiqueta de un producto biológico, para el tramo de compatibilidad."
+  - "Un envase transparente y agua, para mostrar el alcance y el límite de la prueba del frasco. No mezclar ningún agroquímico real."
+  - "Calculadora o celular, para el prendimiento y el margen bruto."
+  - "Cámara o celular, para practicar la foto del lote separado."
+
+archivos:
+  fuente: 01-fuente.md
+  libro: 02-libro.md
+  ejercicios: 03-ejercicios.md
+  docente: 04-docente.md
+  diapositivas: 05-diapositivas.md
+
+# --- Control de datos faltantes ---------------------------------------
+# Todo dato numérico técnico (dosis, concentraciones, umbrales, precios)
+# quedó marcado en el texto con:
+#   <!-- FALTA: confirmar con el docente -->
+# Buscar esos marcadores antes de aprobar el capítulo.
+datos_pendientes: true
