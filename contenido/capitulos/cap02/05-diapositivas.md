@@ -78,7 +78,7 @@ pie: "Si uno falla: separar, consultar o probar en pequeño."
 **09–14 min.** Proyectar y dejar que lo lean solos diez segundos antes de
 hablar. Luego la frase: **no basta con que se vea verde**.
 
-Hacer el ejercicio de la **página 5** con material físico si lo hay: una
+Hacer el ejercicio de las **páginas 5–6** con material físico si lo hay: una
 bandeja, una bolsa de semilla o un atado de estacas. Que el grupo aplique
 los cuatro filtros en voz alta.
 

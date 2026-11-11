@@ -2,8 +2,8 @@
 capitulo: 3
 modulo: "3.1"
 titulo: "Monitoreo y control de insectos en la agricultura"
-pagina_inicio: 4
-paginas_total: 33
+pagina_inicio: 6
+paginas_total: 32
 estado: borrador
 ---
 
@@ -11,7 +11,7 @@ estado: borrador
      delante). Son orientativas: tras construir, ajustarlas con
      salidas/libro/cap03-paginas.json. No anidar comentarios HTML aqui. -->
 
-<!-- pagina: 4 -->
+<!-- pagina: 6 -->
 
 # Monitoreo y control de insectos en la agricultura
 
@@ -29,6 +29,8 @@ Identificar bien el problema, mirarlo de forma ordenada, anotar lo que vio,
 decidir con un criterio, actuar por el nivel más bajo que resuelva, y volver a
 mirar. Este capítulo recorre ese proceso en el orden en que usted lo vive en el
 campo.
+
+## Lo que va a poder hacer al terminar
 
 :::objetivos
 Al terminar este capítulo, usted podrá:
@@ -413,7 +415,7 @@ niveles difíciles de manejar.
 <!-- FALTA: confirmar con el docente — frecuencia de monitoreo recomendada
      (días entre recorridos) para los cultivos del curso. -->
 
-<!-- pagina: 16 -->
+<!-- pagina: 17 -->
 
 ## Trampas amarillas y azules
 
@@ -452,7 +454,7 @@ voladores**, que pueden estar de paso por encima del lote sin haberse establecid
 en el cultivo. Antes de decidir nada, vaya a la planta.
 :::
 
-<!-- pagina: 17 -->
+<!-- pagina: 18 -->
 
 ## Instalar, mantener y leer la trampa
 
@@ -502,7 +504,7 @@ pagado producto y jornada por matar insectos que todavía no se habían
 establecido, y habrían perdido los benéficos que sí estaban adentro.
 :::
 
-<!-- pagina: 18 -->
+<!-- pagina: 19 -->
 
 ## El registro: convertir lo que vio en algo comparable
 
@@ -589,7 +591,7 @@ nuevos, hojas jóvenes, frutos recién cuajados. Ahí sí se ve si la población
 activa.
 :::
 
-<!-- pagina: 20 -->
+<!-- pagina: 21 -->
 
 ## Etapa, clima y benéficos
 
@@ -722,7 +724,7 @@ población, si bajó el daño reciente, si dejaron de aparecer focos y si se pro
 la etapa crítica. Sin ese segundo monitoreo usted nunca sabe si lo que hizo
 sirvió, y el año que viene va a repetirlo a ciegas.
 
-<!-- pagina: 24 -->
+<!-- pagina: 25 -->
 
 ## MIP por niveles: empezar por abajo
 
@@ -749,7 +751,7 @@ uno a otro.
 | **3. Biológico** | Conservar o reforzar la regulación natural | Que la controle otro organismo |
 | **4. Químico responsable** | Intervenir cuando el riesgo lo justifica | Resolver sin generar resistencia |
 
-<!-- pagina: 25 -->
+<!-- pagina: 26 -->
 
 ## Niveles 1 y 2: prevenir y sacar
 
@@ -797,7 +799,7 @@ que la biología y la movilidad de la plaga lo permitan. Baja el costo y expone
 menos a los benéficos.
 :::
 
-<!-- pagina: 26 -->
+<!-- pagina: 27 -->
 
 ## Nivel 3: control biológico
 
@@ -837,7 +839,7 @@ selectividad y riesgo**.
 **Efecto subletal.** El que no mata al organismo, pero le altera el comportamiento, la orientación o la reproducción. En una abeja puede significar que no encuentre el camino de regreso.
 :::
 
-<!-- pagina: 27 -->
+<!-- pagina: 28 -->
 
 ## Nivel 4: control químico responsable
 
@@ -888,7 +890,7 @@ resistencia se desarrollan en las páginas siguientes. Son parte de la condició
 —producto apropiado—, pero merecen capítulo propio.
 :::
 
-<!-- pagina: 28 -->
+<!-- pagina: 29 -->
 
 ## Resistencia: el que cambia es el insecto
 
@@ -967,7 +969,7 @@ La confirmación de resistencia puede requerir bioensayos, pruebas bioquímicas 
 pruebas moleculares hechas en laboratorios especializados. No se confirma en la
 finca.
 
-<!-- pagina: 31 -->
+<!-- pagina: 32 -->
 
 ## Cómo se defiende el insecto
 
@@ -1049,7 +1051,7 @@ específicas.
 <!-- FALTA: confirmar con el docente — secuencia de grupos IRAC recomendada y
      duración de cada ventana para las plagas principales del curso. -->
 
-<!-- pagina: 33 -->
+<!-- pagina: 34 -->
 
 ## Dosis, momento, cobertura y mezclas
 
@@ -1104,7 +1106,7 @@ Al terminar, cuente cuántas veces seguidas aparece el mismo grupo. Esa cuenta e
 su presión de selección del año pasado.
 :::
 
-<!-- pagina: 34 -->
+<!-- pagina: 35 -->
 
 ## Qué hacer cuando sospecha resistencia
 
@@ -1141,7 +1143,7 @@ En términos prácticos, la fórmula completa es:
 > menos aplicaciones innecesarias + mejor momento + mejor cobertura + dosis
 > correcta + rotación real + MIP = **menor presión de selección**
 
-<!-- pagina: 35 -->
+<!-- pagina: 36 -->
 
 ## Todo junto: la secuencia operativa
 

@@ -16,7 +16,7 @@ verla. El razonamiento ampliado de cada uno está en la edición docente.
 ## A. Selección única
 
 :::ejercicio{tipo="seleccion" renglones=1}
-**1. Qué cambia un buen material de siembra** *(página 5)*
+**1. Qué cambia un buen material de siembra** *(página 4)*
 
 Sembrar material de alta calidad sirve sobre todo para:
 
@@ -128,7 +128,7 @@ Usted mezcla dos productos en un envase transparente y la mezcla queda limpia, s
 ## D. Casos de campo
 
 :::ejercicio{tipo="caso" renglones=8}
-**10. El camión de las dos de la tarde** *(páginas 11 y 18)*
+**10. El camión de las dos de la tarde** *(páginas 11 y 20)*
 
 Don Rafael pidió 1 200 plántulas de chile dulce para trasplantar esa misma
 tarde. El camión llega a las dos. La cuadrilla ya está contratada. Para
