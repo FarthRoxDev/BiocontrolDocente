@@ -22,6 +22,8 @@ material del docente (.pptx/.docx/.pdf)
 
 ## Montar el proyecto en otra máquina
 
+Paso a paso para Windows en **`MONTAJE.md`**. Resumen:
+
 ```bash
 pip install -r requisitos.txt
 python -m playwright install chromium      # solo si no hay Chrome/Edge instalado
@@ -29,6 +31,8 @@ python3 build/scripts/comprobar_entorno.py # dice qué falta antes de construir 
 ```
 
 No hace falta Node: libro y presentación usan el mismo Playwright de Python.
+`ingerir_fuentes.py` acepta archivos sueltos, comodines (los expande él mismo,
+porque PowerShell no lo hace) o una carpeta entera con el material.
 
 ## Comandos
 

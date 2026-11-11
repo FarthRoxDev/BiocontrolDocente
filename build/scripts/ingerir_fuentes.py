@@ -14,7 +14,7 @@ Produce:
 
 NO interpreta ni reescribe: eso lo hace despues la skill `redactar-capitulo`.
 """
-import argparse, os, sys, datetime, hashlib, re, unicodedata
+import argparse, os, sys, datetime, hashlib, re, unicodedata, glob as globlib
 from pathlib import Path
 
 # Formatos que el motor del libro puede incrustar directamente en el PDF.
@@ -198,7 +198,8 @@ LECTORES = {".pptx": de_pptx, ".docx": de_docx, ".pdf": de_pdf}
 def main():
     ap = argparse.ArgumentParser(
         description="Convierte el material del docente en 01-fuente.md y extrae sus imagenes.")
-    ap.add_argument("archivos", nargs="+")
+    ap.add_argument("archivos", nargs="+",
+                    help="archivos, comodines (*.pptx) o una carpeta con el material")
     ap.add_argument("--capitulo", required=True, help="p.ej. cap01")
     ap.add_argument("--docente", default="<completar>")
     ap.add_argument("--raiz", default=str(Path(__file__).resolve().parents[2]),
@@ -206,6 +207,27 @@ def main():
     ap.add_argument("--sin-imagenes", action="store_true",
                     help="no extraer las imagenes incrustadas")
     a = ap.parse_args()
+
+    # PowerShell y cmd NO expanden los comodines: le pasan "*.pptx" literal
+    # al programa. Y apuntar a la carpeta entera es lo mas comodo cuando el
+    # material del docente esta todo junto. Se resuelven los dos casos aqui.
+    archivos = []
+    for patron in a.archivos:
+        ruta = Path(patron)
+        if ruta.is_dir():
+            for ext in sorted(LECTORES):
+                archivos += sorted(str(f) for f in ruta.glob(f"*{ext}"))
+        elif any(c in patron for c in "*?[") and not ruta.exists():
+            encontrados = sorted(globlib.glob(patron))
+            if not encontrados:
+                print(f"  nada coincide con: {patron}", file=sys.stderr)
+            archivos += encontrados
+        else:
+            archivos.append(patron)
+    if not archivos:
+        print("error: no se encontro ningun archivo que leer", file=sys.stderr)
+        return 2
+    a.archivos = archivos
 
     raiz = Path(a.raiz).resolve()
     img = Imagenes(raiz, a.capitulo)
