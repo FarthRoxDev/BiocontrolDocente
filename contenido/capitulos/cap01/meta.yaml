@@ -1,26 +1,21 @@
 # ============================================================
 # Capítulo 01 — metadatos
-# AVISO: Contenido de muestra generado para demostrar el formato.
-# Reemplazar con el material del docente antes de usar en clase.
+# Redactado desde el material real del docente (01-fuente.md).
 # ============================================================
 
 capitulo: 1
 id: cap01
-modulo: 1
-titulo: "[MUESTRA] Biofertilización y micorrizas"
+modulo: "4"            # numeración del temario oficial
+titulo: "Biofertilización y micorrizas"
 subtitulo: "Qué son, cómo se presentan, cuándo se aplican y cómo reconocer un producto de buena calidad"
 
-estado: muestra          # muestra | borrador | revisado | aprobado
-es_muestra: true
-aviso_muestra: >
-  Contenido de muestra generado para demostrar el formato.
-  Reemplazar con el material del docente antes de usar en clase.
+estado: borrador         # muestra | borrador | revisado | aprobado
+es_muestra: false
 
 # --- Atribución --------------------------------------------------------
-# NO se atribuye a ningún docente: este capítulo no se basa en material
-# aportado por los profesores del curso. Al pegar la fuente real en
-# 01-fuente.md, completar estos campos con el docente que la aportó.
-docente: null            # <!-- FALTA: confirmar con el docente -->
+# Completar con el docente que entregó el material.
+docente: null            # FALTA: confirmar quién aportó biofertilizantes-micorrizas.docx
+fuente_original: "biofertilizantes-micorrizas.docx"
 docente_revisor: null    # <!-- FALTA: confirmar con el docente -->
 fuente_material: null    # archivo PPTX/DOCX/PDF de origen
 fecha_material: null

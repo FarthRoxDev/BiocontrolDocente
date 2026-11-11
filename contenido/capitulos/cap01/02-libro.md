@@ -1,752 +1,484 @@
-<!-- DESACTUALIZADO: el 01-fuente.md de este capitulo ya es el material
-     REAL del docente (ingerido el 2026-11-11), pero este 02-libro.md
-     sigue siendo el texto de MUESTRA que se escribio para demostrar el
-     formato. Hay que reescribirlo desde la fuente real con la skill
-     redactar-capitulo antes de usarlo en clase. -->
-
 ---
 capitulo: 1
-titulo: "[MUESTRA] Biofertilización y micorrizas"
+modulo: "4"
+titulo: "Biofertilización y micorrizas"
 pagina_inicio: 4
-paginas_total: 18
-estado: muestra
+estado: borrador
 ---
 
-> **Aviso:** Contenido de muestra generado para demostrar el formato.
-> Reemplazar con el material del docente antes de usar en clase.
->
-> Los datos numéricos (dosis, concentraciones, precios, cepas comerciales)
-> aparecen como `<!-- FALTA: confirmar con el docente -->` o como rangos
-> etiquetados «orientativo, verificar». **No aplicar nada de este capítulo
-> en campo sin confirmar los números con el técnico o el docente.**
-
-<!-- Las marcas de pagina de abajo son la paginacion GLOBAL del libro
-     (este capitulo ocupa las paginas 4-21). La autoridad es
-     salidas/libro/cap01-paginas.json, que produce construir_libro.py al
-     medir el PDF: si el texto cambia de largo, volver a generar el libro y
-     reajustar estas marcas y los campos de pagina de 05-diapositivas.md.
-     No escribir comentarios HTML anidados aqui: cierran el comentario
-     antes de tiempo y el texto se imprime en el PDF. -->
+<!-- Marcas de pagina GLOBALES del libro (portada, creditos e indice van
+     delante). Son orientativas: tras construir, ajustarlas con
+     salidas/libro/cap01-paginas.json. No anidar comentarios HTML aqui. -->
 
 <!-- pagina: 4 -->
 
-# [MUESTRA] Capítulo 1 — Biofertilización y micorrizas
+# Biofertilización y micorrizas
 
-Durante muchos años se enseñó que alimentar un cultivo era, sobre todo,
-echarle fertilizante. Se medía el suelo, se calculaba lo que faltaba y se
-aplicaba. Esa cuenta sigue siendo necesaria, pero está incompleta: deja
-afuera a los organismos que viven en el suelo y que son, en la práctica,
-los que entregan buena parte de los nutrientes a la planta.
+Usted ya sabe lo que cuesta un saco de fertilizante, y sabe que cada año cuesta
+más. Lo que este capítulo le propone no es dejar de fertilizar: es poner a
+trabajar a los organismos que ya viven en su suelo para que la planta aproveche
+mejor lo que usted aplica, y para que parte de ese gasto se lo ahorre.
 
-La **biofertilización** consiste en aprovechar a esos organismos vivos
-—hongos y bacterias beneficiosos— para mejorar la nutrición del cultivo.
-No se trata de aplicar nutrientes, sino de aplicar **seres vivos que
-trabajan** en la raíz y alrededor de ella. Esa diferencia, que parece de
-palabras, cambia todo en la práctica: un biofertilizante se puede morir en
-el tanque, se vence, le afecta el sol y no se mezcla con cualquier cosa.
-
-Este capítulo se enfoca en lo que un productor necesita decidir frente a un
-estante de productos: qué tipos existen, en qué presentación vienen, cuándo
-se aplican, con qué se pueden mezclar y cómo reconocer un producto bueno de
-uno que ya no sirve.
+Los biofertilizantes no son abono. Son organismos vivos. Y como todo lo que está
+vivo, se mueren si uno los trata mal: si los mezcla en el tanque con lo que no
+debe, si los guarda al sol, si los aplica tarde. Por eso la mitad de este
+capítulo no habla de qué comprar, sino de **cuándo y con qué no mezclarlo**. Ahí
+es donde se gana o se pierde la plata.
 
 :::objetivos
-Al terminar este capítulo, el participante podrá:
+Al terminar este capítulo, usted podrá:
 
-- Explicar con sus propias palabras qué es un biofertilizante y en qué se
-  diferencia de un fertilizante de síntesis.
-- Identificar los grupos principales: micorrizas arbusculares, bacterias
-  fijadoras de nitrógeno y microorganismos solubilizadores de fósforo.
-- Reconocer las presentaciones comerciales más comunes y para qué sirve
-  cada una.
-- Decidir en qué momento del ciclo del cultivo conviene aplicar cada tipo.
-- Evaluar la compatibilidad de un biofertilizante con otros productos
-  **antes** de mezclarlo en el tanque.
-- Leer la etiqueta de un biofertilizante y detectar señales de mala calidad.
+- Explicar con sus palabras qué es un biofertilizante y en qué se diferencia de un fertilizante químico.
+- Distinguir los cuatro grupos principales: micorrizas, fijadores de nitrógeno, solubilizadores de fósforo y promotores del crecimiento.
+- Decidir en qué momento del cultivo conviene aplicar cada grupo.
+- Saber qué productos **no** se pueden mezclar con un biofertilizante.
+- Leer la etiqueta de un biofertilizante y detectar si vale lo que cuesta.
 :::
 
 <!-- pagina: 5 -->
 
-## 1.1 Qué es —y qué no es— un biofertilizante
+## Qué es un biofertilizante
 
-Un biofertilizante es un producto que contiene **microorganismos vivos**
-(hongos, bacterias o una mezcla de ambos) que, al colocarse en la semilla,
-en la raíz o en el suelo, mejoran la disponibilidad de nutrientes para la
-planta o favorecen su absorción.
+Un biofertilizante es un producto que contiene **microorganismos vivos** —hongos,
+bacterias o una mezcla— que se colocan en la semilla, en la raíz o en el suelo.
+Una vez ahí, esos organismos colonizan la zona de la raíz, y algunos entran
+dentro de los tejidos de la planta. Lo que hacen es mejorar la captación de
+nutrientes, sobre todo nitrógeno, fósforo y potasio.
 
-La clave está en el mecanismo. El biofertilizante no aporta el nutriente:
-lo **pone a disposición**. Puede hacerlo de tres maneras principales:
+Fíjese en la diferencia, porque es la clave de todo el capítulo:
 
-1. **Capturando** un nutriente que la planta no puede tomar del aire, como
-   hace el *Rhizobium* con el nitrógeno atmosférico.
-2. **Liberando** un nutriente que ya estaba en el suelo pero estaba
-   bloqueado, como hacen las bacterias solubilizadoras de fósforo.
-3. **Ampliando** la zona de suelo que la raíz alcanza, como hacen las
-   micorrizas, que funcionan como una extensión de la raíz.
+> Un fertilizante **aporta** el nutriente.
+> Un biofertilizante **no aporta el nutriente: lo pone a disposición.**
+
+Esa distinción, que parece de palabras, cambia todo en la práctica. Si el
+producto es un ser vivo, se puede morir en el tanque, se vence, y se aplica
+cuando la planta todavía lo puede aprovechar, no cuando a uno le queda cómodo.
 
 :::glosario
-**Biofertilizante.** Producto con microorganismos vivos que mejora la
-nutrición del cultivo al hacer disponibles nutrientes del suelo o del aire.
+**Biofertilizante.** Producto con microorganismos vivos que mejoran el aprovechamiento de los nutrientes del suelo por parte de la planta.
 
-**Inoculante.** Otro nombre del mismo tipo de producto, usado sobre todo
-cuando se aplica a la semilla. «Inocular» es poner el microorganismo en
-contacto con la semilla o la raíz.
+**Inoculante.** Otro nombre para el mismo tipo de producto. Se usa sobre todo cuando se aplica a la semilla o a la raíz.
 
-**Abono orgánico.** Materia orgánica (compost, bocashi, estiércol) que sí
-aporta nutrientes y mejora el suelo, pero **no es** un biofertilizante:
-su efecto no depende de un microorganismo vivo específico.
+**Rizosfera.** La capa delgada de suelo que rodea la raíz y que está bajo la influencia de la planta. Ahí es donde pasa casi todo.
 
-**Bioestimulante.** Producto que estimula el crecimiento de la planta
-(hormonas, extractos, aminoácidos) sin aportar ni liberar nutrientes.
-Puede o no contener microorganismos.
+**Endófito.** Microorganismo que vive **dentro** de los tejidos de la planta, no solo alrededor de la raíz.
 :::
 
-Confundir estas categorías es una de las causas más frecuentes de
-decepción. Si alguien espera que un litro de inoculante micorrícico
-sustituya la fertilización fosfórica completa de una hectárea, el producto
-va a «fallar» aunque esté perfecto: se le pidió algo que no hace.
-
 :::nota
-Un biofertilizante **complementa** el plan de fertilización; no lo
-reemplaza. En suelos muy pobres o muy degradados suele hacer falta corregir
-primero materia orgánica, pH y los desbalances gruesos. Sobre un suelo
-muerto y compactado, el microorganismo tampoco tiene cómo trabajar.
+No hay una definición mundial única de «biofertilizante»: cada país tiene la
+suya, ajustada a su legislación. Los países más avanzados en regular esto son
+Brasil, India, China, Estados Unidos y la Unión Europea. Por eso dos productos
+pueden llamarse igual y no ser lo mismo: lo que manda es la etiqueta, no el
+nombre comercial.
 :::
 
 <!-- pagina: 6 -->
 
-## 1.2 El suelo como sistema vivo
+## Por qué se está usando cada vez más
 
-Un puñado de suelo agrícola sano contiene una cantidad enorme de
-microorganismos: hongos, bacterias, protozoarios, nematodos de vida libre.
-La cifra exacta varía tanto entre suelos que no tiene sentido memorizarla.
+No es moda. Hay tres razones concretas, y a usted le pegan las tres.
 
-<!-- FALTA: confirmar con el docente -->
-*(número de microorganismos por gramo de suelo que el docente usa en su
-presentación)*
+**La primera es el bolsillo.** El mercado de insumos agrícolas depende de
+situaciones geopolíticas que encarecen el producto o lo dejan sin llegar. Ya lo
+vivió. Los biofertilizantes reducen la dependencia de ese mercado.
 
-Lo que sí importa entender es **dónde** ocurre la acción. La mayor parte de
-la actividad útil para el cultivo se concentra en la **rizosfera**: la
-delgada capa de suelo pegada a la raíz, de unos pocos milímetros, donde la
-planta libera azúcares y ácidos orgánicos por sus raíces.
+**La segunda es el suelo.** Usar fertilizante químico de forma sostenida, año
+tras año, saliniza el suelo, le quita biodiversidad y contamina los mantos
+acuíferos. El suelo cansado produce menos con la misma inversión.
 
-:::glosario
-**Rizosfera.** Zona de suelo inmediatamente alrededor de la raíz, donde los
-exudados de la planta alimentan a los microorganismos y donde ocurre el
-intercambio de nutrientes.
+**La tercera es el rendimiento.** Y acá están los números que la investigación
+reporta:
 
-**Exudados radicales.** Azúcares, ácidos y otras sustancias que la raíz
-libera al suelo. Son el «pago» que la planta hace a los microorganismos.
+:::tabla{titulo="Lo que la investigación reporta sobre biofertilizantes"}
+| Efecto | Magnitud reportada |
+|---|---|
+| Reducción del requerimiento de nitrógeno | hasta 50 % |
+| Reducción del requerimiento de fósforo | hasta 25 % |
+| Aumento de rendimiento | hasta 25 % |
+| Retención de nutrientes y agua en el suelo | mejora |
+| Estructura del suelo | mejora |
 :::
 
-Esa es una idea central de todo el curso: **la planta paga**. Entrega
-azúcares que produjo con el sol y, a cambio, recibe nutrientes y
-protección. Es un intercambio, no un favor. Y como es un intercambio, tiene
-consecuencias prácticas:
-
-- Una planta débil, enferma o defoliada tiene poco que pagar, así que
-  sostiene menos actividad microbiana. Primero hay que sacarla adelante.
-- Si el nutriente ya está abundante y disponible en el suelo —fósforo
-  soluble alto, por ejemplo— la planta deja de invertir en la sociedad y la
-  colonización baja. Esto explica por qué los biofertilizantes muchas veces
-  se notan más en suelos de fertilidad media que en suelos sobrefertilizados.
-
-:::sabias-que
-Las micorrizas no son un invento moderno ni una moda comercial. La
-asociación entre hongos y raíces de plantas aparece en el registro fósil
-desde las primeras plantas terrestres. Es decir: las plantas salieron del
-agua y colonizaron la tierra firme **acompañadas de hongos**. La mayoría de
-las especies de plantas del mundo forman micorrizas de forma natural; lo
-raro, en términos evolutivos, es una raíz sin hongo.
-:::
-
-:::figura{src="figuras/cap01-rizosfera.svg" pie="La rizosfera: la raíz libera exudados y los microorganismos devuelven nutrientes disponibles. [MUESTRA] — figura pendiente de elaborar."}
-<!-- FALTA: confirmar con el docente -->
-Figura pendiente. Usar el esquema del material original del docente si
-existe, o encargar ilustración al agente de diseño.
+:::precaucion
+Esos porcentajes son **techos reportados en investigación**, no una promesa para
+su finca. Dependen del cultivo, del suelo, del clima y de que el producto se
+aplique bien. Tómelos como «hasta dónde puede llegar esto», no como «esto es lo
+que va a pasar». Si un vendedor se los garantiza, desconfíe.
 :::
 
 <!-- pagina: 7 -->
 
-## 1.3 Micorrizas arbusculares
+## Los cuatro grupos
 
-De todos los biofertilizantes, las **micorrizas** son las que más confusión
-generan y las que más vale la pena entender bien.
+Los biofertilizantes se agrupan según **qué trabajo hacen** en el ciclo de
+nutrientes. Son cuatro grupos, y conviene que los tenga claros porque cada uno
+se aplica distinto.
 
-La palabra significa literalmente «hongo-raíz». Una micorriza no es un
-producto ni un organismo: es una **asociación** entre un hongo del suelo y
-la raíz de una planta. El hongo entra en la raíz, vive parte de su ciclo
-dentro de ella y extiende hacia el suelo una red de filamentos muy finos.
-
-El tipo de interés agrícola para la mayoría de los cultivos es la
-**micorriza arbuscular**. El hongo forma dentro de las células de la raíz
-unas estructuras ramificadas llamadas *arbúsculos* —de ahí el nombre— que
-son el punto de intercambio: por ahí entran los azúcares de la planta y
-salen los nutrientes que el hongo trajo del suelo.
-
-:::glosario
-**Micorriza arbuscular (MA).** Asociación entre hongos del grupo
-Glomeromycota y las raíces de la mayoría de las plantas cultivadas.
-
-**Hifa.** Filamento del hongo. El conjunto de hifas forma el micelio.
-
-**Micelio externo.** Red de hifas que sale de la raíz y explora el suelo.
-Es lo que le da a la planta un «alcance» mucho mayor.
-
-**Arbúsculo.** Estructura ramificada del hongo dentro de la célula de la
-raíz, donde se intercambian azúcares por nutrientes.
-
-**Espora.** Forma de resistencia y propagación del hongo. Es lo que
-normalmente se cuenta y se vende en un inoculante micorrícico.
+:::tabla{titulo="Los cuatro grupos de biofertilizantes"}
+| Grupo | Qué hace | Para qué nutriente |
+|---|---|---|
+| Micorrizas (HMA) | Extienden el alcance de la raíz | Fósforo, agua, micronutrientes |
+| Fijadores de nitrógeno | Toman el nitrógeno del aire y lo convierten en amonio | Nitrógeno |
+| Solubilizadores de fósforo | Liberan el fósforo que está bloqueado en el suelo | Fósforo |
+| Promotores del crecimiento (PGPR) | Producen hormonas vegetales | Ninguno directamente: regulan la planta |
 :::
 
-### Qué le da la micorriza al cultivo
+Los tres primeros trabajan sobre nutrientes. El cuarto no: trabaja sobre la
+**fisiología de la planta**. Es una diferencia que vale la pena tener presente
+cuando un vendedor le ofrezca «un biofertilizante» sin decir de cuál habla.
 
-- **Mayor absorción de fósforo.** Es el efecto mejor documentado. El
-  fósforo se mueve muy poco en el suelo: la raíz lo agota en su vecindad
-  inmediata y después ya no alcanza más. El micelio externo explora un
-  volumen de suelo mucho mayor y trae el fósforo de donde la raíz no llega.
-- **Mejor absorción de agua y de micronutrientes** como zinc y cobre, por
-  el mismo mecanismo de alcance.
-- **Mayor tolerancia al estrés** por sequía, trasplante o salinidad. La
-  planta micorrizada normalmente se recupera mejor de un trasplante.
-- **Cierta protección contra patógenos de raíz**, en parte por competencia
-  física y en parte porque la planta queda más preparada para defenderse.
-- **Mejor estructura del suelo**: las hifas y las sustancias que el hongo
-  produce pegan las partículas y ayudan a formar agregados estables.
-
-:::nota
-El beneficio de la micorriza se nota más cuando el fósforo del suelo es
-limitante o poco disponible —suelos ácidos con mucho hierro y aluminio, muy
-comunes en zonas tropicales— y menos cuando hay fósforo soluble en exceso.
-Antes de invertir en un inoculante micorrícico, vale la pena mirar el
-análisis de suelo.
+:::sabias-que
+Los cuatro grupos no compiten entre sí: se ayudan. Las micorrizas le crean un
+ambiente favorable a las otras bacterias benéficas y hasta les pasan recursos de
+la planta. Por eso las formulaciones que combinan varias especies responden
+mejor que las de una sola.
 :::
 
 <!-- pagina: 8 -->
 
-### Cultivos que responden y cultivos que no
+## Micorrizas: el hongo que le alarga la raíz
 
-Casi todos los cultivos de interés comercial forman micorrizas
-arbusculares: café, cítricos, aguacate, musáceas, hortalizas de fruto,
-granos básicos, caña, palma, ornamentales, forrajes.
+Las micorrizas arbusculares —en las etiquetas las va a ver como **HMA**— son
+hongos del suelo que se asocian con la raíz. Se asocian con más del **80 % de las
+plantas terrestres**, así que es casi seguro que su cultivo es uno de ellos.
 
-Hay excepciones importantes que conviene memorizar, porque aplicar
-micorrizas ahí es botar el dinero:
-
-- **Crucíferas** (repollo, brócoli, coliflor, mostaza, nabo).
-- **Quenopodiáceas y amarantáceas** (remolacha, espinaca).
-
-Estas familias, en general, no forman micorriza arbuscular.
-
-:::precaucion
-No aplicar inoculante micorrícico en repollo, brócoli, coliflor, remolacha
-ni espinaca: esas familias no forman la asociación y no hay respuesta que
-esperar. Si un vendedor asegura lo contrario para esos cultivos, pedir el
-dato publicado que lo respalde.
-:::
-
-:::ejemplo
-**Vivero de café.** Un productor de la zona de Los Santos inocula con
-micorrizas en la bolsa de vivero, al llenar el sustrato, para que el hongo
-colonice la raíz cuando todavía es pequeña y el volumen de sustrato es
-poco. Al trasplantar al campo, la planta ya va «acompañada»: no hay que
-inocular la hectárea completa, solo el volumen de la bolsa.
-
-Esa es la lógica económica de la micorriza: **inocular cuando la raíz es
-chiquita y el volumen de suelo es pequeño**, no cuando la planta ya está
-grande en el campo.
-
-Dosis por bolsa de vivero: <!-- FALTA: confirmar con el docente -->
-:::
-
-## 1.4 Bacterias fijadoras de nitrógeno
-
-El aire que respiramos es casi 80 % nitrógeno, pero la planta no puede
-usarlo: viene en una molécula muy estable que necesita ser «rota». Ciertas
-bacterias sí tienen la enzima para hacerlo, y a eso se le llama **fijación
-biológica de nitrógeno**.
+El trato es simple y es de ida y vuelta: la planta le pasa azúcares al hongo, y
+el hongo le consigue a la planta nutrientes y agua que la raíz sola no alcanza.
+No es que el hongo fabrique fósforo: es que **llega a donde la raíz no llega**.
 
 :::glosario
-**Fijación biológica de nitrógeno.** Proceso por el cual algunas bacterias
-convierten el nitrógeno del aire en formas que la planta puede usar.
+**Micorriza.** Asociación entre un hongo del suelo y la raíz de una planta, en la que los dos salen ganando.
 
-**Simbiótica.** La bacteria vive dentro de un órgano de la planta (el
-nódulo) y el intercambio es cerrado y eficiente. Caso típico: *Rhizobium*
-en leguminosas.
+**Biotrofo obligado.** Organismo que no puede vivir solo: necesita estar pegado a una raíz viva para completar su ciclo. Las micorrizas lo son, y de ahí sale la consecuencia práctica más importante del capítulo.
+:::
 
-**Asociativa o de vida libre.** La bacteria vive en la rizosfera o sobre la
-raíz, sin formar nódulo. Caso típico: *Azospirillum* en gramíneas.
+:::precaucion
+Que las micorrizas sean biotrofos obligados significa que **sin raíz viva se
+mueren**. Aplicarlas en un suelo desnudo, antes de que haya cultivo, es botar el
+producto. Van a la siembra, al trasplante o al establecimiento temprano, en
+contacto con la raíz o muy cerca.
+:::
 
-**Nódulo.** Bultito en la raíz de una leguminosa donde vive el *Rhizobium*.
-Al cortarlo, un nódulo activo se ve rosado o rojizo por dentro.
+Además de los nutrientes, las micorrizas le ayudan a la planta a aguantar
+condiciones adversas y le activan el sistema inmune. Es decir: la planta
+micorrizada resiste mejor el estrés, no solo come mejor.
+
+<!-- pagina: 9 -->
+
+## Qué micorriza viene en el producto
+
+En los inoculantes comerciales va a encontrar sobre todo estos géneros:
+**Rhizophagus, Funneliformis, Claroideoglomus, Glomus** y **Gigaspora**. No todos
+hacen lo mismo:
+
+:::tabla{titulo="Géneros de micorrizas más usados y su aporte"}
+| Género | Aporte principal reportado |
+|---|---|
+| Claroideoglomus | Colonización de la raíz |
+| Rhizophagus | Mejora del rendimiento |
+| Funneliformis | Mejora del rendimiento |
+| Glomus | Uso general en inoculantes |
+| Gigaspora | Uso general en inoculantes |
+:::
+
+**La presentación.** La mayoría viene en matriz sólida; menos común, en
+suspensión acuosa. Lo que hay adentro es una mezcla de componentes inertes,
+dispersantes, coadyuvantes y esporas vivas del hongo.
+
+:::nota
+Las primeras formulaciones traían una sola especie. Los estudios recientes
+muestran que las que combinan **varias especies**, o que mezclan micorrizas con
+otros microorganismos benéficos, responden mejor que las de una sola. Si está
+comparando dos productos de precio parecido, ese es un criterio a favor.
 :::
 
 <!-- pagina: 10 -->
 
-### Rhizobium y leguminosas
+## Fijadores de nitrógeno: sacarlo del aire
 
-*Rhizobium* y los géneros emparentados (*Bradyrhizobium*, *Sinorhizobium*)
-forman nódulos en las raíces de las leguminosas: frijol, soya, gandul,
-maní, arveja, y también leguminosas de cobertura y árboles de sombra como
-el poró y la leucaena.
+El aire que usted respira es casi todo nitrógeno, pero la planta no lo puede
+tomar de ahí. Las bacterias fijadoras sí: lo capturan y lo convierten en
+**amonio**, que es una forma que la planta sí aprovecha. Eso puede suplir buena
+parte de lo que el cultivo necesita.
 
-Dos ideas prácticas:
+Algunas viven dentro de la raíz y otras en la rizosfera, alrededor de ella.
 
-**1. La afinidad es específica.** El *Rhizobium* del frijol no sirve para
-la soya. Cada combinación bacteria–cultivo tiene su grupo de afinidad. Al
-comprar un inoculante hay que verificar en la etiqueta que diga **para qué
-cultivo** es. Esta es una de las razones más comunes por las que «el
-inoculante no funcionó».
-
-**2. Se puede verificar en campo.** Unas semanas después de la siembra se
-saca una planta con cuidado, se lava la raíz y se cuentan los nódulos. Se
-corta uno con la uña: si por dentro está rosado o rojizo, está fijando; si
-está blanco, verde o café, no está trabajando.
-
-Número de nódulos esperable por planta: rango orientativo, verificar según
-cultivo y zona. <!-- FALTA: confirmar con el docente -->
-
-:::actividad
-**Revisión de nódulos (en campo, 15 minutos).**
-
-1. Saque con pala tres plantas de una leguminosa, con todo el cepellón.
-2. Lave la raíz en un balde con agua, sin arrancar los bultitos.
-3. Cuente los nódulos de cada planta y anote.
-4. Corte dos nódulos por planta con la uña y describa el color interno.
-5. Anote: ¿nódulos rosados o blancos? ¿Están en la raíz principal o en las
-   secundarias?
-
-Conclusión a escribir en una línea: ¿hay o no hay fijación activa en ese
-lote?
+:::glosario
+**Fijación biológica de nitrógeno.** Proceso por el cual ciertas bacterias toman el nitrógeno del aire y lo transforman en una forma que la planta puede usar.
 :::
 
-### Azospirillum y gramíneas
+Los géneros que más va a ver, y los que más efectos positivos tienen reportados,
+son **Azospirillum, Azotobacter** y **Rhizobium**. En la literatura también
+aparecen Beijerinckia, Burkholderia, Clostridium, Gluconacetobacter,
+Herbaspirillum, Methanosarcina y Paenibacillus.
 
-*Azospirillum* no forma nódulos: vive asociado a la raíz de gramíneas como
-maíz, arroz, sorgo y pastos. Aporta algo de nitrógeno fijado, pero en la
-práctica una parte importante de su efecto viene de que **produce
-sustancias que estimulan el crecimiento de la raíz**. Una raíz más
-ramificada explora más suelo, y eso se traduce en mejor absorción general.
+**Dónde se usan.** Principalmente en cereales y en leguminosas —frijol, maíz—,
+que es el uso clásico. Pero también se reportan impactos positivos importantes
+en hortalizas, frutales y forrajes. Si su cultivo no es un grano, no lo descarte.
 
-:::nota
-Con *Azospirillum* no se debe esperar sustituir la fertilización
-nitrogenada. Lo razonable es esperar una raíz mejor desarrollada, un
-arranque más parejo y, en algunos casos, la posibilidad de ajustar la dosis
-de nitrógeno. Cuánto se puede ajustar depende del suelo y del cultivo:
-<!-- FALTA: confirmar con el docente -->
+**Presentación.** Casi siempre líquida; en menor medida, granulada.
+
+:::precaucion
+Hay una diferencia que cambia el momento de aplicación. Los fijadores
+**simbióticos** (los que forman nódulo, como Rhizobium) tienen que aplicarse al
+establecimiento del cultivo, para que la inoculación ocurra bien. Los de vida
+libre o asociativos pueden aplicarse al trasplante. Si la etiqueta no dice de
+cuál es, pregunte antes de comprar.
 :::
 
 <!-- pagina: 11 -->
 
-## 1.5 Solubilizadores de fósforo y otros grupos
+## Solubilizadores de fósforo: abrir lo que está bajo llave
 
-En muchos suelos tropicales el fósforo total es alto, pero el fósforo
-**disponible** es bajo: está fijado al hierro y al aluminio en suelos
-ácidos, o al calcio en suelos alcalinos. Es decir, el fósforo está ahí,
-pero bajo llave.
+Este es el grupo que más sorprende al productor, porque ataca un problema que
+casi nadie tiene medido.
 
-Las **bacterias y hongos solubilizadores de fósforo** liberan ácidos
-orgánicos y enzimas que sueltan ese fósforo y lo vuelven disponible. Los
-géneros que se mencionan con más frecuencia son *Bacillus* y *Pseudomonas*
-entre las bacterias, y *Penicillium* y *Aspergillus* entre los hongos.
+En su suelo hay fósforo. El problema es que **el 90 % del fósforo total está en
+formas insolubles o inmovilizadas**, es decir, bloqueado: la planta no lo puede
+tomar. Por eso el fósforo es uno de los mayores limitantes del desarrollo
+vegetal, aun en suelos donde el análisis muestra que hay.
 
-Cepas comerciales específicas disponibles en Costa Rica:
-<!-- FALTA: confirmar con el docente -->
+Las bacterias solubilizadoras transforman esa fracción bloqueada en formas
+aprovechables. No traen fósforo: **abren el que ya estaba ahí**.
 
-:::ejemplo
-**Fósforo bajo llave.** Un análisis de suelo de una finca en zona de altura
-reporta fósforo disponible bajo, pH ácido y hierro y aluminio altos. El
-productor ha venido aplicando fósforo año tras año sin ver respuesta clara
-en el cultivo.
-
-Lo que probablemente está pasando: el fósforo que aplica se fija al poco
-tiempo y deja de estar disponible. En ese escenario tiene sentido trabajar
-en dos frentes —corregir la acidez y usar organismos que liberen el fósforo
-ya acumulado— en lugar de seguir subiendo la dosis.
-
-Niveles exactos de referencia del análisis:
-<!-- FALTA: confirmar con el docente -->
+:::glosario
+**Solubilización.** Convertir un nutriente que está en forma bloqueada en una forma que la planta puede absorber.
 :::
 
-### Otros grupos que conviene conocer
+Los organismos que cumplen esta función son variados: bacterias de los géneros
+*Azospirillum, Bacillus, Pseudomonas* y *Nitrosomonas*; actinobacterias de
+*Streptomyces, Thermobifida* y *Micrococcus*; y cianobacterias como *Calothrix
+braunii, Westiellopsis prolifica, Anabaena variabilis* y *Scytonema*.
 
-- **Solubilizadores de potasio y de silicio.** Mismo principio que los de
-  fósforo, aplicado a otros nutrientes. La evidencia de campo es más
-  reciente y más variable.
-- **PGPR** (bacterias promotoras del crecimiento vegetal). Un grupo amplio
-  —*Bacillus*, *Pseudomonas*, *Azotobacter*— que mejoran el crecimiento por
-  varias vías a la vez: hormonas, solubilización, control de patógenos.
-- ***Trichoderma***. Hongo del suelo que se usa sobre todo como agente de
-  **biocontrol** de enfermedades de raíz, pero que además estimula el
-  crecimiento y mejora el aprovechamiento de nutrientes. Se retoma en el
-  módulo 4.
-
-:::nota
-Los límites entre «biofertilizante», «bioestimulante» y «agente de
-biocontrol» no son líneas firmes: muchos microorganismos hacen las tres
-cosas en distinta medida. Lo que importa en la práctica es qué se le va a
-pedir al producto y si hay respaldo para eso.
-:::
-
-:::tabla{titulo="Resumen de los grupos principales de biofertilizantes"}
-| Grupo | Organismo típico | Qué hace | Cultivos donde aplica |
-|---|---|---|---|
-| Micorrizas arbusculares | Glomeromycota | Extiende el alcance de la raíz; mejora fósforo, agua y micronutrientes | Casi todos, **menos** crucíferas, remolacha y espinaca |
-| Fijadores simbióticos | *Rhizobium*, *Bradyrhizobium* | Fija nitrógeno del aire en nódulos | Leguminosas (específico por cultivo) |
-| Fijadores asociativos | *Azospirillum*, *Azotobacter* | Fija algo de N y estimula la raíz | Gramíneas: maíz, arroz, sorgo, pastos |
-| Solubilizadores de fósforo | *Bacillus*, *Pseudomonas*, *Penicillium* | Libera fósforo fijado del suelo | General, sobre todo con P disponible bajo |
-| PGPR | *Bacillus*, *Pseudomonas* | Varias vías: hormonas, nutrición, defensa | General |
-| *Trichoderma* | *Trichoderma* spp. | Biocontrol de raíz + estímulo de crecimiento | General (ver módulo 4) |
-
-Dosis de cada grupo: <!-- FALTA: confirmar con el docente -->
+:::sabias-que
+Varios géneros aparecen en más de una lista. *Azospirillum* fija nitrógeno
+**y** solubiliza fósforo **y** promueve el crecimiento. Por eso muchos productos
+comerciales lo incluyen: hace tres trabajos a la vez.
 :::
 
 <!-- pagina: 12 -->
 
-## 1.6 Presentaciones comerciales
+## PGPR: los que mandan señales
 
-El mismo microorganismo puede venir en formas muy distintas, y la forma
-cambia cómo se guarda, cómo se aplica y cuánto dura. Es un error frecuente
-comparar precios entre dos productos sin mirar la presentación.
+Las siglas significan bacterias promotoras del crecimiento vegetal. Este grupo
+no le consigue nutrientes a la planta: le **manda señales químicas**.
 
-:::tabla{titulo="Presentaciones comerciales más frecuentes"}
-| Presentación | Cómo se ve | Se aplica | Ventaja | Cuidado principal |
-|---|---|---|---|---|
-| **Polvo mojable** | Polvo fino, se disuelve en agua | Al suelo, al drench, a la semilla | Fácil de guardar; buena vida útil | Puede tapar filtros y boquillas finas |
-| **Granulado** | Gránulos tipo fertilizante | Al fondo del surco o al hoyo | Se aplica con equipo convencional | Mayor volumen y flete por hectárea |
-| **Líquido** | Suspensión, a veces con sedimento | Drench, riego, semilla | Dosificación precisa; buena mezcla | Vida útil más corta; sensible al calor |
-| **Soporte en turba** | Polvo oscuro, húmedo, olor a tierra | Semilla (inoculante clásico) | Protege mucho a la bacteria | Hay que pedirlo y usarlo fresco |
-| **Semilla pre-inoculada** | Semilla ya tratada de fábrica | Se siembra directo | Cero trabajo en finca | Vence; no se sabe cuánto queda vivo |
-| **Sólido en sustrato** | Mezcla con arena, arcilla o vermiculita | Vivero, bolsa, bandeja | Ideal para micorrizas en vivero | Volumen alto; mezclar bien |
+Lo que hacen es producir —o inducir a la planta a producir— reguladores de
+crecimiento: auxinas, citoquininas, etileno, ácido abscísico. Esas sustancias
+gobiernan cómo crece la planta y cómo responde al estrés: a la sequía, al
+calor, a un patógeno, a un insecto.
+
+Es decir, las PGPR no hacen crecer más la planta echándole comida. La hacen
+crecer mejor y aguantar más, cambiándole la fisiología.
+
+Los géneros más usados en agricultura son **Bacillus, Paenibacillus** y
+**Pseudomonas**. También se reportan Aminobacter, Arthrobacter, Azoarcus,
+Azospirillum, Azotobacter, Gluconoacetobacter y Herbaspirillum. A nivel de
+especie, las que aparecen con más frecuencia son *Bacillus megaterium,
+Paenibacillus polymyxa, Streptomyces rochei, Pseudomonas koreensis, P.
+fluorescens* y *Lysinibacillus sphaericus*.
+
+:::nota
+Las PGPR son el único grupo de los cuatro que tiene **aplicaciones repetidas**
+durante el ciclo: cada 15 a 30 días, según el producto y el cultivo. Los otros
+tres se aplican sobre todo al inicio.
 :::
 
-### Qué cambia según la presentación
+<!-- pagina: 13 -->
 
-- **Vida útil.** En general, los productos sólidos y secos duran más que
-  los líquidos. Rango orientativo de vida útil, verificar en la etiqueta de
-  cada producto: <!-- FALTA: confirmar con el docente -->
-- **Conservación.** Algunos productos requieren refrigeración y otros solo
-  lugar fresco y oscuro. La etiqueta manda.
-- **Precisión de la dosis.** Los líquidos permiten dosificar más fino; los
-  granulados son más toscos pero más simples de aplicar con lo que ya hay
-  en la finca.
-- **Compatibilidad con el equipo.** Un polvo mojable mal disuelto tapa
-  filtros; un granulado no pasa por una bomba de espalda.
+## Cuándo aplicar cada grupo
 
-:::precaucion
-**Nunca dejar el producto en el carro.** Un envase de biofertilizante en la
-cabina o la cajuela de un vehículo al sol llega a temperaturas muy altas en
-poco tiempo. El microorganismo se muere y el envase sigue viéndose igual:
-el producto queda sin efecto pero con apariencia normal. Es una de las
-causas más frecuentes y menos reconocidas de falla en campo.
+Acá está la tabla que conviene que lleve al campo. El éxito de la
+biofertilización depende tanto del microorganismo como de **cuándo, dónde y
+cómo** se aplica.
+
+:::tabla{titulo="Cuadro 1. Cuándo y cómo aplicar cada grupo"}
+| Grupo | Momento principal | Aplicaciones posteriores | Forma de aplicación |
+|---|---|---|---|
+| **Micorrizas (HMA)** | Siembra, trasplante o establecimiento temprano | Solo si el producto lo indica | Al suelo, pegado a la raíz; o tratando semilla o plántula |
+| **PGPR** | Siembra, trasplante o primeras etapas vegetativas | Cada 15–30 días, según producto y cultivo | Semilla, drench al suelo, fertirriego o foliar según la cepa |
+| **Solubilizadores de P** | Siembra, trasplante y establecimiento inicial | Durante crecimiento activo, si el producto lo indica | Semilla, suelo, drench o fertirriego |
+| **Fijadores de N** | Semilla, trasplante o establecimiento temprano | Repeticiones en algunos sistemas, según el fabricante | Semilla, raíz, suelo o fertirriego |
 :::
 
-:::sabias-que
-Los inoculantes de leguminosas en soporte de turba son una de las
-tecnologías agrícolas comerciales más antiguas que siguen vigentes casi sin
-cambios de fondo: se usan desde hace más de un siglo. La turba funciona
-porque es húmeda, porosa y le da a la bacteria un refugio físico mientras
-espera a encontrar la raíz.
+:::glosario
+**Drench.** Aplicación de un producto diluido en agua, vertido directamente al suelo en la base de la planta, de modo que moje la zona de raíces.
+
+**Fertirriego.** Aplicar el producto disuelto en el agua de riego.
 :::
+
+Note el patrón: **los cuatro grupos se aplican temprano.** Si ya va por media
+cosecha y nunca inoculó, el momento se pasó para tres de los cuatro.
 
 <!-- pagina: 14 -->
 
-## 1.7 Usos recomendados según el momento del cultivo
+## Consideraciones por grupo
 
-La pregunta no es solo *qué* aplicar, sino *cuándo*. La regla general es
-simple y vale para casi todos los biofertilizantes:
+Cada grupo tiene una condición propia para que funcione:
 
-> **Entre más temprano se pone el microorganismo en contacto con la raíz,
-> mejor.** Lo que se busca es que colonice antes de que lleguen los
-> problemas y antes de que la raíz esté grande.
-
-:::tabla{titulo="Momento de aplicación por tipo de biofertilizante"}
-| Momento | Qué aplicar | Por qué ahí |
-|---|---|---|
-| **Semilla, antes de sembrar** | *Rhizobium*, *Azospirillum*, PGPR | La bacteria viaja con la semilla y coloniza la raíz desde que emerge |
-| **Vivero / bandeja / bolsa** | Micorrizas, *Trichoderma* | Poco volumen de sustrato = poco producto y colonización temprana |
-| **Siembra o trasplante** | Micorrizas, solubilizadores, PGPR | Contacto directo con la raíz nueva; aprovecha la herida de trasplante |
-| **Primeros desarrollos** | Solubilizadores, PGPR | Acompaña el momento de mayor demanda de nutrientes |
-| **Mantenimiento (cultivo establecido)** | Solubilizadores, PGPR, *Trichoderma* | Refuerzo periódico; en perennes, al inicio de lluvias |
-| **Poscosecha / renovación** | Micorrizas al renovar, PGPR | Momento de intervenir el suelo y la raíz nueva
-
-Frecuencia de los refuerzos en cultivo establecido:
-<!-- FALTA: confirmar con el docente -->
-:::
-
-### Formas de aplicación
-
-- **Tratamiento de semilla.** Se humedece ligeramente la semilla, se agrega
-  el inoculante, se revuelve hasta cubrir y se siembra lo antes posible. Es
-  la vía más barata por hectárea.
-- **Drench o riego al pie.** Se diluye y se aplica al suelo mojado al pie
-  de la planta. Hay que mojar la zona de raíces, no la hoja.
-- **Por el sistema de riego (fertirriego).** Práctico en cultivos con goteo.
-  Requiere revisar que no haya cloro activo en el agua y que los filtros
-  dejen pasar el producto.
-- **Al hoyo o al surco.** Para granulados y para micorrizas al momento de
-  sembrar o trasplantar.
-
-:::precaucion
-El biofertilizante **se aplica al suelo o a la raíz, no a la hoja** (salvo
-que la etiqueta lo indique). Aplicado al follaje, en la mayoría de los
-casos el microorganismo se deshidrata y se muere con el sol, sin llegar
-nunca a donde tenía que trabajar.
-:::
+- **Micorrizas.** Aplicar temprano, para que colonicen antes de que llegue el
+  período de alta demanda de nutrientes o de estrés. Trabajan mejor en suelos
+  con **poca disponibilidad de fósforo**, así que conviene bajar la aplicación de
+  fertilizantes ricos en fósforo.
+- **PGPR.** Mantener humedad adecuada. No aplicar inmediatamente después de un
+  bactericida: son bacterias, y el bactericida las mata.
+- **Solubilizadores de fósforo.** Funcionan mejor cuando hay fósforo poco
+  disponible. No dependa exclusivamente de dosis altas de fósforo soluble: si le
+  da a la planta el fósforo servido, el microorganismo no tiene trabajo que hacer.
+- **Fijadores de nitrógeno.** El momento depende de si son simbióticos o de vida
+  libre, como se vio en la página anterior.
 
 :::actividad
-**Ubique su cultivo en el calendario (10 minutos, individual).**
+**Ubique su cultivo en el calendario.** Dibuje una línea con el ciclo de su
+cultivo principal, de la siembra a la cosecha, y marque:
 
-En una hoja, dibuje una línea de tiempo de su cultivo principal, desde la
-semilla o el vivero hasta la cosecha. Marque:
+1. En qué semana hace la siembra o el trasplante.
+2. En qué momento la planta más demanda nutrientes.
+3. Dónde caería cada uno de los cuatro grupos.
 
-1. El momento en que la raíz es más pequeña y manejable.
-2. Dos momentos donde hoy ya hace una labor al suelo (fertilización,
-   aporque, riego) y donde podría «montar» la aplicación sin agregar un
-   viaje extra.
-3. El momento donde hoy ve más problemas de raíz.
+Si los cuatro le quedan apretados en las primeras semanas, está bien: así es.
+:::
 
-Deje la hoja a mano: se usa otra vez al final del capítulo.
+:::nota
+Lo ideal sería usar microorganismos **autóctonos**, de su propia zona. En la
+práctica, aislarlos, identificarlos y formularlos es difícil y caro, así que la
+mayoría de los productos traen microorganismos aislados en otras latitudes. Eso
+no los invalida: lo que hay que buscar es evidencia de que funcionaron en un
+cultivo como el suyo y en **condiciones parecidas** a las suyas.
 :::
 
 <!-- pagina: 15 -->
 
-## 1.8 Compatibilidad: qué se puede mezclar y qué no
+## Con qué NO se puede mezclar
 
-Aquí está el error más caro y más silencioso de la biofertilización:
-mezclar un producto vivo con algo que lo mata, aplicar normalmente, y no
-entender después por qué no pasó nada. El tanque se ve igual. El cultivo se
-ve igual. El dinero se fue igual.
+Si de este capítulo se lleva una sola página, que sea esta. Un biofertilizante
+mal mezclado no rinde menos: **no rinde nada**, y usted pagó por él igual.
 
-La pregunta de fondo siempre es la misma: **¿esto que voy a mezclar mata
-hongos o bacterias?** Si la respuesta es sí o quizás, no se mezcla.
-
-:::tabla{titulo="Compatibilidad general (orientativo, verificar siempre en la etiqueta)"}
-| Se quiere mezclar con… | Riesgo | Qué hacer |
-|---|---|---|
-| **Fungicida de síntesis** | Alto para productos con hongos (micorrizas, *Trichoderma*) | No mezclar. Separar en el tiempo |
-| **Bactericida / antibiótico agrícola** | Alto para productos con bacterias | No mezclar. Separar en el tiempo |
-| **Insecticida** | Variable | Consultar etiqueta; preferir separar |
-| **Herbicida** | Variable | No mezclar en el mismo tanque |
-| **Fertilizante foliar diluido** | Generalmente bajo | Probar compatibilidad física antes |
-| **Fertilizante soluble concentrado** | Alto por salinidad | No mezclar en alta concentración |
-| **Agua con cloro** | Alto | Dejar reposar el agua o filtrar antes |
-| **Materia orgánica líquida, melaza** | Bajo; a veces favorable | Compatible en general |
-| **Caldos minerales (cobre, azufre, sulfocalcio)** | Alto | No mezclar |
-| **Otro biofertilizante** | Generalmente bajo | Verificar con el fabricante |
-
-Tiempos exactos de separación entre un fungicida y un biofertilizante:
-<!-- FALTA: confirmar con el docente -->
+:::tabla{titulo="Cuadro 2. Compatibilidad con otros insumos"}
+| Situación | Micorrizas | PGPR | Solubilizadores P | Fijadores N |
+|---|---|---|---|---|
+| Fertilizante N moderado | Compatible | Compatible | Compatible | Compatible |
+| Fertilizante P moderado | Espaciar | Compatible | Compatible | Compatible |
+| Fertilizante N alto | Espaciar | Espaciar | Espaciar | Espaciar |
+| **Fertilizante P alto** | **No mezclar** | Espaciar | Espaciar | Espaciar |
+| Materia orgánica | Compatible | Compatible | Compatible | Compatible |
+| Ácidos húmicos | Compatible | Compatible | Compatible | Compatible |
+| **Fungicida químico** | **No mezclar** | **No mezclar** | **No mezclar** | **No mezclar** |
+| **Bactericida químico** | **No mezclar** | **No mezclar** | **No mezclar** | **No mezclar** |
+| **Cobre** | **No mezclar** | **No mezclar** | **No mezclar** | **No mezclar** |
+| Herbicida | Espaciar | Espaciar | Espaciar | Espaciar |
+| Insecticida | Espaciar | Espaciar | Espaciar | Espaciar |
+| Trichoderma | Espaciar | Compatible | Compatible | Compatible |
 :::
+
+**Cómo se lee:**
+
+- **Compatible** — se pueden usar juntos.
+- **Espaciar** — se pueden usar los dos, pero separados en el tiempo. Cuánto, lo dice el fabricante.
+- **No mezclar** — no van juntos.
 
 :::precaucion
-**El cobre, el azufre y el sulfocalcio son productos de uso frecuente y muy
-agresivos con los microorganismos benéficos.** Se usan mucho en manejo
-orgánico, lo que crea una trampa: ser «permitido en orgánico» no significa
-«compatible con biológicos». Un caldo de cobre y un inoculante de hongos no
-se llevan.
+Tres cosas matan cualquier biofertilizante, sin importar el grupo: **fungicida
+químico, bactericida químico y cobre.** Las micorrizas son hongos y las otras
+tres son bacterias; un fungicida mata hongos y un bactericida mata bacterias.
+No hay vuelta que darle, y el cobre no perdona a ninguno.
+
+Y una que sorprende: **fósforo alto mata la micorriza**. No porque la envenene,
+sino porque la planta deja de necesitarla y corta la sociedad.
 :::
 
-:::nota
-Sobre el pH del agua de mezcla: los microorganismos trabajan en un rango
-intermedio y sufren en aguas muy ácidas o muy alcalinas. Rango orientativo
-recomendado para el agua del tanque: verificar con la etiqueta del
-producto. <!-- FALTA: confirmar con el docente -->
+<!-- pagina: 16 -->
+
+## Cómo reconocer un producto de buena calidad
+
+Son cuatro cosas, y las cuatro tienen que estar en la etiqueta o en la ficha
+técnica. Si alguna falta, ya sabe algo del producto.
+
+**1. Identificación correcta.** Tiene que decir **género, especie y lote**, y de
+ser posible la procedencia de los microorganismos. Con el género y la especie
+usted puede buscar en la literatura si ese organismo de verdad hace lo que el
+envase promete, en qué condiciones trabaja y con qué es compatible. Un producto
+que solo dice «consorcio de microorganismos benéficos» no le permite comprobar
+nada.
+
+**2. Concentración.** Cuánto organismo vivo hay por unidad de producto. Sin ese
+dato no se puede calcular la dosis.
+
+**3. Viabilidad.** El porcentaje de células que están **vivas**. Es distinto de
+la concentración: un producto puede declarar mucha carga y tener la mitad
+muerta.
+
+**4. Estabilidad en el tiempo.** La **fecha de caducidad**, que le dice cuánta
+vida de anaquel le queda al producto.
+
+:::glosario
+**Viabilidad.** Porcentaje de microorganismos que siguen vivos y capaces de actuar en el momento de la aplicación.
+
+**Vida de anaquel.** Tiempo que el producto se mantiene útil desde que se fabrica hasta que se vence, guardado como corresponde.
+:::
+
+:::ejemplo
+**Dos productos, mismo precio.** El primero dice «biofertilizante a base de
+micorrizas». El segundo dice «*Rhizophagus irregularis* y *Funneliformis
+mosseae*, lote 2026-04, vence 03/2027, probado en tomate y chile bajo
+invernadero».
+
+El segundo le permite verificar qué hace cada especie, si le sirve a su cultivo
+y cuánto le queda de vida. El primero no le permite verificar nada. Al mismo
+precio, no son el mismo producto.
 :::
 
 <!-- pagina: 17 -->
 
-### La prueba de la jarra
+## Antes de comprar
 
-Antes de preparar un tanque completo con una mezcla nueva, se hace una
-prueba pequeña. Cuesta diez minutos y evita perder una aplicación entera.
-
-1. En una jarra o botella transparente, poner agua de la misma fuente que
-   se usará en el tanque.
-2. Agregar los productos **en el mismo orden** y a la **misma
-   concentración relativa** que se usará en el tanque.
-3. Revolver y dejar reposar unos minutos.
-4. Observar: ¿se formaron grumos, natas, precipitado, espuma excesiva?
-   ¿Cambió de color o se calentó?
-5. Si aparece cualquiera de esas señales, la mezcla no sirve: aplicar los
-   productos por separado.
-
-:::precaucion
-La prueba de la jarra detecta **incompatibilidad física** (que se corte o
-se precipite la mezcla). **No detecta incompatibilidad biológica**: un
-fungicida puede mezclarse perfecto, verse transparente, y haber matado todo
-el inoculante. Para eso no hay prueba visual posible — hay que respetar los
-tiempos de separación y la etiqueta.
-:::
-
-### Reglas prácticas de aplicación
-
-Estas son las que conviene escribir en la pared de la bodega:
-
-1. **Preparar y aplicar el mismo día.** No dejar el tanque mezclado de un
-   día para otro. Tiempo máximo recomendado desde la mezcla hasta la
-   aplicación: <!-- FALTA: confirmar con el docente -->
-2. **Aplicar temprano en la mañana o al final de la tarde.** El sol directo
-   y el calor del mediodía matan microorganismos.
-3. **Suelo húmedo, no seco ni encharcado.** En suelo seco el producto no
-   se mueve a la raíz y se deshidrata; encharcado, falta oxígeno.
-4. **Lavar el equipo antes.** Si la bomba tuvo fungicida o herbicida, el
-   residuo basta para arruinar la aplicación. Lavar con agua limpia y, si
-   se puede, usar un equipo dedicado a biológicos.
-5. **Mojar la zona de raíces.** El objetivo es el suelo alrededor de la
-   raíz, no la hoja ni la calle.
-6. **Agitar el tanque durante la aplicación**, sobre todo con líquidos y
-   polvos que sedimentan.
+La etiqueta o la ficha técnica también debería decirle **en qué cultivos se
+probó el producto, en qué condiciones y qué problema pretende resolver**. Esa
+información es la que le sirve para comparar dos productos en precio y
+efectividad, que al final es la decisión que usted toma en la agroveterinaria.
 
 :::actividad
-**Arme su propia hoja de mezclas (15 minutos, en parejas).**
+**Lea una etiqueta de verdad.** Consiga el envase o la ficha técnica de un
+biofertilizante —el que usa, o uno que le hayan ofrecido— y busque:
 
-Haga una lista de los cinco productos que más usa en su finca. Al lado de
-cada uno, escriba: **MEZCLA**, **NO MEZCLA**, o **AVERIGUAR**.
+| Qué buscar | ¿Está? |
+|---|---|
+| Género y especie de los microorganismos | |
+| Número de lote | |
+| Concentración | |
+| Porcentaje de viabilidad | |
+| Fecha de vencimiento | |
+| Cultivos en los que se probó | |
+| Recomendaciones de compatibilidad | |
 
-Para los que marcó AVERIGUAR, escriba la pregunta exacta que le va a hacer
-al técnico o al proveedor. Ejemplo de pregunta bien hecha: «¿Cuántos días
-debo esperar entre aplicar este fungicida y aplicar este inoculante de
-micorrizas?» — no «¿son compatibles?».
+Cuente cuántas casillas quedaron vacías. Esa cuenta es la calidad de la
+información que le están vendiendo.
+:::
+
+:::nota
+**Presentaciones comerciales.** El temario del curso incluye este tema, pero el
+material entregado no lo desarrolla más allá de lo ya visto: las micorrizas
+vienen sobre todo en matriz sólida y menos en suspensión acuosa, y los fijadores
+de nitrógeno sobre todo en líquido y menos en granulado.
+
+<!-- FALTA: confirmar con el docente — desarrollar presentaciones comerciales
+     (polvo, granulado, líquido, turba, peletizado): ventajas de cada una,
+     cómo se almacena y cómo cambia la forma de aplicar. -->
 :::
 
 <!-- pagina: 18 -->
 
-## 1.9 Cómo reconocer un biofertilizante de buena calidad
-
-Un biofertilizante es un producto vivo, y eso tiene una consecuencia
-incómoda: **a simple vista no se puede saber si sirve**. Un envase con el
-microorganismo muerto se ve idéntico a uno bueno. Por eso la calidad se
-evalúa por la etiqueta, por el proveedor y por el manejo, no por el aspecto.
-
-### Lo que debe decir la etiqueta
-
-- **Qué microorganismo contiene**, con género y especie, y de preferencia
-  la cepa identificada. «Hongos benéficos» o «consorcio microbiano» sin
-  nombres es una señal de alerta.
-- **La concentración**, con su unidad: UFC por gramo o por mililitro para
-  bacterias, esporas o propágulos por gramo para micorrizas. Un producto
-  sin concentración declarada no se puede comparar ni dosificar.
-- **Fecha de elaboración y fecha de vencimiento.** Ambas. Solo el
-  vencimiento no dice cuánto tiempo lleva en bodega.
-- **Número de lote**, para poder reclamar y rastrear.
-- **Registro ante la autoridad nacional competente** (en Costa Rica, el
-  Servicio Fitosanitario del Estado). Número de registro visible.
-- **Condiciones de almacenamiento**: temperatura, refrigeración, luz.
-- **Dosis y cultivos** para los que está registrado.
-- **Fabricante y contacto**, no solo el distribuidor.
-
-:::glosario
-**UFC (Unidad Formadora de Colonia).** Medida de cuántas bacterias u hongos
-*vivos y capaces de multiplicarse* hay en un gramo o mililitro de producto.
-Es la unidad en que se declara la concentración.
-
-**Propágulo.** Cualquier estructura del hongo capaz de iniciar la
-colonización: espora, trozo de raíz colonizada o fragmento de micelio. Los
-inoculantes micorrícicos se declaran en propágulos o esporas por gramo.
-
-**Cepa.** Variante específica de una especie, con un código propio. Dos
-cepas de la misma especie pueden rendir muy distinto.
-:::
-
-Concentración mínima aceptable para cada tipo de producto:
-<!-- FALTA: confirmar con el docente -->
-
-:::precaucion
-**Señales de alerta al comprar:**
-
-- Etiqueta sin género y especie, o sin concentración declarada.
-- Sin fecha de vencimiento, o con la fecha borrada o reescrita.
-- Sin número de registro nacional.
-- Envase hinchado, reventado, con fugas, con moho visible por fuera, o con
-  olor putrefacto fuerte al abrirlo.
-- Estaba en exhibición al sol o sin refrigeración cuando la etiqueta la pide.
-- Promete «sustituir toda la fertilización» o «curar» enfermedades.
-- Precio muy por debajo del mercado sin explicación.
-- No hay ficha técnica disponible cuando se la pide.
-:::
-
-<!-- pagina: 20 -->
-
-:::tabla{titulo="Lista de chequeo antes de comprar y antes de aplicar"}
-| # | Revisar | ✔ |
-|---|---|---|
-| 1 | Género y especie (o cepa) declarados en la etiqueta | |
-| 2 | Concentración declarada con unidad (UFC/g, esporas/g) | |
-| 3 | Fecha de elaboración **y** de vencimiento vigentes | |
-| 4 | Número de lote legible | |
-| 5 | Registro nacional visible | |
-| 6 | Registrado para **mi** cultivo | |
-| 7 | Condiciones de almacenamiento indicadas y cumplidas en la tienda | |
-| 8 | Envase íntegro, sin hinchazón ni fugas | |
-| 9 | Ficha técnica disponible | |
-| 10 | Dosis clara para mi cultivo y mi forma de aplicación | |
-| 11 | Compatibilidad con lo que ya aplico, averiguada | |
-| 12 | Equipo de aplicación limpio y sin residuo de fungicida | |
-:::
-
-### Guardarlo bien en la finca
-
-Comprar bien y guardar mal da el mismo resultado que comprar mal.
-
-- Bodega **fresca, oscura y seca**; nunca techo de zinc sin aislamiento ni
-  pared que reciba sol de la tarde.
-- Refrigerado si la etiqueta lo pide, y de forma continua: una cadena de
-  frío interrumpida no se recupera.
-- Lejos de agroquímicos, combustibles y fertilizantes concentrados.
-- **Primero entra, primero sale**: usar los lotes más viejos antes.
-- Envase cerrado; si se abrió, usar lo antes posible y anotar la fecha de
-  apertura en el envase con marcador.
-
-:::ejemplo
-**Lo que se ve igual y no es igual.** Dos sacos del mismo producto, mismo
-lote, comprados el mismo día. Uno se guardó en la bodega fresca; el otro
-quedó tres semanas en la carreta, bajo el sol y la lluvia.
-
-Por fuera son idénticos. Pesan igual, huelen casi igual, se disuelven
-igual. Pero el segundo puede tener una fracción mínima de microorganismos
-vivos. El productor aplica los dos, ve resultados distintos en dos lotes y
-concluye que «el producto es inconsistente». El producto no lo era: el
-almacenamiento sí.
-:::
-
-:::nota
-Si un biofertilizante no dio resultado, antes de cambiar de marca conviene
-revisar en este orden: (1) ¿era el producto correcto para ese cultivo?,
-(2) ¿estaba vivo —fecha, almacenamiento, transporte—?, (3) ¿se mezcló con
-algo que lo mata?, (4) ¿se aplicó al suelo húmedo, con sombra, a la raíz?,
-(5) ¿se le pidió algo que ese producto no hace? En la mayoría de los casos
-la falla está en uno de esos cinco puntos, no en la marca.
-:::
-
 ## Resumen del capítulo
 
-1. Un biofertilizante contiene **organismos vivos** que hacen disponibles
-   nutrientes; complementa la fertilización, no la sustituye.
-2. Los grupos principales son **micorrizas arbusculares** (alcance de la
-   raíz, fósforo, agua), **fijadores de nitrógeno** (*Rhizobium* en
-   leguminosas, *Azospirillum* en gramíneas) y **solubilizadores de
-   fósforo**.
-3. Las micorrizas no funcionan en **crucíferas, remolacha ni espinaca**.
-4. El *Rhizobium* es **específico por cultivo** y se puede verificar
-   cortando nódulos: rosado por dentro = está trabajando.
-5. La **presentación** (polvo, líquido, granulado, turba) define cómo se
-   guarda, cuánto dura y cómo se aplica.
-6. Se aplica **lo más temprano posible** en la vida de la raíz: semilla,
-   vivero, trasplante.
-7. **No se mezcla** con fungicidas, bactericidas, cobre, azufre ni agua
-   clorada. La prueba de la jarra detecta problemas físicos, no biológicos.
-8. Se aplica a **suelo húmedo, con sombra o temprano/tarde, a la raíz**.
-9. La calidad se lee en la **etiqueta**: especie, concentración, fechas,
-   lote, registro.
-10. **Calor y tiempo matan el producto**, y no se nota a simple vista.
-
-:::actividad
-**Cierre (10 minutos).** Recupere la línea de tiempo de su cultivo que
-dibujó en la página 14. Escriba sobre ella **una sola** aplicación de
-biofertilizante que se compromete a probar en la próxima siembra: qué tipo,
-en qué momento, en qué presentación y montada sobre cuál labor que ya hace.
-
-Anote además las dos preguntas que necesita responder antes de hacerlo.
+:::resumen
+1. Un biofertilizante no aporta el nutriente: lo pone a disposición de la planta. Es un organismo vivo, no un abono.
+2. Hay cuatro grupos: micorrizas, fijadores de nitrógeno, solubilizadores de fósforo y promotores del crecimiento (PGPR).
+3. Las micorrizas le extienden el alcance a la raíz. Necesitan raíz viva: sin cultivo establecido, se mueren.
+4. Los fijadores toman nitrógeno del aire y lo convierten en amonio. Los simbióticos van al establecimiento; los de vida libre, al trasplante.
+5. El 90 % del fósforo del suelo está bloqueado. Los solubilizadores lo abren; no lo traen de afuera.
+6. Las PGPR no dan nutrientes: mandan señales hormonales que mejoran el crecimiento y la resistencia al estrés.
+7. Los cuatro grupos se aplican temprano: siembra, trasplante o establecimiento. Solo las PGPR se repiten cada 15 a 30 días.
+8. Fungicida, bactericida y cobre matan cualquier biofertilizante. El fósforo alto corta la sociedad con la micorriza.
+9. Un producto de calidad declara género, especie, lote, concentración, viabilidad y fecha de vencimiento. Si falta alguno, no se puede verificar nada.
+10. Para dosis, almacenamiento y vencimiento, **la etiqueta manda**.
 :::
