@@ -19,3 +19,5 @@ contenido/fuentes/*
 
 # Herramientas externas clonadas, no versionadas (ver docs/PLAN-paperbanana.md)
 tools/
+
+salidas/entregas/

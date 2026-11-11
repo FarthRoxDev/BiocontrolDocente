@@ -192,7 +192,9 @@ ahora con el tanque y con el registro.
 **14. El porcentaje de rechazo y lo que cuesta** *(páginas 19–20)*
 
 Don Rafael evaluó un lote de 1 500 kg y descartó 270 kg. El valor del producto
-es de ₡600 por kilo.
+es de ₡600 por kilo. **Las tres cifras son ficticias**, puestas solo para
+practicar la cuenta: use siempre los números de su propia finca.
+<!-- FALTA: confirmar con el docente — precios y tamaños de lote reales de los cultivos del curso. -->
 
 **a)** Calcule el porcentaje de rechazo. Indique en qué unidad lo está
 expresando.
