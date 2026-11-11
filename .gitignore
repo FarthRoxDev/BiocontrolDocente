@@ -16,3 +16,6 @@ salidas/**/*.json
 contenido/fuentes/*
 !contenido/fuentes/.gitkeep
 !contenido/fuentes/*.md
+
+# Herramientas externas clonadas, no versionadas (ver docs/PLAN-paperbanana.md)
+tools/
