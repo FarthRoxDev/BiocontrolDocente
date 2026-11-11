@@ -35,7 +35,7 @@ Al terminar este capítulo, usted podrá:
 - Leer la etiqueta de un biofertilizante y detectar si vale lo que cuesta.
 :::
 
-<!-- pagina: 5 -->
+<!-- pagina: 4 -->
 
 ## Qué es un biofertilizante
 
@@ -72,7 +72,7 @@ pueden llamarse igual y no ser lo mismo: lo que manda es la etiqueta, no el
 nombre comercial.
 :::
 
-<!-- pagina: 6 -->
+<!-- pagina: 5 -->
 
 ## Por qué se está usando cada vez más
 
@@ -106,7 +106,7 @@ aplique bien. Tómelos como «hasta dónde puede llegar esto», no como «esto e
 que va a pasar». Si un vendedor se los garantiza, desconfíe.
 :::
 
-<!-- pagina: 7 -->
+<!-- pagina: 6 -->
 
 ## Los cuatro grupos
 
@@ -134,7 +134,7 @@ la planta. Por eso las formulaciones que combinan varias especies responden
 mejor que las de una sola.
 :::
 
-<!-- pagina: 8 -->
+<!-- pagina: 7 -->
 
 ## Micorrizas: el hongo que le alarga la raíz
 
@@ -163,7 +163,7 @@ Además de los nutrientes, las micorrizas le ayudan a la planta a aguantar
 condiciones adversas y le activan el sistema inmune. Es decir: la planta
 micorrizada resiste mejor el estrés, no solo come mejor.
 
-<!-- pagina: 9 -->
+<!-- pagina: 7 -->
 
 ## Qué micorriza viene en el producto
 
@@ -192,7 +192,7 @@ otros microorganismos benéficos, responden mejor que las de una sola. Si está
 comparando dos productos de precio parecido, ese es un criterio a favor.
 :::
 
-<!-- pagina: 10 -->
+<!-- pagina: 8 -->
 
 ## Fijadores de nitrógeno: sacarlo del aire
 
@@ -226,7 +226,7 @@ libre o asociativos pueden aplicarse al trasplante. Si la etiqueta no dice de
 cuál es, pregunte antes de comprar.
 :::
 
-<!-- pagina: 11 -->
+<!-- pagina: 9 -->
 
 ## Solubilizadores de fósforo: abrir lo que está bajo llave
 
@@ -256,7 +256,7 @@ Varios géneros aparecen en más de una lista. *Azospirillum* fija nitrógeno
 comerciales lo incluyen: hace tres trabajos a la vez.
 :::
 
-<!-- pagina: 12 -->
+<!-- pagina: 10 -->
 
 ## PGPR: los que mandan señales
 
@@ -284,7 +284,7 @@ durante el ciclo: cada 15 a 30 días, según el producto y el cultivo. Los otros
 tres se aplican sobre todo al inicio.
 :::
 
-<!-- pagina: 13 -->
+<!-- pagina: 10 -->
 
 ## Cuándo aplicar cada grupo
 
@@ -310,7 +310,7 @@ cómo** se aplica.
 Note el patrón: **los cuatro grupos se aplican temprano.** Si ya va por media
 cosecha y nunca inoculó, el momento se pasó para tres de los cuatro.
 
-<!-- pagina: 14 -->
+<!-- pagina: 11 -->
 
 ## Consideraciones por grupo
 
@@ -347,7 +347,7 @@ no los invalida: lo que hay que buscar es evidencia de que funcionaron en un
 cultivo como el suyo y en **condiciones parecidas** a las suyas.
 :::
 
-<!-- pagina: 15 -->
+<!-- pagina: 12 -->
 
 ## Con qué NO se puede mezclar
 
@@ -387,7 +387,7 @@ Y una que sorprende: **fósforo alto mata la micorriza**. No porque la envenene,
 sino porque la planta deja de necesitarla y corta la sociedad.
 :::
 
-<!-- pagina: 16 -->
+<!-- pagina: 13 -->
 
 ## Cómo reconocer un producto de buena calidad
 
@@ -428,7 +428,7 @@ y cuánto le queda de vida. El primero no le permite verificar nada. Al mismo
 precio, no son el mismo producto.
 :::
 
-<!-- pagina: 17 -->
+<!-- pagina: 13 -->
 
 ## Antes de comprar
 
@@ -466,7 +466,7 @@ de nitrógeno sobre todo en líquido y menos en granulado.
      cómo se almacena y cómo cambia la forma de aplicar. -->
 :::
 
-<!-- pagina: 18 -->
+<!-- pagina: 15 -->
 
 ## Resumen del capítulo
 

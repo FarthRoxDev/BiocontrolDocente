@@ -1,474 +1,497 @@
 <!-- ============================================================
-     Capítulo 1 — Presentación (17 diapositivas)
-     AVISO: Contenido de muestra generado para demostrar el formato.
-     Reemplazar con el material del docente antes de usar en clase.
+     Capítulo 1 — Presentación (18 diapositivas)
+     Redactada desde 02-libro.md, que a su vez sale del material real
+     del docente (01-fuente.md). Contenido real: no es muestra.
 
-     Cada diapositiva declara `pagina:` = página de 02-libro.md que el
-     productor tiene abierta. build/scripts/verificar_sync.py falla si una
-     diapositiva apunta a una página que el libro no produjo.
-     Paginación global: este capítulo ocupa las páginas 4–21 del libro.
+     Cada diapositiva declara `pagina:` = página GLOBAL del libro que el
+     productor tiene abierta, y `seccion:` = slug de la sección en
+     salidas/libro/cap01-paginas.json (así verificar_sync.py empareja
+     una por una). El capítulo ocupa las páginas 4–15 del libro.
+
+     Dato pendiente que arrastra este mazo: el desarrollo de las
+     presentaciones comerciales (diapositiva 17). No improvisarlo.
      ============================================================ -->
 
 ---
 slide: 1
-pagina: 5
-titulo: "[MUESTRA] Biofertilización y micorrizas"
+pagina: 4
+titulo: "Biofertilización y micorrizas"
+subtitulo: "Módulo 4 — Curso para productores agrícolas"
+meta: "Laboratorio de Biocontrol · CIB — TEC"
 layout: portada
 ---
 
-# [MUESTRA] Biofertilización y micorrizas
-
-## Módulo 1
-
-Laboratorio de Biocontrol — CIB, TEC
-Curso para productores agrícolas
-
-> Contenido de muestra. Reemplazar con el material del docente.
-
 :::notas
-Apertura (0–05 min). Pregunta a mano alzada: «¿Quién ha comprado alguna vez
-un producto biológico que no le dio resultado?». Contar las manos en voz
-alta y anotar dos o tres casos en la pizarra, una línea cada uno. Decir:
-«vamos a volver a estos al final». Leer los objetivos de la página 4 sin
-desarrollarlos (la apertura del capítulo es la página 4; el cuerpo arranca
-en la 5, que es la que declara esta diapositiva).
+**0–04 min · Apertura.** Pregunta a mano alzada: «¿Quién compró alguna vez
+un producto biológico que no le dio resultado?». Contar las manos y anotar
+dos o tres casos en la pizarra, una línea cada uno. Decir: «volvemos a
+estos cuando lleguemos a la compatibilidad». Mandarlos a abrir el libro en
+la **página 4** y leer los objetivos sin desarrollarlos.
 :::
 
 ---
 slide: 2
-pagina: 5
-seccion: 11-que-es-y-que-no-es-un-biofertilizante
-titulo: "No aporta el nutriente: lo pone disponible"
-layout: titulo-contenido
+pagina: 4
+seccion: que-es-un-biofertilizante
+titulo: "No aporta el nutriente: lo pone a disposición"
+layout: dato
+dato: "No es abono"
+cita: "Son microorganismos vivos. El fertilizante aporta el nutriente; el biofertilizante lo pone a disposición de la planta."
+fuente: "Libro, página 4"
 ---
 
-# No aporta el nutriente: lo pone disponible
-
-- **Captura** el nitrógeno del aire
-- **Libera** el fósforo bloqueado
-- **Amplía** el alcance de la raíz
-
-> Complementa. **No sustituye.**
-
 :::notas
-05–15 min. Analogía de la llave: el fósforo está en el suelo pero bajo
-llave; el biofertilizante no trae más fósforo, trae la llave.
-Separar explícitamente las cuatro palabras del glosario de la página 5.
-Muchos productores las usan como sinónimos, y de ahí vienen las
-expectativas que no se cumplen.
-Decirlo con estas palabras: **complementa, no sustituye**.
+**04–08 min.** Es la distinción que sostiene todo el capítulo. Escribir en
+la pizarra dos columnas: APORTA / PONE A DISPOSICIÓN. Insistir en la
+consecuencia práctica: si es un ser vivo, **se muere en el tanque, se vence
+y hay un momento para aplicarlo**.
+
+Preguntar al grupo: «¿alguien guarda el producto biológico en la bodega
+donde pega el sol?». Mandarlos al glosario de la **página 4** (rizosfera,
+inoculante, endófito).
+
+No dar dosis: el libro no las trae. Si preguntan, responder «lo dice la
+etiqueta».
 :::
 
 ---
 slide: 3
-pagina: 6
-seccion: 12-el-suelo-como-sistema-vivo
-titulo: "La planta paga"
-layout: imagen-texto
+pagina: 5
+seccion: por-que-se-esta-usando-cada-vez-mas
+titulo: "No es moda: son tres razones"
+layout: vinetas
 ---
 
-# La planta paga
+# No es moda: son tres razones
 
-Todo ocurre en la **rizosfera**.
-
-- La raíz da azúcares
-- El microorganismo devuelve nutrientes
-
-> Es un intercambio, no un favor.
-
-:::figura{src="figuras/cap01-rizosfera.svg" pie="Figura pendiente"}
-<!-- FALTA: confirmar con el docente — figura por elaborar -->
-:::
+- **El bolsillo.** Menos dependencia de un mercado que encarece el insumo.
+- **El suelo.** El químico sostenido saliniza y quita biodiversidad.
+- **El rendimiento.** La investigación reporta mejoras.
 
 :::notas
-Pregunta para discusión: «si la planta paga con azúcares, ¿qué pasa cuando
-está enferma o defoliada?». Lleva directo a la idea de que primero hay que
-sacar adelante la planta.
-Esto también explica por qué los biofertilizantes se notan más en suelos de
-fertilidad media que en suelos sobrefertilizados.
-No dar la cifra de microorganismos por gramo de suelo: está pendiente de
-confirmar.
+**08–11 min.** Pedirles que digan en voz alta cuánto les subió el saco de
+fertilizante en los últimos tres años; anotar dos cifras en la pizarra sin
+discutirlas. Esa es la primera razón y la sienten en la mano.
+
+Pregunta de discusión: «¿han notado que el mismo lote de potrero o el mismo
+invernadero produce menos con la misma inversión?». Conectarlo con suelo
+cansado. Libro, **página 5**.
 :::
 
 ---
 slide: 4
-pagina: 7
-seccion: 13-micorrizas-arbusculares
-titulo: "Micorriza = hongo + raíz"
-layout: titulo-contenido
+pagina: 5
+seccion: por-que-se-esta-usando-cada-vez-mas
+titulo: "Son techos reportados, no promesas"
+layout: tabla
 ---
 
-# Micorriza = hongo + raíz
+# Son techos reportados, no promesas
 
-No es un producto: es una **asociación**.
+| Efecto | Hasta |
+|---|---|
+| Menos nitrógeno requerido | 50 % |
+| Menos fósforo requerido | 25 % |
+| Más rendimiento | 25 % |
 
-- **Arbúsculos** en la raíz → intercambio
-- **Micelio externo** → explora el suelo
-- Se vende en **esporas por gramo**
+Dependen del cultivo, del suelo y del clima.
 
 :::notas
-15–30 min. Corazón del capítulo.
-Dibujar en la pizarra una raíz y, alrededor, la red de hifas. Marcar con un
-círculo pequeño lo que la raíz alcanza sola y con un círculo grande lo que
-alcanza con el hongo. Esa imagen es la que se retiene.
+**11–14 min.** Leer la cifra y **bajarla de inmediato**: son techos
+reportados en investigación, no una promesa para su finca. Es el momento de
+decir la frase que más les va a servir en la agroveterinaria: «si un
+vendedor se lo garantiza, desconfíe».
+
+Pregunta al grupo: «¿a alguien le han garantizado un porcentaje de aumento
+por escrito?». Libro, **página 5**, bloque de precaución.
+
+No agregar ninguna cifra que no esté en esa tabla.
 :::
 
 ---
 slide: 5
-pagina: 8
-seccion: que-le-da-la-micorriza-al-cultivo
-titulo: "Qué le da la micorriza al cultivo"
-layout: titulo-contenido
+pagina: 6
+seccion: los-cuatro-grupos
+titulo: "Cuatro grupos, cuatro trabajos distintos"
+layout: tabla
 ---
 
-# Qué le da la micorriza
+# Cuatro grupos, cuatro trabajos
 
-- **Fósforo** — el efecto principal
-- Agua y micronutrientes
-- Tolerancia a sequía y trasplante
-- Mejor estructura de suelo
-
-> El fósforo no se mueve. El hongo sí.
+| Grupo | Qué hace |
+|---|---|
+| Micorrizas | Alargan el alcance de la raíz |
+| Fijadores de N | Toman nitrógeno del aire |
+| Solubilizadores de P | Abren el fósforo bloqueado |
+| PGPR | Mandan señales hormonales |
 
 :::notas
-El argumento del fósforo inmóvil es el que hay que dejar fijado: es la
-explicación de todo el beneficio.
-Se nota más donde el fósforo es limitante o poco disponible —suelos ácidos
-con hierro y aluminio altos, muy comunes en el trópico— y menos donde hay
-fósforo soluble en exceso. Recomendar mirar el análisis de suelo antes de
-invertir.
+**14–18 min.** Dibujar en la pizarra una raíz y colocar los cuatro grupos
+alrededor: tres trabajan sobre el nutriente, el cuarto sobre la planta.
+
+Decirlo claro: cuando un vendedor ofrece «un biofertilizante» sin decir de
+cuál de los cuatro habla, todavía no dijo nada. Esa pregunta —«¿de cuál de
+los cuatro grupos es?»— es la que deben llevarse al mostrador.
+
+Los cuatro grupos no compiten: se ayudan. Libro, **página 6**.
 :::
 
 ---
 slide: 6
-pagina: 8
-seccion: cultivos-que-responden-y-cultivos-que-no
-titulo: "Dónde sí y dónde no"
-layout: comparacion
+pagina: 7
+seccion: micorrizas-el-hongo-que-le-alarga-la-raiz
+titulo: "El hongo llega donde la raíz no llega"
+layout: vinetas
 ---
 
-# Dónde sí y dónde no
+# El hongo llega donde la raíz no llega
 
-### Sí responden
-
-Café · cítricos · aguacate · musáceas · hortalizas · granos · caña · palma
-
-### NO forman micorriza
-
-**Repollo · brócoli · coliflor · remolacha · espinaca**
+- Se asocian con más del **80 %** de las plantas terrestres
+- La planta da azúcares; el hongo trae fósforo, agua y micronutrientes
+- La planta micorrizada aguanta mejor el estrés
 
 :::notas
-Nombrar los **cultivos**, no las familias: «crucíferas» y
-«quenopodiáceas» no le dicen nada al productor, «repollo y brócoli» sí.
-Si un vendedor asegura lo contrario para esos cultivos, pedir el dato
-publicado que lo respalde.
-Pregunta para discusión: «¿por qué convendría inocular en vivero y no en el
-campo?». Dejar que el grupo llegue solo al argumento del volumen y del
-costo: funciona muy bien.
+**18–22 min.** Si se consiguieron raíces frescas con y sin inoculación,
+este es el momento: pasarlas por el grupo y que las toquen. Si no hay,
+dibujar la raíz y el micelio extendiéndose más allá de ella.
+
+Insistir en el trato de ida y vuelta: el hongo **no fabrica fósforo**, llega
+a donde la raíz no alcanza. Es la idea que corrige el error más común.
+
+Pregunta: «¿para qué le serviría eso en verano, cuando falta agua?».
+Libro, **página 7**.
 :::
 
 ---
 slide: 7
-pagina: 9
-seccion: 14-bacterias-fijadoras-de-nitrogeno
-titulo: "Fijación biológica de nitrógeno"
-layout: titulo-contenido
+pagina: 7
+seccion: micorrizas-el-hongo-que-le-alarga-la-raiz
+titulo: "Sin raíz viva, la micorriza se muere"
+layout: dato
+dato: "Raíz viva"
+cita: "Biotrofo obligado: en suelo desnudo, antes del cultivo, el producto se bota. Va a la siembra o al trasplante."
+fuente: "Libro, página 7"
 ---
 
-# Fijación biológica de nitrógeno
-
-El aire es 80 % nitrógeno. La planta no lo puede usar.
-
-- **Simbiótica** — con nódulo → *Rhizobium*
-- **Asociativa** — sin nódulo → *Azospirillum*
-
 :::notas
-30–40 min. La distinción nódulo sí / nódulo no es lo que se evalúa en el
-ejercicio 8 y es la confusión más frecuente del capítulo.
+**22–25 min.** La consecuencia práctica más importante de las micorrizas.
+Preguntar primero, antes de dar la respuesta: «¿se puede aplicar micorriza
+en el suelo preparado, una semana antes de sembrar?». Dejar que contesten y
+que se equivoquen; recién entonces explicar el biotrofo obligado.
+
+Dejar la conclusión escrita en la pizarra: **sin raíz viva, plata botada**.
+Libro, **página 7**, bloque de precaución.
 :::
 
 ---
 slide: 8
-pagina: 10
-seccion: rhizobium-y-leguminosas
-titulo: "Rhizobium: específico y verificable"
-layout: dos-columnas
+pagina: 7
+seccion: que-micorriza-viene-en-el-producto
+titulo: "La etiqueta dice qué especie trae"
+layout: columnas
 ---
 
-# *Rhizobium*: específico y verificable
+# La etiqueta dice qué especie trae
 
-### Específico
+Varias especies responden mejor que una sola.
 
-El del frijol **no** sirve para la soya. Leer para qué cultivo es.
+### Géneros
 
-+++
+Rhizophagus, Funneliformis, Claroideoglomus, Glomus, Gigaspora
 
-### Verificable
+### Presentación
 
-Cortar un nódulo con la uña.
-
-**Rosado = fija.** Blanco = no trabaja.
+Sobre todo matriz sólida; menos común, suspensión acuosa
 
 :::notas
-Si hay raíces frescas con nódulos, cortarlas **aquí**, frente al grupo. El
-contraste rosado/blanco se recuerda más que cualquier diapositiva. Si no
-hay raíces, usar fotos grandes de nódulos cortados.
-Si hay tiempo y material, hacer aquí la actividad de la página 10 (15 min) y
-recortar después la pausa de ejercicios.
-No dar número esperable de nódulos por planta: pendiente de confirmar.
-<!-- FALTA: confirmar con el docente — nódulos esperables por planta -->
+**25–29 min.** Pasar uno de los envases reales y que lean en voz alta qué
+géneros declara. Si el envase solo dice «micorrizas», ese es el hallazgo.
+
+Criterio de compra concreto: entre dos productos de precio parecido, el que
+declara **varias especies** tiene mejor respaldo. Libro, **página 7**.
+
+No atribuir efectos por género más allá de la tabla del libro
+(colonización / rendimiento / uso general): el material no dice más.
 :::
 
 ---
 slide: 9
-pagina: 10
-seccion: azospirillum-y-gramineas
-titulo: "Azospirillum en gramíneas"
-layout: titulo-contenido
+pagina: 8
+seccion: fijadores-de-nitrogeno-sacarlo-del-aire
+titulo: "El nitrógeno del aire, convertido en amonio"
+layout: vinetas
 ---
 
-# *Azospirillum* en gramíneas
+# Del aire a amonio
 
-Maíz · arroz · sorgo · pastos
-
-- **No** forma nódulos
-- Fija algo de nitrógeno
-- **Estimula la raíz**
-
-> No sustituye la fertilización nitrogenada.
+- Géneros más usados: **Azospirillum, Azotobacter, Rhizobium**
+- Clásico en cereales y leguminosas; también hortalizas y frutales
+- Simbióticos: al establecimiento. Vida libre: al trasplante
 
 :::notas
-Insistir en que no es un sustituto del nitrógeno. Lo razonable es esperar
-una raíz mejor desarrollada y un arranque más parejo.
-No dar ninguna cifra de ahorro de fertilizante: el dato está pendiente de
-confirmar con el docente y es exactamente el tipo de número sobre el que un
-productor actúa.
-<!-- FALTA: confirmar con el docente — ajuste posible de la dosis de N -->
+**29–33 min.** Empezar con la pregunta: «el aire es casi todo nitrógeno,
+¿por qué la planta no lo usa?». De ahí sale la función del grupo.
+
+Lo accionable: antes de comprar hay que saber si es **simbiótico** (forma
+nódulo) o de vida libre, porque cambia el momento de aplicación. Si la
+etiqueta no lo dice, preguntar en la agroveterinaria.
+
+Para los frijoleros del grupo: si sacan la planta y no hay nódulos, la
+inoculación no ocurrió. Libro, **página 8**.
 :::
 
 ---
 slide: 10
-pagina: 11
-seccion: 15-solubilizadores-de-fosforo-y-otros-grupos
-titulo: "Fósforo bajo llave"
-layout: titulo-contenido
+pagina: 9
+seccion: solubilizadores-de-fosforo-abrir-lo-que-esta-bajo-llave
+titulo: "El fósforo ya está ahí, pero bajo llave"
+layout: dato
+dato: "90 %"
+cita: "del fósforo del suelo está bloqueado. Los solubilizadores lo abren: no lo traen de afuera."
+fuente: "Libro, página 9"
 ---
 
-# Fósforo bajo llave
-
-- Fósforo **total** alto
-- Fósforo **disponible** bajo
-- Fijado al hierro, aluminio o calcio
-
-Solubilizadores: *Bacillus*, *Pseudomonas*, *Penicillium*
-
 :::notas
-40–48 min. Pasar rápido.
-Lo esencial: **fósforo alto en el análisis y fósforo disponible bajo no son
-lo mismo**. Mostrar un análisis de suelo real si se tiene.
-Caso de la página 11: el productor que sube la dosis de fósforo año tras año
-sin ver respuesta. Lo que hace falta es corregir la acidez y liberar el
-fósforo ya acumulado, no seguir subiendo la dosis.
-<!-- FALTA: confirmar con el docente — cepas comerciales disponibles en el país -->
+**33–36 min.** La diapositiva que más sorprende. Preguntar: «¿a quién le
+ha dicho el análisis de suelo que hay fósforo, y aun así el cultivo responde
+a la fertilización fosforada?». Esa es la paradoja que explica el 90 %.
+
+Analogía de la llave: el fósforo está en la bodega, con candado. El
+solubilizador no trae fósforo, trae la llave.
+
+*Azospirillum* aparece en tres listas: fija nitrógeno, solubiliza fósforo y
+promueve crecimiento. Libro, **página 9**.
 :::
 
 ---
 slide: 11
-pagina: 11
-seccion: otros-grupos-que-conviene-conocer
-titulo: "Los grupos, de un vistazo"
-layout: tabla
+pagina: 10
+seccion: pgpr-los-que-mandan-senales
+titulo: "Las PGPR no dan comida: mandan señales"
+layout: vinetas
 ---
 
-# Los grupos, de un vistazo
+# No dan comida: mandan señales
 
-| Grupo | Qué hace |
-|---|---|
-| Micorrizas | Alcance de raíz, P |
-| *Rhizobium* | N en nódulos |
-| *Azospirillum* | N + raíz |
-| Solubilizadores | Libera P |
-| *Trichoderma* | Biocontrol + crecimiento |
+- Reguladores: auxinas, citoquininas, etileno, ácido abscísico
+- La planta crece mejor y aguanta más estrés
+- Único grupo con aplicaciones repetidas: cada 15 a 30 días
 
 :::notas
-Dejar claro que los límites entre biofertilizante, bioestimulante y agente
-de biocontrol **no son líneas firmes**: muchos microorganismos hacen las
-tres cosas en distinta medida.
-Anunciar que *Trichoderma* se retoma en el módulo 4.
-Dosis de cada grupo: pendiente de confirmar. No improvisar.
-<!-- FALTA: confirmar con el docente — dosis por grupo -->
+**36–39 min.** No entrar en bioquímica: lo que el productor necesita saber
+es que este grupo **cambia la fisiología**, no alimenta.
+
+Dato operativo que sí cambia su calendario: es el único de los cuatro que se
+repite durante el ciclo, cada 15 a 30 días **según el producto y el
+cultivo** —ese «según» es del libro, no sustituirlo por un número fijo.
+
+Géneros: Bacillus, Paenibacillus, Pseudomonas. Libro, **página 10**.
 :::
 
 ---
 slide: 12
-pagina: 12
-seccion: 16-presentaciones-comerciales
-titulo: "La presentación cambia todo"
+pagina: 10
+seccion: cuando-aplicar-cada-grupo
+titulo: "Los cuatro se aplican temprano"
 layout: tabla
 ---
 
-# La presentación cambia todo
+# Los cuatro se aplican temprano
 
-| Forma | Cuidado |
-|---|---|
-| Polvo | Tapa filtros |
-| Granulado | Volumen y flete |
-| Líquido | Calor; vida corta |
-| Turba | Pedirlo fresco |
-
-> Nunca dejarlo en el carro.
+| Grupo | Momento | Después |
+|---|---|---|
+| Micorrizas | Siembra o trasplante | Si lo indica |
+| PGPR | Siembra o vegetativo | Cada 15–30 días |
+| Solubilizadores P | Siembra o trasplante | Si lo indica |
+| Fijadores N | Semilla o trasplante | Según fabricante |
 
 :::notas
-48–58 min. Pasar los envases reales por el grupo. Que los toquen.
-Error frecuente: comparar precios entre dos productos sin mirar la
-presentación.
-Insistir en el envase en el carro: el microorganismo se muere y el envase
-sigue viéndose igual. Es una de las causas de falla más frecuentes y menos
-reconocidas.
-Vida útil por presentación: pendiente de confirmar; remitir a la etiqueta.
-<!-- FALTA: confirmar con el docente — vida útil por presentación -->
+**39–43 min.** Esta es la tabla que se llevan al campo: Cuadro 1,
+**página 10** del libro. Decirles que la marquen.
+
+Hacer la actividad de la página 11: que cada uno dibuje la línea del ciclo
+de su cultivo principal y ubique los cuatro grupos. Si se le apretan todos
+en las primeras semanas, está bien: así es.
+
+Pregunta: «¿quién va por media cosecha y nunca inoculó?». Para tres de los
+cuatro grupos, el momento ya pasó.
 :::
 
 ---
 slide: 13
-pagina: 14
-seccion: 17-usos-recomendados-segun-el-momento-del-cultivo
-titulo: "Entre más temprano, mejor"
-layout: titulo-contenido
+pagina: 11
+seccion: consideraciones-por-grupo
+titulo: "Cada grupo tiene su condición"
+layout: columnas
 ---
 
-# Entre más temprano, mejor
+# Cada grupo tiene su condición
 
-| Momento | Qué aplicar |
-|---|---|
-| Semilla | *Rhizobium*, *Azospirillum* |
-| Vivero | Micorrizas |
-| Trasplante | Micorrizas, PGPR |
-| Mantenimiento | Solubilizadores |
+### Humedad y momento
 
-> Al suelo y a la raíz, no a la hoja.
+PGPR: mantener humedad. No aplicar tras un bactericida.
+
+### Fósforo
+
+Micorrizas y solubilizadores: trabajan mejor con fósforo poco disponible.
 
 :::notas
-Repetir dos veces la regla: entre más temprano en la vida de la raíz,
-mejor.
-Pregunta para discusión, la que decide la adopción: «¿sobre cuál labor que
-ya hacen podrían montar la aplicación sin agregar un viaje al lote?».
-Aquí va la actividad de la línea de tiempo de la página 14 (10 min). Si el
-tiempo aprieta, dejarla de tarea.
-Frecuencia de refuerzos en cultivo establecido: pendiente de confirmar.
-<!-- FALTA: confirmar con el docente — frecuencia de refuerzos -->
+**43–46 min.** Las dos condiciones que más se incumplen en campo.
+
+Adelantar media frase de lo que viene: si usted le da a la planta el fósforo
+servido, el microorganismo no tiene trabajo que hacer. Eso prepara la
+diapositiva siguiente.
+
+Mencionar el tema de los microorganismos **autóctonos**: lo ideal sería
+usar los de la propia zona, pero aislarlos es caro, así que casi todos los
+productos traen cepas de otras latitudes. Lo que hay que buscar es evidencia
+en un cultivo y condiciones parecidas a las suyas. Libro, **página 11**.
 :::
 
 ---
 slide: 14
-pagina: 15
-seccion: 18-compatibilidad-que-se-puede-mezclar-y-que-no
-titulo: "Lo que mata el producto"
-layout: titulo-contenido
+pagina: 12
+seccion: con-que-no-se-puede-mezclar
+titulo: "Fungicida, bactericida y cobre matan el biofertilizante"
+layout: dato
+dato: "No mezclar"
+cita: "Fungicida, bactericida y cobre matan cualquier biofertilizante. Y el fósforo alto corta la micorriza: la planta deja de necesitarla."
+fuente: "Cuadro 2, página 12 del libro"
 ---
 
-# Lo que mata el producto
-
-**No mezclar:** fungicidas · bactericidas · **cobre, azufre, sulfocalcio** · agua clorada
-
-Compatible: melaza, materia orgánica líquida
-
-> «Permitido en orgánico» no significa compatible.
-
 :::notas
-58–70 min. **El bloque más importante del capítulo.** Si solo quedara
-tiempo para una cosa, es este: es donde el productor pierde dinero sin
-saberlo.
-La trampa del cobre merece decirse despacio: se usa mucho en manejo
-orgánico y es muy agresivo con los benéficos.
-La pregunta de fondo, siempre: «¿esto que voy a mezclar mata hongos o
-bacterias?». Si la respuesta es sí o quizás, no se mezcla.
-Tiempos de separación entre fungicida y biofertilizante: pendiente de
-confirmar. Decir «la etiqueta manda».
-<!-- FALTA: confirmar con el docente — tiempos de separación -->
+**46–51 min · el bloque más importante del capítulo.** Si de los 90 minutos
+se llevan una sola cosa, es esta. Bajar el ritmo y repetirlo.
+
+El razonamiento, en la pizarra: las micorrizas **son hongos** → el fungicida
+las mata. Los otros tres grupos **son bacterias** → el bactericida las mata.
+El cobre no perdona a ninguno.
+
+Y la que sorprende: el fósforo alto no envenena la micorriza, la planta
+simplemente deja de necesitarla y corta la sociedad.
+
+Volver a los casos que se anotaron en la apertura: «¿alguno de esos tanques
+llevaba fungicida o cobre?». Normalmente aparece uno, y ahí se cierra el
+círculo. Si hay balde, agua y jarra, hacer la demostración de mezcla.
+
+No dar tiempos de espera en horas o días: el libro no los trae, los dice el
+fabricante. **No improvisar ese número.**
 :::
 
 ---
 slide: 15
-pagina: 17
-seccion: la-prueba-de-la-jarra
-titulo: "La prueba de la jarra — y su límite"
-layout: dos-columnas
+pagina: 12
+seccion: con-que-no-se-puede-mezclar
+titulo: "Compatible, espaciar o no mezclar"
+layout: tabla
 ---
 
-# La prueba de la jarra — y su límite
+# Compatible, espaciar o no mezclar
 
-### Cómo
+| Palabra | Qué significa |
+|---|---|
+| Compatible | Van juntos |
+| Espaciar | Juntos, pero separados en el tiempo |
+| No mezclar | No van juntos |
 
-1. Misma agua, mismo orden
-2. ¿Grumos o precipitado?
-3. Si aparecen → por separado
-
-+++
-
-### Su límite
-
-Detecta lo **físico**.
-
-No detecta que el fungicida ya mató al inoculante.
+Cuánto espaciar lo dice el fabricante.
 
 :::notas
-Hacer la prueba en vivo, aunque sea con dos productos cualesquiera y agua.
-Lo que no se puede dejar de decir, con estas palabras: la prueba de la
-jarra no detecta que el fungicida mató al inoculante.
-Reglas para la pared de la bodega (página 17): preparar y aplicar el mismo
-día · temprano o tarde, nunca al sol del mediodía · suelo húmedo, no seco
-ni encharcado · lavar el equipo antes · mojar la zona de raíces · agitar el
-tanque.
-70–80 min: ejercicios 1, 3, 6, 11 y 14 en parejas. El 11 se revisa en
-plenaria.
+**51–53 min.** Enseñarles a leer el Cuadro 2 de la **página 12**, columna
+por columna, con su propio cultivo en mente.
+
+Pedir tres ejemplos al grupo de lo que suelen echar al mismo tanque y
+buscarlos juntos en el cuadro. Herbicida e insecticida son «espaciar», no
+«compatible»: ese es el error frecuente.
+
+**Cuánto espaciar no está en el libro.** Es dato del fabricante: no inventar
+un número de horas ni de días.
 :::
 
 ---
 slide: 16
-pagina: 18
-seccion: 19-como-reconocer-un-biofertilizante-de-buena-calidad
-titulo: "A simple vista no se sabe"
-layout: titulo-contenido
+pagina: 13
+seccion: como-reconocer-un-producto-de-buena-calidad
+titulo: "Cuatro datos o no se puede verificar nada"
+layout: vinetas
 ---
 
-# A simple vista no se sabe
+# Cuatro datos, o no verifica nada
 
-Debe decir: **especie** · **concentración** · fechas · lote · **registro**
-
-Alerta: sin especie · sin concentración · vencido · envase hinchado · al sol
+- **Identificación:** género, especie y lote
+- **Concentración:** cuánto organismo vivo hay
+- **Viabilidad:** cuántos están vivos de verdad
+- **Estabilidad:** fecha de caducidad
 
 :::notas
-80–90 min. Pasar los envases reales y pedir que busquen dos datos:
-**especie** y **concentración**. Con un envase de etiqueta deficiente el
-ejercicio sale solo.
-Concentración mínima aceptable por tipo de producto: pendiente de
-confirmar. No dar un número de memoria.
-<!-- FALTA: confirmar con el docente — concentración mínima aceptable -->
+**53–55 min.** Separar bien concentración de viabilidad: un producto puede
+declarar mucha carga y tener la mitad muerta. Son dos datos distintos y los
+dos tienen que estar.
+
+Contar el ejemplo de los dos productos al mismo precio (**página 13**): uno
+dice «a base de micorrizas», el otro declara especies, lote, vencimiento y
+cultivos en que se probó. Al mismo precio no son el mismo producto.
+
+Pregunta: «¿quién sabe el lote del producto que tiene en la bodega?».
 :::
 
 ---
 slide: 17
-pagina: 20
-seccion: guardarlo-bien-en-la-finca
-titulo: "Antes de culpar a la marca"
+pagina: 13
+seccion: antes-de-comprar
+titulo: "Pregunte en qué cultivo se probó"
+layout: vinetas
+---
+
+# Pregunte en qué cultivo se probó
+
+- Cultivos y condiciones del ensayo
+- Qué problema pretende resolver
+- Recomendaciones de compatibilidad
+
+<!-- FALTA: confirmar con el docente -->
+
+:::notas
+**55–80 min · ejercicios.** Repartir los envases reales y hacer la
+actividad de la **página 13**: la tabla de casillas de la etiqueta. Cada
+participante cuenta cuántas casillas quedaron vacías; esa cuenta es la
+calidad de la información que le están vendiendo.
+
+Después, el bloque de ejercicios del libro (páginas 16 en adelante). No
+proyectar respuestas antes de que el grupo las resuelva.
+
+**Dato pendiente:** las presentaciones comerciales (polvo, granulado,
+líquido, turba, peletizado) no están desarrolladas en el material
+entregado. El libro solo dice que las micorrizas vienen sobre todo en
+matriz sólida y los fijadores sobre todo en líquido. Si preguntan por
+ventajas de cada presentación o por almacenamiento,
+**decir que está pendiente de confirmar con el docente. No improvisar.**
+:::
+
+---
+slide: 18
+pagina: 15
+seccion: resumen-del-capitulo
+titulo: "Lo que se lleva al campo"
 layout: cierre
 ---
 
-# Antes de culpar a la marca
+# Lo que se lleva al campo
 
-1. ¿Producto correcto para **ese cultivo**?
-2. ¿Estaba **vivo**?
-3. ¿Se **mezcló** con algo que lo mata?
-4. ¿Suelo húmedo, con sombra, a la raíz?
-5. ¿Se le pidió lo que no hace?
+- Es un ser vivo: se muere y se vence
+- Los cuatro grupos van temprano
+- Fungicida, bactericida, cobre: nunca
+- La etiqueta manda para dosis y vencimiento
 
 :::notas
-Repartir impresa la lista de chequeo de 12 puntos de la página 20.
-Recuperar los casos anotados en la pizarra en la apertura y clasificarlos
-con estos cinco puntos. Casi siempre encajan, y eso convierte al
-participante escéptico en el mejor aliado de la clase.
-Cerrar con la actividad de compromiso de la página 20: una sola aplicación
-por participante, montada sobre una labor que ya hace, más las dos
-preguntas que necesita responder antes de hacerla.
+**80–90 min · cierre.** Repasar el resumen de la **página 15**, los diez
+puntos, en voz alta y rápido.
+
+Volver una última vez a los casos de la apertura y preguntar qué harían
+distinto mañana. Pedir que cada uno diga **una** acción concreta: revisar
+una etiqueta, separar el fungicida del biológico, adelantar la aplicación al
+trasplante.
+
+Cerrar con la regla que resuelve las preguntas que el capítulo no contesta:
+para dosis, almacenamiento y vencimiento, **la etiqueta manda**.
 :::
