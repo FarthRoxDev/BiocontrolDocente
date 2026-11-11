@@ -1,0 +1,20 @@
+# ============================================================
+# CAP05 — metadatos
+# ============================================================
+
+capitulo: 05
+id: cap05
+modulo: "3.2"            # numeración del temario oficial
+titulo: "Tratamientos poscosecha"
+subtitulo: "Puntos críticos de cosecha a almacenamiento, y qué hacer según el nivel de inversión"
+
+estado: borrador         # muestra | borrador | revisado | aprobado
+es_muestra: false
+
+# --- Atribución --------------------------------------------------------
+# Completar con el docente que entregó el material.
+docente: null
+fuente_original: "tratamientos-poscosecha.docx"
+
+# --- Clase -------------------------------------------------------------
+duracion: "90 min"

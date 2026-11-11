@@ -380,72 +380,46 @@ def preparar_headings(cuerpo_html: str, numero_cap: int) -> tuple[str, list[dict
 
 
 # ----------------------------------------------------------------------
-# Render con Playwright (Node) — PDF + medición de páginas
+# Render con Playwright (Python) — PDF + medición de páginas
+#
+# El libro y la presentación usan el mismo binding de Playwright, para que
+# montar el proyecto en otra máquina sea un solo `pip install -r
+# requisitos.txt` y no haga falta Node. Lo único que sigue siendo
+# JavaScript es la función de medición, porque corre dentro del navegador.
 # ----------------------------------------------------------------------
-SCRIPT_NODE = r"""
-const { chromium } = require('playwright');
-const fs = require('fs');
+JS_MEDICION = r"""
+(altoPx) => {
+  const esSaltoForzado = (el) => {
+    const s = getComputedStyle(el);
+    const v = [s.breakBefore, s.pageBreakBefore].join(' ');
+    return /page|always|left|right|recto|verso/.test(v);
+  };
+  const top = (el) => el.getBoundingClientRect().top + window.scrollY;
 
-(async () => {
-  const cfg = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
-  const navegador = await chromium.launch();
-  const pagina = await navegador.newPage({
-    viewport: { width: Math.round(cfg.anchoPx), height: Math.round(cfg.altoPx) }
-  });
-  await pagina.emulateMedia({ media: 'print' });
-  await pagina.goto('file://' + cfg.html, { waitUntil: 'load' });
-  await pagina.evaluate(() => document.fonts && document.fonts.ready);
+  const interes = Array.from(document.querySelectorAll(
+    'h2[id], h3[id], section[id], main[id], header[id], .bc-portada, .bc-creditos, .bc-indice, .bc-apertura, .bc-ejercicios, .bc-clave'
+  ));
+  interes.sort((a, b) => top(a) - top(b));
 
-  // --- Mapa heading → página -------------------------------------
-  const medicion = await pagina.evaluate((altoPx) => {
-    const esSaltoForzado = (el) => {
-      const s = getComputedStyle(el);
-      const v = [s.breakBefore, s.pageBreakBefore].join(' ');
-      return /page|always|left|right|recto|verso/.test(v);
-    };
-    const top = (el) => el.getBoundingClientRect().top + window.scrollY;
-
-    const interes = Array.from(document.querySelectorAll(
-      'h2[id], h3[id], section[id], main[id], header[id], .bc-portada, .bc-creditos, .bc-indice, .bc-apertura, .bc-ejercicios, .bc-clave'
-    ));
-    interes.sort((a, b) => top(a) - top(b));
-
-    let extra = 0;
-    const paginas = {};
-    const orden = [];
-    for (const el of interes) {
-      const t = top(el);
-      if (esSaltoForzado(el)) {
-        const pos = t + extra;
-        const borde = Math.ceil(pos / altoPx) * altoPx;
-        if (borde - pos > 1) extra += borde - pos;
-      }
-      const num = Math.floor((t + extra) / altoPx) + 1;
-      if (el.id) { paginas[el.id] = num; orden.push({ id: el.id, pagina: num }); }
+  let extra = 0;
+  const paginas = {};
+  const orden = [];
+  for (const el of interes) {
+    const t = top(el);
+    if (esSaltoForzado(el)) {
+      const pos = t + extra;
+      const borde = Math.ceil(pos / altoPx) * altoPx;
+      if (borde - pos > 1) extra += borde - pos;
     }
-    return {
-      paginas, orden,
-      altoDocumento: document.documentElement.scrollHeight,
-      paginasEstimadas: Math.max(1, Math.ceil((document.documentElement.scrollHeight + extra) / altoPx))
-    };
-  }, cfg.altoPx);
-
-  // --- PDF --------------------------------------------------------
-  const base = { format: 'A4', printBackground: true, preferCSSPageSize: true };
-  await pagina.pdf({
-    ...base,
-    path: cfg.pdf,
-    displayHeaderFooter: true,
-    headerTemplate: cfg.encabezado,
-    footerTemplate: cfg.pie
-  });
-  // Segunda tirada sin encabezado ni pie: de ella se toma la portada,
-  // que va a sangre completa.
-  await pagina.pdf({ ...base, path: cfg.pdfLimpio, displayHeaderFooter: false });
-
-  await navegador.close();
-  fs.writeFileSync(cfg.medicion, JSON.stringify(medicion, null, 2), 'utf8');
-})().catch((e) => { console.error(e); process.exit(1); });
+    const num = Math.floor((t + extra) / altoPx) + 1;
+    if (el.id) { paginas[el.id] = num; orden.push({ id: el.id, pagina: num }); }
+  }
+  return {
+    paginas, orden,
+    altoDocumento: document.documentElement.scrollHeight,
+    paginasEstimadas: Math.max(1, Math.ceil((document.documentElement.scrollHeight + extra) / altoPx))
+  };
+}
 """
 
 
@@ -493,33 +467,63 @@ def plantilla_corrido(tokens: str, titulo_cap: str, titulo_libro: str, cual: str
     return marco + cuerpo
 
 
+def _lanzar_chromium(p):
+    """Chromium de Playwright; si no se descargó, el Chrome o Edge del
+    sistema. Evita obligar a `playwright install` en la máquina del
+    usuario cuando ya hay un navegador instalado."""
+    intentos = [
+        dict(),
+        dict(channel="chrome"),
+        dict(channel="msedge"),
+        dict(executable_path="/usr/bin/google-chrome"),
+    ]
+    ultimo = None
+    for kw in intentos:
+        try:
+            return p.chromium.launch(args=["--no-sandbox"], **kw)
+        except Exception as exc:  # noqa: BLE001
+            ultimo = exc
+    raise RuntimeError(
+        "no se pudo abrir Chromium para exportar el PDF. Instalá el navegador "
+        "con `python -m playwright install chromium`, o tené Chrome/Edge en el "
+        f"sistema. Último error: {ultimo}")
+
+
 def exportar(html: Path, pdf: Path, tokens: str, titulo_cap: str, titulo_libro: str,
              ancho_px: float, alto_px: float) -> dict:
-    if shutil.which("node") is None:
-        raise RuntimeError("No se encontró 'node'; es necesario para Playwright.")
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError as exc:
+        raise RuntimeError(
+            "falta el paquete 'playwright' de Python: pip install -r requisitos.txt"
+        ) from exc
+
+    encabezado = plantilla_corrido(tokens, titulo_cap, titulo_libro, "encabezado")
+    pie = plantilla_corrido(tokens, titulo_cap, titulo_libro, "pie")
+    opciones = dict(format="A4", print_background=True, prefer_css_page_size=True)
+
     with tempfile.TemporaryDirectory() as tmp:
-        tmp = Path(tmp)
-        script = tmp / "render.js"
-        script.write_text(SCRIPT_NODE, encoding="utf-8")
-        medicion = tmp / "medicion.json"
-        pdf_limpio = tmp / "limpio.pdf"
-        cfg = tmp / "cfg.json"
-        cfg.write_text(json.dumps({
-            "html": str(html.resolve()),
-            "pdf": str(pdf.resolve()),
-            "pdfLimpio": str(pdf_limpio),
-            "medicion": str(medicion),
-            "anchoPx": ancho_px,
-            "altoPx": alto_px,
-            "encabezado": plantilla_corrido(tokens, titulo_cap, titulo_libro, "encabezado"),
-            "pie": plantilla_corrido(tokens, titulo_cap, titulo_libro, "pie"),
-        }), encoding="utf-8")
-        proc = subprocess.run(["node", str(script), str(cfg)],
-                              capture_output=True, text=True)
-        if proc.returncode != 0:
-            raise RuntimeError(f"Playwright falló:\n{proc.stdout}\n{proc.stderr}")
+        pdf_limpio = Path(tmp) / "limpio.pdf"
+        with sync_playwright() as p:
+            navegador = _lanzar_chromium(p)
+            try:
+                pagina = navegador.new_page(viewport={
+                    "width": int(round(ancho_px)), "height": int(round(alto_px))})
+                pagina.emulate_media(media="print")
+                pagina.goto(html.resolve().as_uri(), wait_until="load")
+                pagina.evaluate("() => document.fonts && document.fonts.ready")
+
+                medicion = pagina.evaluate(JS_MEDICION, alto_px)
+
+                pagina.pdf(path=str(pdf.resolve()), display_header_footer=True,
+                           header_template=encabezado, footer_template=pie, **opciones)
+                # Segunda tirada sin encabezado ni pie: de ella se toma la
+                # portada, que va a sangre completa.
+                pagina.pdf(path=str(pdf_limpio), display_header_footer=False, **opciones)
+            finally:
+                navegador.close()
         fusionar_portada(pdf, pdf_limpio)
-        return json.loads(medicion.read_text(encoding="utf-8"))
+    return medicion
 
 
 def fusionar_portada(pdf: Path, pdf_limpio: Path) -> None:

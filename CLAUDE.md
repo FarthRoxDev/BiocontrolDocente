@@ -20,6 +20,16 @@ material del docente (.pptx/.docx/.pdf)
                  └─ build/scripts/construir_*.py ──> salidas/ (PDF, PPTX)
 ```
 
+## Montar el proyecto en otra máquina
+
+```bash
+pip install -r requisitos.txt
+python -m playwright install chromium      # solo si no hay Chrome/Edge instalado
+python3 build/scripts/comprobar_entorno.py # dice qué falta antes de construir nada
+```
+
+No hace falta Node: libro y presentación usan el mismo Playwright de Python.
+
 ## Comandos
 
 ```bash
@@ -48,12 +58,19 @@ python3 build/scripts/verificar_sync.py --capitulo cap01     # libro ↔ present
 
 ## Docentes y módulos
 
-| Módulo | Tema | Docente |
-|---|---|---|
-| cap01 | Biofertilización y micorrizas | *(por asignar)* |
-| cap02 | Material de siembra élite y semilla artificial | *(por asignar)* |
-| cap03 | Monitoreo y control de insectos en agricultura | *(por asignar)* |
-| cap04 | Biocontrol de enfermedades y salud de suelo | *(por asignar)* |
-| cap05 | Tratamientos poscosecha | *(por asignar)* |
+La numeración del temario oficial **no coincide** con el orden de las carpetas
+`capNN` (que nació del orden en que se pidió el demo). Las carpetas no se
+renombran para no romper historial ni rutas de `diseno/assets/`; el número que
+se imprime sale de `modulo:` en cada `meta.yaml`.
+
+| Carpeta | Módulo del temario | Tema | Fuente ingerida | Docente |
+|---|---|---|---|---|
+| cap01 | 4 | Biofertilización y micorrizas | sí | *(por asignar)* |
+| cap02 | 1 | Material de siembra élite y semilla artificial | sí | *(por asignar)* |
+| cap03 | 3.1 | Monitoreo y control de insectos | sí | *(por asignar)* |
+| cap04 | 2 | Biocontrol de enfermedades y salud del suelo | **falta** | *(por asignar)* |
+| cap05 | 3.2 | Tratamientos poscosecha | sí | *(por asignar)* |
+
+El temario completo está en `referencias/temario-capacitaciones.docx`.
 
 Aportan material: William Watson, William Rivera, Randall Sequeira, Luis Barbosa.

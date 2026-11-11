@@ -1,3 +1,9 @@
+<!-- DESACTUALIZADO: el 01-fuente.md de este capitulo ya es el material
+     REAL del docente (ingerido el 2026-11-11), pero este 02-libro.md
+     sigue siendo el texto de MUESTRA que se escribio para demostrar el
+     formato. Hay que reescribirlo desde la fuente real con la skill
+     redactar-capitulo antes de usarlo en clase. -->
+
 ---
 capitulo: 1
 titulo: "[MUESTRA] Biofertilización y micorrizas"

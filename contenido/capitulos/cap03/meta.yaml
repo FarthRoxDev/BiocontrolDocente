@@ -1,0 +1,20 @@
+# ============================================================
+# CAP03 — metadatos
+# ============================================================
+
+capitulo: 03
+id: cap03
+modulo: "3.1"            # numeración del temario oficial
+titulo: "Monitoreo y control de insectos en la agricultura"
+subtitulo: "Cómo recorrer el lote, qué registrar y cómo decidir antes de aplicar"
+
+estado: borrador         # muestra | borrador | revisado | aprobado
+es_muestra: false
+
+# --- Atribución --------------------------------------------------------
+# Completar con el docente que entregó el material.
+docente: null
+fuente_original: "monitoreo-control-insectos.docx"
+
+# --- Clase -------------------------------------------------------------
+duracion: "90 min"

@@ -1,0 +1,20 @@
+# ============================================================
+# CAP02 — metadatos
+# ============================================================
+
+capitulo: 02
+id: cap02
+modulo: "1"            # numeración del temario oficial
+titulo: "Material de siembra élite y semilla artificial"
+subtitulo: "De dónde viene el material élite, cómo se reconoce su calidad y qué esperar de él en finca"
+
+estado: borrador         # muestra | borrador | revisado | aprobado
+es_muestra: false
+
+# --- Atribución --------------------------------------------------------
+# Completar con el docente que entregó el material.
+docente: null
+fuente_original: "material-siembra-elite.pptx"
+
+# --- Clase -------------------------------------------------------------
+duracion: "90 min"

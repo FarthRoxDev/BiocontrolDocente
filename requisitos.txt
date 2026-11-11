@@ -1,0 +1,15 @@
+# Dependencias del proyecto. Un solo comando para montarlo en otra maquina:
+#
+#   pip install -r requisitos.txt
+#   python -m playwright install chromium     # si no hay Chrome/Edge en el sistema
+#
+# No hace falta Node: libro y presentacion usan el mismo Playwright de Python.
+
+jinja2>=3.1          # plantillas de libro y presentacion
+markdown>=3.5        # markdown -> HTML (tablas, attr_list, footnotes)
+playwright>=1.40     # render a PDF y PNG (Chromium)
+pypdf>=4.0           # medir y fusionar PDFs, leer PDFs de origen
+python-pptx>=1.0     # leer el material del docente y escribir el .pptx
+python-docx>=1.1     # leer el material del docente en Word
+PyYAML>=6.0          # meta.yaml y front-matter
+Pillow>=10.0         # manejo de imagenes extraidas
