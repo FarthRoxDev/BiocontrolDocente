@@ -1,12 +1,3 @@
-<!-- FUENTE AMPLIADA: el 01-fuente.md de este capitulo ahora incluye tambien
-     la guia en Word del docente (5041 palabras), que no estaba disponible
-     cuando se redacto este texto: se escribio solo desde la presentacion.
-     La guia aporta secciones que aqui no estan — ficha de recepcion en finca,
-     prueba de compatibilidad en frasco, material sexual frente a vegetativo,
-     recepcion y transporte, como leer el estado de una plantula, que aporta y
-     que no aporta el cultivo in vitro. Conviene reescribir el capitulo desde
-     la fuente completa con la skill redactar-capitulo. -->
-
 ---
 capitulo: 2
 modulo: "1"
@@ -15,6 +6,15 @@ pagina_inicio: 4
 paginas_total: 16
 estado: borrador
 ---
+
+<!-- FUENTE AMPLIADA: el 01-fuente.md de este capitulo ahora incluye tambien
+     la guia en Word del docente (5041 palabras), que no estaba disponible
+     cuando se redacto este texto: se escribio solo desde la presentacion.
+     La guia aporta secciones que aqui no estan — ficha de recepcion en finca,
+     prueba de compatibilidad en frasco, material sexual frente a vegetativo,
+     recepcion y transporte, como leer el estado de una plantula, que aporta y
+     que no aporta el cultivo in vitro. Conviene reescribir el capitulo desde
+     la fuente completa con la skill redactar-capitulo. -->
 
 <!-- Marcas de pagina GLOBALES del libro (portada, creditos e indice van
      delante). Son orientativas: tras construir, ajustarlas con
